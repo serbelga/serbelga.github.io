@@ -1,7 +1,7 @@
 import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
-
+import {} from '@polymer/polymer/lib/utils/html-tag.js';
+import './social-icons'
 import '@polymer/polymer/lib/utils/html-tag.js';
-
 import '@polymer/app-layout/app-drawer/app-drawer.js';
 import '@polymer/app-layout/app-drawer-layout/app-drawer-layout.js';
 import '@polymer/app-layout/app-header/app-header.js';
@@ -229,8 +229,82 @@ class SergiobeldaMeApp extends PolymerElement {
             height: 32px;
             padding: 8px 16px;
         }
+        
+        paper-icon-button:first-child {
+            margin-right: 4px;
+        }
+        
+        paper-icon-button:last-child {
+            margin-left: 4px;
+        }
+        
+        paper-icon-button {
+            margin-right: 4px;
+            margin-left: 4px;
+        }
+        
+        paper-icon-button.blue {
+      color: var(--paper-blue-400);
+      border: 2px solid var(--paper-blue-400);
+      --paper-icon-button-ink-color: var(--paper-blue-600);
+    }
+    paper-icon-button.blue:hover {
+      background-color: var(--paper-blue-400);
+      color: white;
+    }
+    paper-icon-button.teal {
+      color: var(--paper-teal-400);
+      border: 2px solid var(--paper-teal-400);
+      --paper-icon-button-ink-color: var(--paper-teal-600);
+    }
+    paper-icon-button.teal:hover {
+      background-color: var(--paper-teal-400);
+      color: white;
+    }
+    paper-icon-button.blue-grey {
+      color: var(--paper-blue-grey-400);
+      border: 2px solid var(--paper-blue-grey-400);
+      --paper-icon-button-ink-color: var(--paper-blue-grey-600);
+    }
+    paper-icon-button.blue-grey:hover {
+      background-color: var(--paper-blue-grey-400);
+      color: white;
+    }
+    paper-icon-button.grey {
+      color: var(--paper-grey-700);
+      border: 2px solid var(--paper-grey-700);
+      --paper-icon-button-ink-color: var(--paper-grey-900);
+    }
+    paper-icon-button.grey:hover {
+      background-color: var(--paper-grey-700);
+      color: white;
+    }
+    paper-icon-button.blue-a400 {
+      color: var(--paper-blue-a400);
+      border: 2px solid var(--paper-blue-a400);
+      --paper-icon-button-ink-color: var(--paper-blue-a700);
+    }
+    paper-icon-button.blue-a400:hover {
+      background-color: var(--paper-blue-a400);
+      color: white;
+    }
+    paper-icon-button.indigo {
+      color: var(--paper-indigo-400);
+      border: 2px solid var(--paper-indigo-400);
+      --paper-icon-button-ink-color: var(--paper-indigo-600);
+    }
+    paper-icon-button.indigo:hover {
+      background-color: var(--paper-indigo-400);
+      color: white;
+    }
+    
+    footer {
+        margin-top: 24px;
+        color: #717171;
+    }
     </style>
 
+    <app-header-layout >
     <app-header 
     effects="waterfall resize-snapped-title fade-background"
     effects-config='{"resize-snapped-title": {"startsAt": 0.8, "duration": "100ms"}, "fade-background": {"startsAt": 0.8, "endsAt": 0.9}}'
@@ -261,7 +335,7 @@ class SergiobeldaMeApp extends PolymerElement {
                 <a href="#posts" class="link" tabindex="-1">POSTS</a>
             </paper-tab>
             <paper-tab link>
-                <a href="#ui" class="link" tabindex="-1">UI/UX</a>
+                <a href="#ui">UI/UX</a>
             </paper-tab>
             <paper-tab link>
                 <a href="#contact" class="link" tabindex="-1">CONTACT</a>
@@ -273,8 +347,8 @@ class SergiobeldaMeApp extends PolymerElement {
         <div class="section-title">BIO</div>
         <div class="section-content">
         <div id="bio-card" class="card">
-           
-            <div class="card-header">
+           <app-box class="first" scroll-target="scrollingRegion" effects="parallax-background">
+           <div class="card-header">
                 <img src="../../src/img/profile.jpg" width="120px" class="card-header-image">
                 <div class="card-title">SERGIO BELDA</div>
             </div>
@@ -289,6 +363,8 @@ class SergiobeldaMeApp extends PolymerElement {
                     I have knowledge about different programming languages as Java, C#, C, Python, Javascript, Kotlin... Also, I have some ability in many multimedia design applications as Sketch, Adobe Photoshop and Adobe Illustrator.
                 </div>
             </div>
+           </app-box>
+            
         </div>
         </div>
         
@@ -296,6 +372,7 @@ class SergiobeldaMeApp extends PolymerElement {
         
     </section>
     <section id="work">
+        <div>
         <div class="section-title">WORK</div>
         <div class="row">
             <div class="card card-mini">
@@ -312,8 +389,11 @@ class SergiobeldaMeApp extends PolymerElement {
                 </div>
             </div>
         </div>
+        </div>
+        
     </section>
     <section id="posts">
+        <div>
         <div class="section-title">POSTS</div>
         <div class="row">
             <div class="card card-mini">
@@ -330,8 +410,11 @@ class SergiobeldaMeApp extends PolymerElement {
                 </div>
             </div>
         </div>
+</div>
+        
     </section>
     <section id="ui">
+        <div>
         <div class="section-title">UI</div>
         <div class="row">
             <div class="card card-mini">
@@ -348,28 +431,43 @@ class SergiobeldaMeApp extends PolymerElement {
                 </div>
             </div>
         </div>
+        </div>
+        
     </section>
     <section id="contact" >
+        <div>
         <div class="section-title">CONTACT</div>
         <div id="contact-row" class="row">
-            
-            <paper-fab icon="web:facebook" mini label="a" class="facebook" elevation="0">
-           </paper-fab>
-           <paper-fab icon="web:facebook" mini label="a" class="github">
-           </paper-fab>
-           <paper-fab icon="web:facebook" mini label="a" class="twitter">
-           </paper-fab>
-           <paper-fab icon="web:facebook" mini label="a" class="medium">
-           </paper-fab>
-            <paper-fab icon="web:facebook" mini label="a" class="linkedin">
-           </paper-fab>
-           <paper-fab icon="web:facebook" mini label="a" class="behance">
-           </paper-fab>
+            <a target="_blank" href="https://www.behance.net/sdagal8081d5">
+                <paper-icon-button class="grey" icon="social:behance"></paper-icon-button>
+            </a>
+            <a target="_blank" href="https://github.com/serbelga">
+                <paper-icon-button class="blue-grey" icon="social:github"></paper-icon-button>
+            </a>
+            <a target="_blank" href="https://medium.com/@serbelga">
+                <paper-icon-button class="teal" icon="social:medium"></paper-icon-button>
+            </a>
+            <a target="_blank" href="https://www.linkedin.com/in/sergio-belda-galbis/">
+                <paper-icon-button class="blue-a400" icon="social:linkedin"></paper-icon-button>
+            </a>
+            <!--
+            <a target="_blank" href="https://www.behance.net/sdagal8081d5">
+                <paper-icon-button class="indigo" icon="social:facebook"></paper-icon-button>
+            </a>
+            -->
+            <a target="_blank" href="https://twitter.com/SergioBeldaG">
+                <paper-icon-button class="blue" icon="social:twitter"></paper-icon-button>
+            </a>
         </div>
+        </div>
+        
     </section>
     <footer>
       Designed by Sergio Belda using Web Components
     </footer>
+</app-header-layout>
+    
+    
     `;
     }
 
