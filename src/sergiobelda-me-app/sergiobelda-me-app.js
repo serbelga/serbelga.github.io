@@ -43,6 +43,7 @@ class SergiobeldaMeApp extends PolymerElement {
             left: 0;
             width: 100%;
             color: #fff;
+            z-index: 1000;
             background-color: #717171;
             --app-header-background-front-layer: {
               background: url("../../src/img/header.jpg") no-repeat center;
@@ -103,7 +104,6 @@ class SergiobeldaMeApp extends PolymerElement {
         [main-title] {
             width: 100%;
             text-align: center;
-            font-weight: 300;
             position: absolute;
             bottom: 40px;
             font-size: 36px;
@@ -129,7 +129,7 @@ class SergiobeldaMeApp extends PolymerElement {
         }
         
         .section-title {
-            margin: 16px;
+            margin: 48px 16px 16px;
             font-family: "Roboto Condensed", "Roboto", sans-serif;
             font-size: 36px;
             text-align: center;
@@ -142,7 +142,7 @@ class SergiobeldaMeApp extends PolymerElement {
      
         .card {
             max-width: 800px;
-            border: 1px solid #dadce0;
+                border: 1px solid #cccccc;
             padding: 0px 0px 16px;
             margin: 8px;
         }
@@ -197,7 +197,7 @@ class SergiobeldaMeApp extends PolymerElement {
             display: flex;
             flex-direction: row;
             justify-content: flex-end;
-            margin-top: 8px;
+            margin-top: 16px;
             margin-right: 8px;
         }
      
@@ -249,7 +249,7 @@ class SergiobeldaMeApp extends PolymerElement {
             <div style="font-size: 48px;">I'M SERGIO BELDA</div>
             <div style="font-size: 18px;">SOFTWARE ENGINEER - UI DESIGNER</div>
         </div>
-        <app-box sticky scroll-target="scrollingRegion" threshold="64">
+        <app-box scroll-target="scrollingRegion" threshold="64">
            <paper-tabs selected="0" autoselect>
             <paper-tab link>
                 <a href="#bio" class="link" tabindex="-1">BIO</a>
