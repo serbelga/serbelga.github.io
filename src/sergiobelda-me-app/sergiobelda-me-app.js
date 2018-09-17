@@ -355,7 +355,7 @@ class SergiobeldaMeApp extends PolymerElement {
             </div>
         </app-header>
         <!-- App-DrawerLayout -->
-        <app-drawer-layout id="drawerLayout">
+        <app-drawer-layout id="drawerLayout" force-narrow>
         <!-- App-Drawer -->
             <app-drawer id="drawer" slot="drawer">
                 <!-- App-Drawer Content -->
@@ -505,11 +505,14 @@ class SergiobeldaMeApp extends PolymerElement {
 
     toggle(e) {
         var drawerLayout = this.$.drawerLayout;
+        /*
         if (drawerLayout.forceNarrow || !drawerLayout.narrow) {
             drawerLayout.forceNarrow = !drawerLayout.forceNarrow;
         } else {
             drawerLayout.drawer.toggle();
-        }
+        }*/
+
+        drawerLayout.drawer.toggle();
     }
 }
 window.customElements.define('sergiobelda-me-app', SergiobeldaMeApp);
