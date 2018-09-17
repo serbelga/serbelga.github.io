@@ -2701,6 +2701,11 @@ define(["exports","meta"],function(_exports,meta){"use strict";Object.defineProp
                     padding: 8px 16px;
                 }
                 
+                /* Item Design */
+                paper-item {
+                    font-family: "Roboto Condensed", Roboto, sans-serif;
+                }
+                
                 /* Footer */
                 footer {
                     margin-top: 24px;
@@ -2802,7 +2807,7 @@ define(["exports","meta"],function(_exports,meta){"use strict";Object.defineProp
                     <div class="row">
                         <div class="card card-mini">
                             <div class="card-image">
-                                <img src="../../src/img/google_play_music_design/thumbnail.jpg">
+                                <img src="../img/ui/google_play_music_design/thumbnail.jpg">
                             </div>
                             <div class="card-subtitle">Google Play Music Material Design Concept</div>
                             <div class="card-actions">
@@ -2889,10 +2894,9 @@ define(["exports","meta"],function(_exports,meta){"use strict";Object.defineProp
             --paper-tabs-selection-bar-color: #fff;
         }
       
-        paper-tab[link] a {
+        paper-tab  {
             /* These mixins (from iron-flex-layout) center the link text. */
             
-            color: #fff;
             text-decoration: none;
             font-family: "Roboto Condensed", "Roboto", serif;
             font-size: 16px;
@@ -3009,16 +3013,6 @@ define(["exports","meta"],function(_exports,meta){"use strict";Object.defineProp
             margin-right: 8px;
         }
         
-        paper-button {
-            font-family: "Roboto Condensed", "Noto", sans-serif;
-            font-size: 18px;
-            font-weight: bold;
-            border-radius: 0px;
-            border: 2px solid black;
-            height: 32px;
-            padding: 8px 16px;
-        }
-        
         paper-icon-button:first-child {
             margin-right: 4px;
         }
@@ -3110,20 +3104,22 @@ define(["exports","meta"],function(_exports,meta){"use strict";Object.defineProp
                         </div>
                 </app-toolbar>
                 
-                <paper-tabs selected="{{page}}" attr-for-selected="name" role="navigation">
-                        <paper-tab name="bio">
+                <paper-listbox selected="{{page}}" attr-for-selected="name" role="navigation">
+                        <paper-item name="bio">
                             BIO
-                        </paper-tab>
-                        <paper-tab name="work">
+                        </paper-item>
+                        <paper-item name="work">
                             WORK
-                        </paper-tab>
-                        <paper-tab name="posts">
+                        </paper-item>
+                        <paper-item name="posts">
                             POSTS
-                        </paper-tab>
-                        <paper-tab name="ui">
+                        </paper-item>
+                        <!--
+                        <paper-item name="ui">
                             UI/UX
-                        </paper-tab>
-                    </paper-tabs>
+                        </paper-item>
+                        -->
+                    </paper-listbox>
             </app-drawer>
             <app-header-layout id="scrollingRegion">
         <app-header 
@@ -3145,7 +3141,6 @@ define(["exports","meta"],function(_exports,meta){"use strict";Object.defineProp
                 <div>SOFTWARE ENGINEER - UI DESIGNER</div>
             </div>
             <div hidden$="{{!wideLayout}}">
-                <app-toolbar scroll-target="scrollingRegion" threshold="64">
                     <paper-tabs selected="{{page}}" attr-for-selected="name" role="navigation">
                         <paper-tab name="bio">
                             BIO
@@ -3156,18 +3151,19 @@ define(["exports","meta"],function(_exports,meta){"use strict";Object.defineProp
                         <paper-tab name="posts">
                             POSTS
                         </paper-tab>
+                        <!--
                         <paper-tab name="ui">
                             UI/UX
                         </paper-tab>
+                        -->
                     </paper-tabs>
-                </app-toolbar>
             </div>
         </app-header>
-        <iron-pages selected="{{page}}" attr-for-selected="page" style="padding-top: 260px;">
+        <iron-pages selected="{{page}}" attr-for-selected="page" style="padding-top: 200px;">
             <bio-view page="bio"></bio-view>
             <work-view page="work"></work-view>
             <posts-view page="posts"></posts-view>
-            <ui-view page="ui"></ui-view>
+            <!-- <ui-view page="ui"></ui-view> -->
         </iron-pages>
         
             
@@ -3199,7 +3195,7 @@ define(["exports","meta"],function(_exports,meta){"use strict";Object.defineProp
                     </div>
             </section>
             <footer>
-                Designed by Sergio Belda using Web Components
+                Designed by Sergio Belda using Web Components.
             </footer>
             </app-header-layout>
             
