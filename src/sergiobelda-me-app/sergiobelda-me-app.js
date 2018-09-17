@@ -2943,75 +2943,6 @@ define(["exports","meta"],function(_exports,meta){"use strict";Object.defineProp
                 font-size: 16px;
             }
         }
-     
-        .card {
-            max-width: 800px;
-                border: 1px solid #cccccc;
-            padding: 0px 0px 16px;
-            margin: 8px;
-        }
-        
-        .card-top {
-        
-        }
-        
-        .card-mini {
-            max-width: 250px;
-        }
-     
-        .card-header {
-            margin-top: 16px;
-            display: flex;
-            align-items: center;
-            margin-bottom: 24px;
-        }
-     
-        .card-title {
-            font-size: 32px;
-            font-family: "Roboto Condensed", "Roboto", sans-serif;
-            font-weight: bold;
-            margin-left: 24px;
-        }
-        
-        .card-subtitle {
-            font-size: 18px;
-            font-family: "Roboto Condensed", "Roboto", sans-serif;
-            margin-left: 16px;
-            margin-right: 16px;
-            margin-top: 8px;
-        }
-        
-        .card-header-image {
-            border-radius: 100px;
-            margin-left: 16px;
-        }
-        
-        .card-image {
-            width: 250px;
-            height: 200px;
-            overflow: hidden;
-        }
-        
-        .card-image img {
-            width: 250px;
-            height: auto;
-        }
-        
-        .card-content {
-            margin-top: 8px;
-            color: #232f34;
-            overflow: hidden;
-            padding-right: 16px;
-            padding-left: 16px;
-        }
-        
-        .card-actions {
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-end;
-            margin-top: 16px;
-            margin-right: 8px;
-        }
         
         paper-icon-button:first-child {
             margin-right: 4px;
@@ -3084,6 +3015,31 @@ define(["exports","meta"],function(_exports,meta){"use strict";Object.defineProp
         app-drawer-layout:not([narrow]) [drawer-toggle] {
       display: none;
     }
+    
+    .indicator {
+        height: 2px;
+        margin-right: 8px;
+        width: 10%;
+         -webkit-transition: width 0.75s; /* Safari */
+        transition: width 0.75s;
+    }
+    
+    .iron-selected > .indicator {
+        background: black; 
+        width: 90%;
+    }
+    
+    .nav-item {
+        margin-left: 24px;
+        height: 48px;
+        display: flex; 
+        flex-direction: column;
+        font-family: "Roboto Condensed", Roboto, Noto, sans-serif;
+    }
+    
+    .iron-selected {
+        font-weight: bold;
+    }
     </style>
         <app-location route="{{route}}"></app-location>
         <app-route
@@ -3097,29 +3053,26 @@ define(["exports","meta"],function(_exports,meta){"use strict";Object.defineProp
             <app-drawer id="drawer" swipe-open slot="drawer">
                 <!-- App-Drawer Content -->
                 <app-toolbar>
-                        <paper-icon-button id="toggle" icon="arrow-back"
-                                           on-click="toggle" ></paper-icon-button>
-                        <div style="display: flex; justify-content: flex-end; width: 80%;">
+                        <paper-icon-button id="toggle" icon="arrow-back" on-click="toggle" ></paper-icon-button>
+                        <div style="display: flex; justify-content: flex-end; width: 80%; height: 48px;">
                             <img src="../../src/img/logo.svg" width="48px">
                         </div>
                 </app-toolbar>
                 
-                <paper-listbox selected="{{page}}" attr-for-selected="name" role="navigation">
-                        <paper-item name="bio">
-                            BIO
-                        </paper-item>
-                        <paper-item name="work">
-                            WORK
-                        </paper-item>
-                        <paper-item name="posts">
-                            POSTS
-                        </paper-item>
-                        <!--
-                        <paper-item name="ui">
-                            UI/UX
-                        </paper-item>
-                        -->
-                    </paper-listbox>
+                <iron-selector selected="{{page}}" attr-for-selected="name" style="margin-top: 16px;">
+                    <div name="bio" class="nav-item">
+                        <div style="width: 100%">BIO</div>
+                        <div class="indicator"></div>
+                    </div>
+                    <div name="work" class="nav-item">
+                        <div style="width: 100%">WORK</div>
+                        <div class="indicator"></div>
+                    </div>
+                    <div name="posts" class="nav-item">
+                        <div style="width: 100%">POSTS</div>
+                        <div class="indicator"></div>
+                    </div>
+                </iron-selector>
             </app-drawer>
             <app-header-layout id="scrollingRegion">
         <app-header 
