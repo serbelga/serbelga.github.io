@@ -2622,7 +2622,7 @@ define(["exports","meta"],function(_exports,meta){"use strict";Object.defineProp
                     font-size: 32px;
                     font-family: "Roboto Condensed", "Roboto", sans-serif;
                     font-weight: bold;
-                    margin-left: 24px;
+                    margin-left: 18px;
                 }
                 
                 .card-subtitle {
@@ -2940,7 +2940,7 @@ define(["exports","meta"],function(_exports,meta){"use strict";Object.defineProp
     
         @media (max-width: 600px) {
             [main-title] {
-                font-size: 12px;
+                font-size: 16px;
             }
         }
      
@@ -3135,10 +3135,10 @@ define(["exports","meta"],function(_exports,meta){"use strict";Object.defineProp
             </app-toolbar>
             <app-toolbar class="middle">
             </app-toolbar>
-            <div main-title >
-                <div>HELLO</div>
+            <div main-title>
+                <div style="font-size: 18px;">HELLO</div>
                 <div>I'M SERGIO BELDA</div>
-                <div>SOFTWARE ENGINEER - UI DESIGNER</div>
+                <div style="font-size: 14px;">SOFTWARE ENGINEER - UI DESIGNER</div>
             </div>
             <div hidden$="{{!wideLayout}}">
                     <paper-tabs selected="{{page}}" attr-for-selected="name" role="navigation">
