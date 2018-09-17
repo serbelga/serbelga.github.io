@@ -1,5 +1,10 @@
 import {html, PolymerElement} from '@polymer/polymer/polymer-element.js';
 import {} from '@polymer/polymer/lib/utils/html-tag.js';
+import './bio-view.js'
+import './work-view.js'
+import './posts-view.js'
+import './ui-view.js'
+import './styles.js'
 import './social-icons.js'
 import '@polymer/polymer/lib/utils/html-tag.js';
 import '@polymer/app-layout/app-drawer/app-drawer.js';
@@ -14,6 +19,7 @@ import '@polymer/iron-icons/iron-icons.js';
 import '@polymer/iron-icon/iron-icon.js';
 import '@polymer/iron-media-query/iron-media-query.js';
 import '@polymer/iron-selector/iron-selector.js';
+import '@polymer/iron-pages/iron-pages.js';
 import '@polymer/iron-resizable-behavior/iron-resizable-behavior.js';
 import '@polymer/paper-button/paper-button.js';
 import '@polymer/paper-card/paper-card.js';
@@ -32,7 +38,7 @@ import '@polymer/paper-tabs/paper-tabs.js'
 class SergiobeldaMeApp extends PolymerElement {
     static get template() {
         return html`
-    <style>
+    <style include="styles">
         :host {
           display: block;
           font-family: 'Montserrat', sans-serif;
@@ -64,13 +70,7 @@ class SergiobeldaMeApp extends PolymerElement {
             height: 92px;
         }
         
-        footer {
-                height: 50px;
-                line-height: 50px;
-                text-align: center;
-                background-color: white;
-                font-size: 14px;
-      }
+        
       
         paper-tabs {
             margin-right: 20%;
@@ -128,18 +128,6 @@ class SergiobeldaMeApp extends PolymerElement {
             [main-title] {
                 font-size: 12px;
             }
-        }
-        
-        .section-title {
-            margin: 48px 16px 16px;
-            font-family: "Roboto Condensed", "Roboto", sans-serif;
-            font-size: 36px;
-            text-align: center;
-        }
-     
-        .section-content {
-            justify-content: center;
-            display: flex;
         }
      
         .card {
@@ -209,25 +197,6 @@ class SergiobeldaMeApp extends PolymerElement {
             justify-content: flex-end;
             margin-top: 16px;
             margin-right: 8px;
-        }
-     
-        .row {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        
-        paper-fab.facebook {
-            --paper-fab-background: var(--paper-blue-200);
-        }
-        
-        paper-fab.twitter {
-            --paper-fab-background: var(--paper-blue-a400);
-        }
-        
-        paper-fab.github {
-            --paper-fab-background: var(--paper-blue-grey-200);
         }
         
         paper-button {
@@ -308,12 +277,45 @@ class SergiobeldaMeApp extends PolymerElement {
           color: white;
         }
         
-        footer {
-            margin-top: 24px;
-            color: #717171;
-        }
+        app-drawer-layout:not([narrow]) [drawer-toggle] {
+      display: none;
+    }
     </style>
-    <app-header-layout id="scrollingRegion">
+        <app-location route="{{route}}"></app-location>
+        <app-route
+                route="{{route}}"
+                pattern="/:page"
+                data="{{data}}"
+                tail="{{subroute}}">
+        <!-- App-DrawerLayout -->
+        <app-drawer-layout id="drawerLayout" force-narrow>
+        <!-- App-Drawer -->
+            <app-drawer id="drawer" swipe-open slot="drawer">
+                <!-- App-Drawer Content -->
+                <app-toolbar>
+                        <paper-icon-button id="toggle" icon="arrow-back"
+                                           on-click="toggle" ></paper-icon-button>
+                        <div style="display: flex; justify-content: flex-end; width: 80%;">
+                            <img src="../../src/img/logo.svg" width="48px">
+                        </div>
+                </app-toolbar>
+                
+                <paper-tabs selected="{{page}}" attr-for-selected="name" role="navigation">
+                        <paper-tab name="bio">
+                            BIO
+                        </paper-tab>
+                        <paper-tab name="work">
+                            WORK
+                        </paper-tab>
+                        <paper-tab name="posts">
+                            POSTS
+                        </paper-tab>
+                        <paper-tab name="ui">
+                            UI/UX
+                        </paper-tab>
+                    </paper-tabs>
+            </app-drawer>
+            <app-header-layout id="scrollingRegion">
         <app-header 
             effects="waterfall resize-snapped-title fade-background"
             effects-config='{"resize-snapped-title": {"startsAt": 0.8, "duration": "100ms"}, "fade-background": {"startsAt": 0.8, "endsAt": 0.9}}'
@@ -334,121 +336,31 @@ class SergiobeldaMeApp extends PolymerElement {
             </div>
             <div hidden$="{{!wideLayout}}">
                 <app-toolbar scroll-target="scrollingRegion" threshold="64">
-                    <paper-tabs selected="0" role="navigation">
-                        <paper-tab link on-click="scroll">
+                    <paper-tabs selected="{{page}}" attr-for-selected="name" role="navigation">
+                        <paper-tab name="bio">
                             BIO
                         </paper-tab>
-                        <paper-tab link>
-                            <a href="#work">WORK</a>
+                        <paper-tab name="work">
+                            WORK
                         </paper-tab>
-                        <paper-tab link>
-                            <a href="#posts">POSTS</a>
+                        <paper-tab name="posts">
+                            POSTS
                         </paper-tab>
-                        <paper-tab link>
-                            <a href="#ui">UI/UX</a>
-                        </paper-tab>
-                        <paper-tab link>
-                            <a href="#contact">CONTACT</a>
+                        <paper-tab name="ui">
+                            UI/UX
                         </paper-tab>
                     </paper-tabs>
                 </app-toolbar>
             </div>
         </app-header>
-        <!-- App-DrawerLayout -->
-        <app-drawer-layout id="drawerLayout" force-narrow>
-        <!-- App-Drawer -->
-            <app-drawer id="drawer" slot="drawer">
-                <!-- App-Drawer Content -->
-                <app-toolbar>
-                        <paper-icon-button id="toggle" icon="editor:format-list-numbered"
-                                           on-click="toggle" ></paper-icon-button>
-                    </app-toolbar>
-                <div style="font-family: Montserrat, Roboto, sans-serif; margin: 24px;">
-                        Steps
-                    </div>
-                <iron-selector selected="[[routeData.page]]" attr-for-selected="name" class="drawer-list"
-                                   role="navigation">
-                        <ul role="navigation" class="nav">
-            <li><a href="#speed">Bio</a></li>
-            <li><a href="#modern">Work</a></li>
-            <li><a href="#standard">Posts</a></li>
-            <li><a href="#create">UI/UX</a></li>
-            <li><a href="#create">Contact</a></li>
-          </ul>
-                    </iron-selector>
-            </app-drawer>
-            <section id="bio" style="padding-top: 220px">
-                <div>
-                    <div class="section-title">BIO</div>
-                    <div class="section-content">
-                        <div id="bio-card" class="card">
-                            <div class="card-header">
-                                <img src="../../src/img/profile.jpg" width="120px" class="card-header-image">
-                                <div class="card-title">SERGIO BELDA</div>
-                            </div>
-                            <div class="card-content">
-                                <div>
-                                        Software Engineer by the Polytechnic University of Valencia. Currently working on an entrepreneur project for Android in the entrepreneurship space, Start.Inf, at UPV.
-                                    </div>
-                                <div>
-                                        Passionate about software development and new technologies. Interested in the development of applications for mobile devices, design of user interfaces, web applications and IoT. Moreover, I'm attracted by the development through agile techniques, and the development of model-driven software.
-                                    </div>
-                                <div>
-                                        I have knowledge about different programming languages as Java, C#, C, Python, Javascript, Kotlin... Also, I have some ability in many multimedia design applications as Sketch, Adobe Photoshop and Adobe Illustrator.
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="work">
-                <div>
-                    <div class="section-title">WORK</div>
-                    <div class="row">
-                        <div class="card card-mini">
-                            <div class="card-image">
-                                <img src="../../src/img/work/pymapp.svg">
-                            </div>
-                            <div class="card-subtitle">PymApp - Frontend Developer & UI Designer</div>
-                            <div class="card-actions">
-                                <paper-button><a target="_blank" href="https://www.behance.net/gallery/64444291/Google-Play-Music-Material-Design-Concept"></a>View</paper-button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="posts">
-                <div>
-                    <div class="section-title">POSTS</div>
-                    <div class="row">
-                        <div class="card card-mini">
-                            <div class="card-image">
-                                <img src="../../src/img/posts/1.jpg">
-                            </div>
-                            <div class="card-subtitle">Integración de un módulo NodeMCU ESP8266 con una aplicación Android en Kotlin (I)</div>
-                            <div class="card-actions">
-                                <a target="_blank" href="https://medium.com/@serbelga/integraci%C3%B3n-de-un-m%C3%B3dulo-nodemcu-esp8266-con-una-aplicaci%C3%B3n-android-en-kotlin-i-e434294415d2"><paper-button>View</paper-button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section id="ui">
-                <div>
-                    <div class="section-title">UI</div>
-                    <div class="row">
-                        <div class="card card-mini">
-                            <div class="card-image">
-                                <img src="../../src/img/google_play_music_design/thumbnail.jpg">
-                            </div>
-                            <div class="card-subtitle">Google Play Music Material Design Concept</div>
-                            <div class="card-actions">
-                                <a target="_blank" href="https://www.behance.net/gallery/64444291/Google-Play-Music-Material-Design-Concept"><paper-button>View</paper-button></a>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-            </section>
+        <iron-pages selected="{{page}}" attr-for-selected="page" style="padding-top: 260px;">
+            <bio-view page="bio"></bio-view>
+            <work-view page="work"></work-view>
+            <posts-view page="posts"></posts-view>
+            <ui-view page="ui"></ui-view>
+        </iron-pages>
+        
+            
             <section id="contact" >
                 <div>
                     <div class="section-title">CONTACT</div>
@@ -479,8 +391,10 @@ class SergiobeldaMeApp extends PolymerElement {
             <footer>
                 Designed by Sergio Belda using Web Components
             </footer>
+            </app-header-layout>
+            
         </app-drawer-layout>
-    </app-header-layout>
+    
     <iron-media-query query="min-width: 600px" query-matches="{{wideLayout}}"></iron-media-query>
     `;
     }
@@ -495,6 +409,10 @@ class SergiobeldaMeApp extends PolymerElement {
                 type: Boolean,
                 value: false,
                 observer: 'onLayoutChange',
+            },
+            page: {
+                type: String,
+                value: 'bio',
             },
         };
     }
@@ -511,7 +429,6 @@ class SergiobeldaMeApp extends PolymerElement {
         } else {
             drawerLayout.drawer.toggle();
         }*/
-
         drawerLayout.drawer.toggle();
     }
 }

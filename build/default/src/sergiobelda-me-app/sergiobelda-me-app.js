@@ -1,5 +1,12 @@
 import { html, PolymerElement } from "../../node_modules/@polymer/polymer/polymer-element.js";
 import "../../node_modules/@polymer/polymer/lib/utils/html-tag.js";
+import './bio-view.js';
+import './work-view.js';
+import './posts-view.js';
+import './ui-view.js';
+import './styles.js';
+import './social-icons.js';
+import "../../node_modules/@polymer/polymer/lib/utils/html-tag.js";
 import "../../node_modules/@polymer/app-layout/app-drawer/app-drawer.js";
 import "../../node_modules/@polymer/app-layout/app-drawer-layout/app-drawer-layout.js";
 import "../../node_modules/@polymer/app-layout/app-header/app-header.js";
@@ -12,6 +19,8 @@ import "../../node_modules/@polymer/iron-icons/iron-icons.js";
 import "../../node_modules/@polymer/iron-icon/iron-icon.js";
 import "../../node_modules/@polymer/iron-media-query/iron-media-query.js";
 import "../../node_modules/@polymer/iron-selector/iron-selector.js";
+import "../../node_modules/@polymer/iron-pages/iron-pages.js";
+import "../../node_modules/@polymer/iron-resizable-behavior/iron-resizable-behavior.js";
 import "../../node_modules/@polymer/paper-button/paper-button.js";
 import "../../node_modules/@polymer/paper-card/paper-card.js";
 import "../../node_modules/@polymer/paper-fab/paper-fab.js";
@@ -29,7 +38,7 @@ import "../../node_modules/@polymer/paper-tabs/paper-tabs.js";
 class SergiobeldaMeApp extends PolymerElement {
   static get template() {
     return html`
-    <style>
+    <style include="styles">
         :host {
           display: block;
           font-family: 'Montserrat', sans-serif;
@@ -78,8 +87,7 @@ class SergiobeldaMeApp extends PolymerElement {
       
         paper-tab[link] a {
             /* These mixins (from iron-flex-layout) center the link text. */
-            @apply --layout-horizontal;
-            @apply --layout-center-center;
+            
             color: #fff;
             text-decoration: none;
             font-family: "Roboto Condensed", "Roboto", serif;
@@ -107,6 +115,8 @@ class SergiobeldaMeApp extends PolymerElement {
             font-size: 36px;
             margin: 0 0 24px;
         }
+        
+       
     
         [condensed-title] {
             font-weight: lighter;
@@ -120,22 +130,10 @@ class SergiobeldaMeApp extends PolymerElement {
             font-style: normal;
         }
     
-        @media (max-width: 639px) {
+        @media (max-width: 600px) {
             [main-title] {
-                left: 85px;
+                font-size: 12px;
             }
-        }
-        
-        .section-title {
-            margin: 48px 16px 16px;
-            font-family: "Roboto Condensed", "Roboto", sans-serif;
-            font-size: 36px;
-            text-align: center;
-        }
-     
-        .section-content {
-            justify-content: center;
-            display: flex;
         }
      
         .card {
@@ -165,6 +163,14 @@ class SergiobeldaMeApp extends PolymerElement {
             font-family: "Roboto Condensed", "Roboto", sans-serif;
             font-weight: bold;
             margin-left: 24px;
+        }
+        
+        .card-subtitle {
+            font-size: 18px;
+            font-family: "Roboto Condensed", "Roboto", sans-serif;
+            margin-left: 16px;
+            margin-right: 16px;
+            margin-top: 8px;
         }
         
         .card-header-image {
@@ -199,12 +205,7 @@ class SergiobeldaMeApp extends PolymerElement {
             margin-right: 8px;
         }
      
-        .row {
-            display: flex;
-            flex-direction: row;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
+        
         
         paper-fab.facebook {
             --paper-fab-background: var(--paper-blue-200);
@@ -227,147 +228,193 @@ class SergiobeldaMeApp extends PolymerElement {
             height: 32px;
             padding: 8px 16px;
         }
+        
+        paper-icon-button:first-child {
+            margin-right: 4px;
+        }
+        
+        paper-icon-button:last-child {
+            margin-left: 4px;
+        }
+        
+        paper-icon-button {
+            margin-right: 4px;
+            margin-left: 4px;
+        }
+        
+        paper-icon-button.blue {
+          color: var(--paper-blue-400);
+          border: 2px solid var(--paper-blue-400);
+          --paper-icon-button-ink-color: var(--paper-blue-600);
+        }
+        paper-icon-button.blue:hover {
+          background-color: var(--paper-blue-400);
+          color: white;
+        }
+        paper-icon-button.teal {
+          color: var(--paper-teal-400);
+          border: 2px solid var(--paper-teal-400);
+          --paper-icon-button-ink-color: var(--paper-teal-600);
+        }
+        paper-icon-button.teal:hover {
+          background-color: var(--paper-teal-400);
+          color: white;
+        }
+        paper-icon-button.blue-grey {
+          color: var(--paper-blue-grey-400);
+          border: 2px solid var(--paper-blue-grey-400);
+          --paper-icon-button-ink-color: var(--paper-blue-grey-600);
+        }
+        paper-icon-button.blue-grey:hover {
+          background-color: var(--paper-blue-grey-400);
+          color: white;
+        }
+        paper-icon-button.grey {
+          color: var(--paper-grey-700);
+          border: 2px solid var(--paper-grey-700);
+          --paper-icon-button-ink-color: var(--paper-grey-900);
+        }
+        paper-icon-button.grey:hover {
+          background-color: var(--paper-grey-700);
+          color: white;
+        }
+        paper-icon-button.blue-a400 {
+          color: var(--paper-blue-a400);
+          border: 2px solid var(--paper-blue-a400);
+          --paper-icon-button-ink-color: var(--paper-blue-a700);
+        }
+        paper-icon-button.blue-a400:hover {
+          background-color: var(--paper-blue-a400);
+          color: white;
+        }
+        paper-icon-button.indigo {
+          color: var(--paper-indigo-400);
+          border: 2px solid var(--paper-indigo-400);
+          --paper-icon-button-ink-color: var(--paper-indigo-600);
+        }
+        paper-icon-button.indigo:hover {
+          background-color: var(--paper-indigo-400);
+          color: white;
+        }
+        
+        footer {
+            margin-top: 24px;
+            color: #717171;
+        }
+        
+        app-drawer-layout:not([narrow]) [drawer-toggle] {
+      display: none;
+    }
     </style>
-
-    <app-header 
-    effects="waterfall resize-snapped-title fade-background"
-    effects-config='{"resize-snapped-title": {"startsAt": 0.8, "duration": "100ms"}, "fade-background": {"startsAt": 0.8, "endsAt": 0.9}}'
-    condenses fixed>
-        <app-toolbar sticky>
-            <!--<paper-icon-button icon="icons:menu"></paper-icon-button>-->
-            <div condensed-title style="width: 48px; height: 48px;">
-                <img src="../../src/img/logo.svg" width="48px">
-            </div>
-            <!--<div condensed-title>SERGIO BELDA</div>-->
-        </app-toolbar>
-        <app-toolbar class="middle">
-        </app-toolbar>
-        <div main-title>
-            <div>HELLO</div>
-            <div style="font-size: 48px;">I'M SERGIO BELDA</div>
-            <div style="font-size: 18px;">SOFTWARE ENGINEER - UI DESIGNER</div>
-        </div>
-        <app-box scroll-target="scrollingRegion" threshold="64">
-           <paper-tabs selected="0" autoselect>
-            <paper-tab link>
-                <a href="#bio" class="link" tabindex="-1">BIO</a>
-            </paper-tab>
-            <paper-tab link>
-                <a href="#work" class="link" tabindex="-1">WORK</a>
-            </paper-tab>
-            <paper-tab link>
-                <a href="#posts" class="link" tabindex="-1">POSTS</a>
-            </paper-tab>
-            <paper-tab link>
-                <a href="#ui" class="link" tabindex="-1">UI/UX</a>
-            </paper-tab>
-            <paper-tab link>
-                <a href="#contact" class="link" tabindex="-1">CONTACT</a>
-            </paper-tab>
-        </paper-tabs>
-        </app-box>
-    </app-header>
-    <section id="bio" style="padding-top: 220px">
-        <div class="section-title">BIO</div>
-        <div class="section-content">
-        <div id="bio-card" class="card">
-           
-            <div class="card-header">
-                <img src="../../src/img/profile.jpg" width="120px" class="card-header-image">
-                <div class="card-title">SERGIO BELDA</div>
-            </div>
-            <div class="card-content">
-                <div>
-                    Software Engineer by the Polytechnic University of Valencia. Currently working on an entrepreneur project for Android in the entrepreneurship space, Start.Inf, at UPV.
+        <app-location route="{{route}}"></app-location>
+        <app-route
+                route="{{route}}"
+                pattern="/:page"
+                data="{{data}}"
+                tail="{{subroute}}">
+        <!-- App-DrawerLayout -->
+        <app-drawer-layout id="drawerLayout" force-narrow>
+        <!-- App-Drawer -->
+            <app-drawer id="drawer" swipe-open slot="drawer">
+                <!-- App-Drawer Content -->
+                <app-toolbar>
+                        <paper-icon-button id="toggle" icon="arrow-back"
+                                           on-click="toggle" ></paper-icon-button>
+                        <div style="display: flex; justify-content: flex-end; width: 80%;">
+                            <img src="../../src/img/logo.svg" width="48px">
+                        </div>
+                </app-toolbar>
+                <iron-selector selected="[[routeData.page]]" attr-for-selected="name" class="drawer-list"
+                                   role="navigation">
+                        <ul role="navigation" class="nav">
+            <li><a href="#speed">Bio</a></li>
+            <li><a href="#modern">Work</a></li>
+            <li><a href="#standard">Posts</a></li>
+            <li><a href="#create">UI/UX</a></li>
+          </ul>
+                    </iron-selector>
+            </app-drawer>
+            <app-header-layout id="scrollingRegion">
+        <app-header 
+            effects="waterfall resize-snapped-title fade-background"
+            effects-config='{"resize-snapped-title": {"startsAt": 0.8, "duration": "100ms"}, "fade-background": {"startsAt": 0.8, "endsAt": 0.9}}'
+            condenses fixed>
+            <app-toolbar >
+                <paper-icon-button id="toggle" icon="menu" on-click="toggle" hidden$="{{wideLayout}}"></paper-icon-button>
+                <div condensed-title style="width: 48px; height: 48px;" hidden$="{{!wideLayout}}">
+                    <img src="../../src/img/logo.svg" width="48px">
                 </div>
-                <div>
-                    Passionate about software development and new technologies. Interested in the development of applications for mobile devices, design of user interfaces, web applications and IoT. Moreover, I'm attracted by the development through agile techniques, and the development of model-driven software.
-                </div>
-                <div>
-                    I have knowledge about different programming languages as Java, C#, C, Python, Javascript, Kotlin... Also, I have some ability in many multimedia design applications as Sketch, Adobe Photoshop and Adobe Illustrator.
-                </div>
+                <!--<div condensed-title>SERGIO BELDA</div>-->
+            </app-toolbar>
+            <app-toolbar class="middle">
+            </app-toolbar>
+            <div main-title >
+                <div>HELLO</div>
+                <div>I'M SERGIO BELDA</div>
+                <div>SOFTWARE ENGINEER - UI DESIGNER</div>
             </div>
-        </div>
-        </div>
+            <div hidden$="{{!wideLayout}}">
+                <app-toolbar scroll-target="scrollingRegion" threshold="64">
+                    <paper-tabs selected="[[page]]" attr-for-selected="name" role="navigation">
+                        <paper-tab name="bio">
+                            BIO
+                        </paper-tab>
+                        <paper-tab name="work">
+                            WORK
+                        </paper-tab>
+                        <paper-tab name="posts">
+                            POSTS
+                        </paper-tab>
+                        <paper-tab name="ui">
+                            UI/UX
+                        </paper-tab>
+                    </paper-tabs>
+                </app-toolbar>
+            </div>
+        </app-header>
+        <iron-pages selected="[[page]]" attr-for-selected="page" style="padding-top: 260px;">
+            <bio-view page="bio"></bio-view>
+            <work-view page="work"></work-view>
+            <posts-view page="posts"></posts-view>
+            <ui-view page="ui"></ui-view>
+        </iron-pages>
         
-        
-        
-    </section>
-    <section id="work">
-        <div class="section-title">WORK</div>
-        <div class="row">
-            <div class="card card-mini">
-                <div class="card-image">
-                    <img src="../../src/img/work/pymapp.svg">
-                </div>
-                <div class="card-content">
-                    <div>
-                        PymApp - Frontend Developer & UI Designer
-                    </div>
-                </div>
-                <div class="card-actions">
-                    <paper-button><a target="_blank" href="https://www.behance.net/gallery/64444291/Google-Play-Music-Material-Design-Concept"></a>View</paper-button>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="posts">
-        <div class="section-title">POSTS</div>
-        <div class="row">
-            <div class="card card-mini">
-                <div class="card-image">
-                    <img src="../../src/img/posts/1.jpg">
-                </div>
-                <div class="card-content">
-                    <div>
-                        Integración de un módulo NodeMCU ESP8266 con una aplicación Android en Kotlin (I)
-                    </div>
-                </div>
-                <div class="card-actions">
-                    <a target="_blank" href="https://medium.com/@serbelga/integraci%C3%B3n-de-un-m%C3%B3dulo-nodemcu-esp8266-con-una-aplicaci%C3%B3n-android-en-kotlin-i-e434294415d2"><paper-button>View</paper-button></a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="ui">
-        <div class="section-title">UI</div>
-        <div class="row">
-            <div class="card card-mini">
-                <div class="card-image">
-                    <img src="../../src/img/google_play_music_design/thumbnail.jpg">
-                </div>
-                <div class="card-content">
-                    <div>
-                    Google Play Music Material Design Concept
-                    </div>
-                </div>
-                <div class="card-actions">
-                    <a target="_blank" href="https://www.behance.net/gallery/64444291/Google-Play-Music-Material-Design-Concept"><paper-button>View</paper-button></a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="contact" >
-        <div class="section-title">CONTACT</div>
-        <div id="contact-row" class="row">
             
-            <paper-fab icon="web:facebook" mini label="a" class="facebook" elevation="0">
-           </paper-fab>
-           <paper-fab icon="web:facebook" mini label="a" class="github">
-           </paper-fab>
-           <paper-fab icon="web:facebook" mini label="a" class="twitter">
-           </paper-fab>
-           <paper-fab icon="web:facebook" mini label="a" class="medium">
-           </paper-fab>
-            <paper-fab icon="web:facebook" mini label="a" class="linkedin">
-           </paper-fab>
-           <paper-fab icon="web:facebook" mini label="a" class="behance">
-           </paper-fab>
-        </div>
-    </section>
-    <footer>
-      Designed by Sergio Belda using Web Components
-    </footer>
+            <section id="contact" >
+                <div>
+                    <div class="section-title">CONTACT</div>
+                    <div id="contact-row" class="row">
+                        <a target="_blank" href="https://www.behance.net/sdagal8081d5">
+                            <paper-icon-button class="grey" icon="social:behance"></paper-icon-button>
+                        </a>
+                        <a target="_blank" href="https://github.com/serbelga">
+                            <paper-icon-button class="blue-grey" icon="social:github"></paper-icon-button>
+                        </a>
+                        <a target="_blank" href="https://medium.com/@serbelga">
+                            <paper-icon-button class="teal" icon="social:medium"></paper-icon-button>
+                        </a>
+                        <a target="_blank" href="https://www.linkedin.com/in/sergio-belda-galbis/">
+                            <paper-icon-button class="blue-a400" icon="social:linkedin"></paper-icon-button>
+                        </a>
+                        <!--
+                        <a target="_blank" href="https://www.behance.net/sdagal8081d5">
+                            <paper-icon-button class="indigo" icon="social:facebook"></paper-icon-button>
+                        </a>
+                        -->
+                        <a target="_blank" href="https://twitter.com/SergioBeldaG">
+                            <paper-icon-button class="blue" icon="social:twitter"></paper-icon-button>
+                        </a>
+                    </div>
+                    </div>
+            </section>
+            <footer>
+                Designed by Sergio Belda using Web Components
+            </footer>
+            </app-header-layout>
+            
+        </app-drawer-layout>
+    
+    <iron-media-query query="min-width: 600px" query-matches="{{wideLayout}}"></iron-media-query>
     `;
   }
 
@@ -376,8 +423,33 @@ class SergiobeldaMeApp extends PolymerElement {
       prop1: {
         type: String,
         value: 'new_website_polymer-app'
+      },
+      wideLayout: {
+        type: Boolean,
+        value: false,
+        observer: 'onLayoutChange'
+      },
+      page: {
+        type: String,
+        value: 'bio'
       }
     };
+  }
+
+  scroll() {
+    this.$.ui.scrollIntoView();
+  }
+
+  toggle(e) {
+    var drawerLayout = this.$.drawerLayout;
+    /*
+    if (drawerLayout.forceNarrow || !drawerLayout.narrow) {
+        drawerLayout.forceNarrow = !drawerLayout.forceNarrow;
+    } else {
+        drawerLayout.drawer.toggle();
+    }*/
+
+    drawerLayout.drawer.toggle();
   }
 
 }
