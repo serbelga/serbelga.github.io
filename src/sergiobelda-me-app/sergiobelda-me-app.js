@@ -3030,6 +3030,7 @@ define(["exports","meta"],function(_exports,meta){"use strict";Object.defineProp
     }
     
     .nav-item {
+        cursor: pointer;
         margin-left: 24px;
         height: 48px;
         display: flex; 
