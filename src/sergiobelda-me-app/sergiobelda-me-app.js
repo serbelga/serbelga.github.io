@@ -2810,7 +2810,7 @@ define(["exports","meta"],function(_exports,meta){"use strict";Object.defineProp
                                 </div>
                                 <div class="card-subtitle">PymApp - Frontend Developer & UI Designer</div>
                                 <div class="card-actions">
-                                    <paper-button><a target="_blank" href="https://www.behance.net/gallery/64444291/Google-Play-Music-Material-Design-Concept"></a>View</paper-button>
+                                    <a target="_blank" href="https://play.google.com/store/apps/details?id=pin.project.pymapp&hl=en_US"><paper-button>View</paper-button></a>
                                 </div>
                             </div>
                         </div>
