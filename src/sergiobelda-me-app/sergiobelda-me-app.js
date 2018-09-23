@@ -2631,6 +2631,7 @@ define(["exports","meta"],function(_exports,meta){"use strict";Object.defineProp
                     margin-left: 16px;
                     margin-right: 16px;
                     margin-top: 8px;
+                    height: 90px;
                 }
                 
                 .card-header-image {
@@ -2642,6 +2643,9 @@ define(["exports","meta"],function(_exports,meta){"use strict";Object.defineProp
                     width: 250px;
                     height: 200px;
                     overflow: hidden;
+                    display: flex;
+                    align-items: center;
+                    background: #f7f7f7;
                 }
                 
                 .card-image img {
@@ -2763,9 +2767,27 @@ define(["exports","meta"],function(_exports,meta){"use strict";Object.defineProp
                             <div class="card-image">
                                 <img src="../../src/img/posts/1.jpg">
                             </div>
-                            <div class="card-subtitle">Integración de un módulo NodeMCU ESP8266 con una aplicación Android en Kotlin (I)</div>
+                            <div class="card-subtitle">Integración de un módulo NodeMCU ESP8266 con una aplicación Android en Kotlin — Parte I</div>
                             <div class="card-actions">
                                 <a target="_blank" href="https://medium.com/@serbelga/integraci%C3%B3n-de-un-m%C3%B3dulo-nodemcu-esp8266-con-una-aplicaci%C3%B3n-android-en-kotlin-i-e434294415d2"><paper-button>View</paper-button></a>
+                            </div>
+                        </div>
+                        <div class="card card-mini">
+                            <div class="card-image">
+                                <img src="../../src/img/posts/2.png">
+                            </div>
+                            <div class="card-subtitle">Material Components: BottomAppBar (Kotlin) — Parte I</div>
+                            <div class="card-actions">
+                                <a target="_blank" href="https://medium.com/@serbelga/material-components-android-bottomappbar-kotlin-part-i-7541acf105fd"><paper-button>View</paper-button></a>
+                            </div>
+                        </div>
+                        <div class="card card-mini">
+                            <div class="card-image">
+                                <img src="../../src/img/posts/3.png">
+                            </div>
+                            <div class="card-subtitle">Material Components: BottomAppBar (Flutter)</div>
+                            <div class="card-actions">
+                                <a target="_blank" href="https://medium.com/@serbelga/material-components-bottomappbar-flutter-e8ee54ce5deb"><paper-button>View</paper-button></a>
                             </div>
                         </div>
                     </div>
