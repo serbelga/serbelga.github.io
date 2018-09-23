@@ -2750,7 +2750,10 @@ define(["exports","meta"],function(_exports,meta){"use strict";Object.defineProp
                             </div>
                         </div>
                     </div>
-                </div>
+            <!--
+            <div class="section-title">SKILLS</div>
+            -->
+        </div>
     
     `}static get properties(){return{prop1:{type:String,value:"bio-view"}}}}window.customElements.define("bio-view",BioView);class PostsView extends PolymerElement{static get template(){return html`
     <style include="styles">
@@ -3060,7 +3063,7 @@ define(["exports","meta"],function(_exports,meta){"use strict";Object.defineProp
         font-family: "Roboto Condensed", Roboto, Noto, sans-serif;
     }
     
-    .iron-selected {
+    iron-selector .iron-selected {
         font-weight: bold;
     }
     </style>
