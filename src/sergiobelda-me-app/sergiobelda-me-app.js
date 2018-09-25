@@ -2750,9 +2750,8 @@ define(["exports","meta"],function(_exports,meta){"use strict";Object.defineProp
                             </div>
                         </div>
                     </div>
-            <!--
             <div class="section-title">SKILLS</div>
-            -->
+            
         </div>
     
     `}static get properties(){return{prop1:{type:String,value:"bio-view"}}}}window.customElements.define("bio-view",BioView);class PostsView extends PolymerElement{static get template(){return html`
@@ -2777,7 +2776,7 @@ define(["exports","meta"],function(_exports,meta){"use strict";Object.defineProp
                         </div>
                         <div class="card card-mini">
                             <div class="card-image">
-                                <img src="../../src/img/posts/2.png">
+                                <img src="../../src/img/posts/2.jpg">
                             </div>
                             <div class="card-subtitle">Material Components: BottomAppBar (Kotlin) — Parte I</div>
                             <div class="card-actions">
@@ -2786,7 +2785,7 @@ define(["exports","meta"],function(_exports,meta){"use strict";Object.defineProp
                         </div>
                         <div class="card card-mini">
                             <div class="card-image">
-                                <img src="../../src/img/posts/3.png">
+                                <img src="../../src/img/posts/3.jpg">
                             </div>
                             <div class="card-subtitle">Material Components: BottomAppBar (Flutter)</div>
                             <div class="card-actions">
