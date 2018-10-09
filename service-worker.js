@@ -37,7 +37,7 @@
 /* eslint-disable indent, no-unused-vars, no-multiple-empty-lines, max-nested-callbacks, space-before-function-paren, quotes, comma-spacing */
 'use strict';
 
-var precacheConfig = [["index.html","0b0b5861bc3a0505a4a7788b249634d7"],["src/sergiobelda-me-app/sergiobelda-me-app.js","56b2a04048812bfb62513b01885fe220"]];
+var precacheConfig = [["index.html","3ff5cdf43750280f06e8ca6e3837c0f0"],["src/sergiobelda-me-app/sergiobelda-me-app.js","56b2a04048812bfb62513b01885fe220"]];
 var cacheName = 'sw-precache-v3--' + (self.registration ? self.registration.scope : '');
 
 
