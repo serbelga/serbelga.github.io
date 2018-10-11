@@ -2878,8 +2878,8 @@ define(["exports","meta"],function(_exports,meta){"use strict";Object.defineProp
 </iron-iconset-svg>`;document.head.appendChild(template$11.content);class SergiobeldaMeApp extends PolymerElement{static get template(){return html`
     <style include="styles">
         :host {
-          display: block;
-          font-family: 'Montserrat', sans-serif;
+            display: block;
+            font-family: 'Montserrat', sans-serif;
         }
         
         app-header {
@@ -2891,8 +2891,10 @@ define(["exports","meta"],function(_exports,meta){"use strict";Object.defineProp
             z-index: 1000;
             background-color: #717171;
             --app-header-background-front-layer: {
-              background: url("../../src/img/header.jpg") no-repeat center;
-              background-size: auto;
+              background: url("../../src/img/header.jpg") no-repeat;
+              background-size: cover;
+              background-position: center;
+              filter: blur(1px);
             };
         }
 
@@ -2901,15 +2903,13 @@ define(["exports","meta"],function(_exports,meta){"use strict";Object.defineProp
         }
     
         app-toolbar.middle {
-            height: 120px;
+            height: 160px;
         }
 
         app-toolbar.bottom {
             height: 92px;
         }
         
-        
-      
         paper-tabs {
             margin-right: 20%;
             margin-left: 20%;
@@ -2919,11 +2919,11 @@ define(["exports","meta"],function(_exports,meta){"use strict";Object.defineProp
       
         paper-tab  {
             /* These mixins (from iron-flex-layout) center the link text. */
-            
             text-decoration: none;
             font-family: "Roboto Condensed", "Roboto", serif;
             font-size: 16px;
         }
+        
         a paper-button {
             color: black;
             text-decoration: none;
@@ -2942,13 +2942,11 @@ define(["exports","meta"],function(_exports,meta){"use strict";Object.defineProp
             width: 100%;
             text-align: center;
             position: absolute;
-            bottom: 40px;
+            bottom: 24px;
             font-size: 36px;
-            margin: 0 0 24px;
+            margin: 0 0 64px;
         }
         
-       
-    
         [condensed-title] {
             font-weight: lighter;
             margin-left: 30px;
@@ -2981,89 +2979,100 @@ define(["exports","meta"],function(_exports,meta){"use strict";Object.defineProp
         }
         
         paper-icon-button.blue {
-          color: var(--paper-blue-400);
-          border: 2px solid var(--paper-blue-400);
-          --paper-icon-button-ink-color: var(--paper-blue-600);
+            color: var(--paper-blue-400);
+            border: 2px solid var(--paper-blue-400);
+            --paper-icon-button-ink-color: var(--paper-blue-600);
         }
+        
         paper-icon-button.blue:hover {
-          background-color: var(--paper-blue-400);
-          color: white;
+            background-color: var(--paper-blue-400);
+            color: white;
         }
+        
         paper-icon-button.teal {
-          color: var(--paper-teal-400);
-          border: 2px solid var(--paper-teal-400);
-          --paper-icon-button-ink-color: var(--paper-teal-600);
+            color: var(--paper-teal-400);
+            border: 2px solid var(--paper-teal-400);
+            --paper-icon-button-ink-color: var(--paper-teal-600);
         }
+        
         paper-icon-button.teal:hover {
-          background-color: var(--paper-teal-400);
-          color: white;
+            background-color: var(--paper-teal-400);
+            color: white;
         }
+        
         paper-icon-button.blue-grey {
-          color: var(--paper-blue-grey-400);
-          border: 2px solid var(--paper-blue-grey-400);
-          --paper-icon-button-ink-color: var(--paper-blue-grey-600);
+            color: var(--paper-blue-grey-400);
+            border: 2px solid var(--paper-blue-grey-400);
+            --paper-icon-button-ink-color: var(--paper-blue-grey-600);
         }
+        
         paper-icon-button.blue-grey:hover {
-          background-color: var(--paper-blue-grey-400);
-          color: white;
+            background-color: var(--paper-blue-grey-400);
+            color: white;
         }
+        
         paper-icon-button.grey {
-          color: var(--paper-grey-700);
-          border: 2px solid var(--paper-grey-700);
-          --paper-icon-button-ink-color: var(--paper-grey-900);
+            color: var(--paper-grey-700);
+            border: 2px solid var(--paper-grey-700);
+            --paper-icon-button-ink-color: var(--paper-grey-900);
         }
+        
         paper-icon-button.grey:hover {
-          background-color: var(--paper-grey-700);
-          color: white;
+            background-color: var(--paper-grey-700);
+            color: white;
         }
+        
         paper-icon-button.blue-a400 {
-          color: var(--paper-blue-a400);
-          border: 2px solid var(--paper-blue-a400);
-          --paper-icon-button-ink-color: var(--paper-blue-a700);
+            color: var(--paper-blue-a400);
+            border: 2px solid var(--paper-blue-a400);
+            --paper-icon-button-ink-color: var(--paper-blue-a700);
         }
+        
         paper-icon-button.blue-a400:hover {
-          background-color: var(--paper-blue-a400);
-          color: white;
+            background-color: var(--paper-blue-a400);
+            color: white;
         }
+        
         paper-icon-button.indigo {
-          color: var(--paper-indigo-400);
-          border: 2px solid var(--paper-indigo-400);
-          --paper-icon-button-ink-color: var(--paper-indigo-600);
+            color: var(--paper-indigo-400);
+            border: 2px solid var(--paper-indigo-400);
+            --paper-icon-button-ink-color: var(--paper-indigo-600);
         }
+        
         paper-icon-button.indigo:hover {
-          background-color: var(--paper-indigo-400);
-          color: white;
+            background-color: var(--paper-indigo-400);
+            color: white;
         }
         
         app-drawer-layout:not([narrow]) [drawer-toggle] {
-      display: none;
-    }
+            display: none;
+        }
     
-    .indicator {
-        height: 2px;
-        margin-right: 8px;
-        width: 10%;
-         -webkit-transition: width 0.75s; /* Safari */
-        transition: width 0.75s;
-    }
+        .indicator {
+            height: 2px;
+            margin-right: 8px;
+            width: 10%;
+            -webkit-transition: width 0.75s; /* Safari */
+            transition: width 0.75s;
+        }
     
-    .iron-selected > .indicator {
-        background: black; 
-        width: 90%;
-    }
+        .iron-selected > .indicator {
+            background: black; 
+            width: 90%;
+        }
     
-    .nav-item {
-        cursor: pointer;
-        margin-left: 24px;
-        height: 48px;
-        display: flex; 
-        flex-direction: column;
-        font-family: "Roboto Condensed", Roboto, Noto, sans-serif;
-    }
+        .nav-item {
+            cursor: pointer;
+            margin-left: 24px;
+            height: 48px;
+            display: flex; 
+            flex-direction: column;
+            font-family: "Roboto Condensed", Roboto, Noto, sans-serif;
+        }
     
-    .iron-selected {
-        font-weight: bold;
-    }
+        .iron-selected {
+            font-weight: bold;
+        }
     </style>
         <app-location route="{{route}}"></app-location>
         <app-route
@@ -3071,18 +3080,17 @@ define(["exports","meta"],function(_exports,meta){"use strict";Object.defineProp
                 pattern="/:page"
                 data="{{data}}"
                 tail="{{subroute}}">
-        <!-- App-DrawerLayout -->
+        <!-- App-Drawer-Layout -->
         <app-drawer-layout id="drawerLayout" force-narrow>
-        <!-- App-Drawer -->
+            <!-- App-Drawer NavigationView -->
             <app-drawer id="drawer" swipe-open slot="drawer">
-                <!-- App-Drawer Content -->
+                <!-- App-Toolbar -->
                 <app-toolbar>
-                        <paper-icon-button id="toggle" icon="arrow-back" on-click="toggle" ></paper-icon-button>
-                        <div style="display: flex; justify-content: flex-end; width: 80%; height: 48px;">
-                            <img src="../../src/img/logo.svg" width="48px">
-                        </div>
+                    <paper-icon-button id="toggle" icon="arrow-back" on-click="toggle" ></paper-icon-button>
+                    <div style="display: flex; justify-content: flex-end; width: 80%; height: 48px;">
+                        <img src="../../src/img/logo.svg" width="48px">
+                    </div>
                 </app-toolbar>
-                
                 <iron-selector selected="{{page}}" attr-for-selected="name" style="margin-top: 16px;">
                     <div name="bio" class="nav-item">
                         <div style="width: 100%">BIO</div>
@@ -3099,55 +3107,54 @@ define(["exports","meta"],function(_exports,meta){"use strict";Object.defineProp
                 </iron-selector>
             </app-drawer>
             <app-header-layout id="scrollingRegion">
-        <app-header 
-            effects="waterfall resize-snapped-title fade-background"
-            effects-config='{"resize-snapped-title": {"startsAt": 0.8, "duration": "100ms"}, "fade-background": {"startsAt": 0.8, "endsAt": 0.9}}'
-            condenses fixed>
-            <app-toolbar >
-                <paper-icon-button id="toggle" icon="menu" on-click="toggle" hidden$="{{wideLayout}}"></paper-icon-button>
-                <div condensed-title style="width: 48px; height: 48px;" hidden$="{{!wideLayout}}">
-                    <img src="../../src/img/logo.svg" width="48px">
-                </div>
-                <!--<div condensed-title>SERGIO BELDA</div>-->
-            </app-toolbar>
-            <app-toolbar class="middle">
-            </app-toolbar>
-            <div main-title>
-                <div style="font-size: 18px;">HELLO</div>
-                <div>I'M SERGIO BELDA</div>
-                <div style="font-size: 14px;">SOFTWARE ENGINEER - UI DESIGNER</div>
-            </div>
-            <div hidden$="{{!wideLayout}}">
-                    <paper-tabs selected="{{page}}" attr-for-selected="name" role="navigation">
-                        <paper-tab name="bio">
-                            BIO
-                        </paper-tab>
-                        <paper-tab name="work">
-                            WORK
-                        </paper-tab>
-                        <paper-tab name="posts">
-                            POSTS
-                        </paper-tab>
-                        <!--
-                        <paper-tab name="ui">
-                            UI/UX
-                        </paper-tab>
-                        -->
-                    </paper-tabs>
-            </div>
-        </app-header>
-        <iron-pages selected="{{page}}" attr-for-selected="page" style="padding-top: 200px;">
-            <bio-view page="bio"></bio-view>
-            <work-view page="work"></work-view>
-            <posts-view page="posts"></posts-view>
-            <!-- <ui-view page="ui"></ui-view> -->
-        </iron-pages>
-        
-            
-            <section id="contact" >
-                <div>
-                    <div class="section-title">CONTACT</div>
-                    <div id="contact-row" class="row">
+                <app-header effects="waterfall resize-snapped-title fade-background"
+                    effects-config='{"resize-snapped-title": {"startsAt": 0.8, "duration": "100ms"}, "fade-background": {"startsAt": 0.8, "endsAt": 0.9}}'
+                    condenses fixed>
+                    <!-- App-Toolbar Top -->
+                    <!-- Menu button toggle & Logo visible if the window is expanded -->
+                    <app-toolbar>
+                        <paper-icon-button id="toggle" icon="menu" on-click="toggle" hidden$="{{wideLayout}}"></paper-icon-button>
+                        <div condensed-title style="width: 48px; height: 48px;" hidden$="{{!wideLayout}}">
+                            <img src="../../src/img/logo.svg" width="48px">
+                        </div>
+                        <!--<div condensed-title>SERGIO BELDA</div>-->
+                    </app-toolbar>
+                    <app-toolbar class="middle">
+                    </app-toolbar>
+                    <div main-title>
+                        <div style="font-size: 18px;">HELLO</div>
+                        <div>I'M SERGIO BELDA</div>
+                        <div style="font-size: 14px;">SOFTWARE ENGINEER - UI DESIGNER</div>
+                    </div>
+                    <div hidden$="{{!wideLayout}}">
+                        <paper-tabs selected="{{page}}" attr-for-selected="name" role="navigation">
+                            <paper-tab name="bio">
+                                BIO
+                            </paper-tab>
+                            <paper-tab name="work">
+                                WORK
+                            </paper-tab>
+                            <paper-tab name="posts">
+                                POSTS
+                            </paper-tab>
+                            <!--
+                            <paper-tab name="ui">
+                                UI/UX
+                            </paper-tab>
+                            -->
+                        </paper-tabs>
+                    </div>
+                </app-header>
+                <iron-pages selected="{{page}}" attr-for-selected="page" style="padding-top: 260px;">
+                    <bio-view page="bio"></bio-view>
+                    <work-view page="work"></work-view>
+                    <posts-view page="posts"></posts-view>
+                    <!-- <ui-view page="ui"></ui-view> -->
+                </iron-pages>
+                <section id="contact">
+                    <div>
+                        <div class="section-title">CONTACT</div>
+                        <div id="contact-row" class="row">
                         <a target="_blank" href="https://www.behance.net/sdagal8081d5">
                             <paper-icon-button class="grey" icon="social:behance"></paper-icon-button>
                         </a>
@@ -3170,13 +3177,11 @@ define(["exports","meta"],function(_exports,meta){"use strict";Object.defineProp
                         </a>
                     </div>
                     </div>
-            </section>
-            <footer>
+                </section>
+                <footer>
                 Designed by Sergio Belda using Web Components.
             </footer>
             </app-header-layout>
-            
         </app-drawer-layout>
-    
-    <iron-media-query query="min-width: 600px" query-matches="{{wideLayout}}"></iron-media-query>
+        <iron-media-query query="min-width: 600px" query-matches="{{wideLayout}}"></iron-media-query>
     `}static get properties(){return{prop1:{type:String,value:"new_website_polymer-app"},wideLayout:{type:Boolean,value:!1,observer:"onLayoutChange"},page:{type:String,value:"bio"}}}scroll(){this.$.ui.scrollIntoView()}toggle(){var drawerLayout=this.$.drawerLayout;drawerLayout.drawer.toggle()}}window.customElements.define("sergiobelda-me-app",SergiobeldaMeApp)});
