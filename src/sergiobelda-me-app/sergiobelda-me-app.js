@@ -2768,9 +2768,9 @@ define(["exports","meta"],function(_exports,meta){"use strict";Object.defineProp
                             <div class="card-image">
                                 <img src="../../src/img/posts/2.jpg">
                             </div>
-                            <div class="card-subtitle">Material Components: BottomAppBar (Kotlin) — Parte I</div>
+                            <div class="card-subtitle">Material Components: BottomAppBar (Kotlin) — Part I</div>
                             <div class="card-actions">
-                                <a target="_blank" href="https://medium.com/@serbelga/material-components-android-bottomappbar-kotlin-part-i-7541acf105fd"><paper-button>View</paper-button></a>
+                                <a target="_blank" href="https://medium.com/@serbelga/material-components-bottomappbar-kotlin-part-i-6c248600f6d3"><paper-button>View</paper-button></a>
                             </div>
                         </div>
                         <div class="card card-mini">
@@ -3115,7 +3115,7 @@ define(["exports","meta"],function(_exports,meta){"use strict";Object.defineProp
                     <div main-title>
                         <div style="font-size: 18px;">HELLO</div>
                         <div>I'M SERGIO BELDA</div>
-                        <div style="font-size: 14px;">SOFTWARE ENGINEER - UI DESIGNER</div>
+                        <div style="font-size: 14px;">SOFTWARE ENGINEER // UI DESIGNER</div>
                     </div>
                     <div hidden$="{{!wideLayout}}">
                         <paper-tabs selected="{{page}}" attr-for-selected="name" role="navigation">
