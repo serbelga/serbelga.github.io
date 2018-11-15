@@ -2595,6 +2595,11 @@ define(["exports","meta"],function(_exports,meta){"use strict";Object.defineProp
 `,is:"paper-tabs",behaviors:[IronResizableBehavior,IronMenubarBehavior],properties:{noink:{type:Boolean,value:!1,observer:"_noinkChanged"},noBar:{type:Boolean,value:!1},noSlide:{type:Boolean,value:!1},scrollable:{type:Boolean,value:!1},fitContainer:{type:Boolean,value:!1},disableDrag:{type:Boolean,value:!1},hideScrollButtons:{type:Boolean,value:!1},alignBottom:{type:Boolean,value:!1},selectable:{type:String,value:"paper-tab"},autoselect:{type:Boolean,value:!1},autoselectDelay:{type:Number,value:0},_step:{type:Number,value:10},_holdDelay:{type:Number,value:1},_leftHidden:{type:Boolean,value:!1},_rightHidden:{type:Boolean,value:!1},_previousTab:{type:Object}},hostAttributes:{role:"tablist"},listeners:{"iron-resize":"_onTabSizingChanged","iron-items-changed":"_onTabSizingChanged","iron-select":"_onIronSelect","iron-deselect":"_onIronDeselect"},keyBindings:{"left:keyup right:keyup":"_onArrowKeyup"},created:function(){this._holdJob=null;this._pendingActivationItem=void 0;this._pendingActivationTimeout=void 0;this._bindDelayedActivationHandler=this._delayedActivationHandler.bind(this);this.addEventListener("blur",this._onBlurCapture.bind(this),!0)},ready:function(){this.setScrollDirection("y",this.$.tabsContainer)},detached:function(){this._cancelPendingActivation()},_noinkChanged:function(noink){var childTabs=dom(this).querySelectorAll("paper-tab");childTabs.forEach(noink?this._setNoinkAttribute:this._removeNoinkAttribute)},_setNoinkAttribute:function(element){element.setAttribute("noink","")},_removeNoinkAttribute:function(element){element.removeAttribute("noink")},_computeScrollButtonClass:function(hideThisButton,scrollable,hideScrollButtons){if(!scrollable||hideScrollButtons){return"hidden"}if(hideThisButton){return"not-visible"}return""},_computeTabsContentClass:function(scrollable,fitContainer){return scrollable?"scrollable"+(fitContainer?" fit-container":""):" fit-container"},_computeSelectionBarClass:function(noBar,alignBottom){if(noBar){return"hidden"}else if(alignBottom){return"align-bottom"}return""},_onTabSizingChanged:function(){this.debounce("_onTabSizingChanged",function(){this._scroll();this._tabChanged(this.selectedItem)},10)},_onIronSelect:function(event){this._tabChanged(event.detail.item,this._previousTab);this._previousTab=event.detail.item;this.cancelDebouncer("tab-changed")},_onIronDeselect:function(){this.debounce("tab-changed",function(){this._tabChanged(null,this._previousTab);this._previousTab=null},1)},_activateHandler:function(){this._cancelPendingActivation();IronMenuBehaviorImpl._activateHandler.apply(this,arguments)},_scheduleActivation:function(item,delay){this._pendingActivationItem=item;this._pendingActivationTimeout=this.async(this._bindDelayedActivationHandler,delay)},_delayedActivationHandler:function(){var item=this._pendingActivationItem;this._pendingActivationItem=void 0;this._pendingActivationTimeout=void 0;item.fire(this.activateEvent,null,{bubbles:!0,cancelable:!0})},_cancelPendingActivation:function(){if(this._pendingActivationTimeout!==void 0){this.cancelAsync(this._pendingActivationTimeout);this._pendingActivationItem=void 0;this._pendingActivationTimeout=void 0}},_onArrowKeyup:function(){if(this.autoselect){this._scheduleActivation(this.focusedItem,this.autoselectDelay)}},_onBlurCapture:function(event){if(event.target===this._pendingActivationItem){this._cancelPendingActivation()}},get _tabContainerScrollSize(){return _Mathmax(0,this.$.tabsContainer.scrollWidth-this.$.tabsContainer.offsetWidth)},_scroll:function(e,detail){if(!this.scrollable){return}var ddx=detail&&-detail.ddx||0;this._affectScroll(ddx)},_down:function(){this.async(function(){if(this._defaultFocusAsync){this.cancelAsync(this._defaultFocusAsync);this._defaultFocusAsync=null}},1)},_affectScroll:function(dx){this.$.tabsContainer.scrollLeft+=dx;var scrollLeft=this.$.tabsContainer.scrollLeft;this._leftHidden=0===scrollLeft;this._rightHidden=scrollLeft===this._tabContainerScrollSize},_onLeftScrollButtonDown:function(){this._scrollToLeft();this._holdJob=setInterval(this._scrollToLeft.bind(this),this._holdDelay)},_onRightScrollButtonDown:function(){this._scrollToRight();this._holdJob=setInterval(this._scrollToRight.bind(this),this._holdDelay)},_onScrollButtonUp:function(){clearInterval(this._holdJob);this._holdJob=null},_scrollToLeft:function(){this._affectScroll(-this._step)},_scrollToRight:function(){this._affectScroll(this._step)},_tabChanged:function(tab,old){if(!tab){this.$.selectionBar.classList.remove("expand");this.$.selectionBar.classList.remove("contract");this._positionBar(0,0);return}var r=this.$.tabsContent.getBoundingClientRect(),w=r.width,tabRect=tab.getBoundingClientRect(),tabOffsetLeft=tabRect.left-r.left;this._pos={width:this._calcPercent(tabRect.width,w),left:this._calcPercent(tabOffsetLeft,w)};if(this.noSlide||null==old){this.$.selectionBar.classList.remove("expand");this.$.selectionBar.classList.remove("contract");this._positionBar(this._pos.width,this._pos.left);return}var oldRect=old.getBoundingClientRect(),oldIndex=this.items.indexOf(old),index=this.items.indexOf(tab),m=5;this.$.selectionBar.classList.add("expand");var moveRight=oldIndex<index,isRTL=this._isRTL;if(isRTL){moveRight=!moveRight}if(moveRight){this._positionBar(this._calcPercent(tabRect.left+tabRect.width-oldRect.left,w)-m,this._left)}else{this._positionBar(this._calcPercent(oldRect.left+oldRect.width-tabRect.left,w)-m,this._calcPercent(tabOffsetLeft,w)+m)}if(this.scrollable){this._scrollToSelectedIfNeeded(tabRect.width,tabOffsetLeft)}},_scrollToSelectedIfNeeded:function(tabWidth,tabOffsetLeft){var l=tabOffsetLeft-this.$.tabsContainer.scrollLeft;if(0>l){this.$.tabsContainer.scrollLeft+=l}else{l+=tabWidth-this.$.tabsContainer.offsetWidth;if(0<l){this.$.tabsContainer.scrollLeft+=l}}},_calcPercent:function(w,w0){return 100*w/w0},_positionBar:function(width,left){width=width||0;left=left||0;this._width=width;this._left=left;this.transform("translateX("+left+"%) scaleX("+width/100+")",this.$.selectionBar)},_onBarTransitionEnd:function(){var cl=this.$.selectionBar.classList;if(cl.contains("expand")){cl.remove("expand");cl.add("contract");this._positionBar(this._pos.width,this._pos.left)}else if(cl.contains("contract")){cl.remove("contract")}}});const $_documentContainer$2=document.createElement("template");$_documentContainer$2.innerHTML=`<dom-module id="styles">
       <template>
             <style>
+                :host {
+                    --border-color-grey: #cccccc;
+                    --color-text-app-header: #323232;
+                }
+            
                 /* Card Design */
                 .card {
                     max-width: 800px;
@@ -2655,6 +2660,7 @@ define(["exports","meta"],function(_exports,meta){"use strict";Object.defineProp
                 
                 .card-content {
                     margin-top: 8px;
+                    font-weight: normal;
                     color: #232f34;
                     overflow: hidden;
                     padding-right: 16px;
@@ -2878,11 +2884,11 @@ define(["exports","meta"],function(_exports,meta){"use strict";Object.defineProp
             top: 0;
             left: 0;
             width: 100%;
-            color: #fff;
+            color: var(--color-text-app-header);
             z-index: 1000;
-            background-color: #717171;
+            background-color: #fff;
             --app-header-background-front-layer: {
-              background: url("../../src/img/header.jpg") no-repeat;
+              /*background: url("../../src/img/header.jpg") no-repeat;*/
               background-size: cover;
               background-position: center;
               filter: blur(1px);
@@ -2905,7 +2911,7 @@ define(["exports","meta"],function(_exports,meta){"use strict";Object.defineProp
             margin-right: 20%;
             margin-left: 20%;
             --paper-tab-ink: #fff;
-            --paper-tabs-selection-bar-color: #fff;
+            --paper-tabs-selection-bar-color: var(--color-text-app-header);
         }
       
         paper-tab  {
@@ -3117,7 +3123,7 @@ define(["exports","meta"],function(_exports,meta){"use strict";Object.defineProp
                         <div>I'M SERGIO BELDA</div>
                         <div style="font-size: 14px;">SOFTWARE ENGINEER // UI DESIGNER</div>
                     </div>
-                    <div hidden$="{{!wideLayout}}">
+                    <div hidden$="{{!wideLayout}}" style="border-bottom: 1px solid var(--border-color-grey)">
                         <paper-tabs selected="{{page}}" attr-for-selected="name" role="navigation">
                             <paper-tab name="bio">
                                 BIO
