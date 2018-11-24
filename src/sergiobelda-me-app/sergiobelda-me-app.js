@@ -2765,28 +2765,88 @@ define(["exports","meta"],function(_exports,meta){"use strict";Object.defineProp
           display: block;
           font-family: 'Montserrat', sans-serif;
         }
+        
+        .post {
+            max-width: 800px;
+            border: 1px solid #cccccc;
+            margin: 8px;
+            display: flex;
+            flex-direction: row;
+        }
+        
+        .post-image {
+            width: 480px;
+            height: 180px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            background: #f7f7f7;
+        }
+                
+        .post-description {
+            border: 0px solid #cccccc;border-left-width: 1px;
+            width: 300px;
+            display: flex; 
+            flex-direction: column; 
+            justify-content: space-evenly;
+        }
+                
+        img {
+            width: 480px;
+        }
     </style>
     
         <div>
                     <div class="section-title">POSTS</div>
                     <div class="row">
-                        <div class="card card-mini">
-                            <div class="card-image">
-                                <img src="../../src/img/posts/2.jpg">
+                        
+                        <div class="post">
+                            <div class="post-image">
+                                <img src="../../src/img/posts/3.jpg" width="480px">
                             </div>
-                            <div class="card-subtitle">Material Components: BottomAppBar (Kotlin) — Part I</div>
-                            <div class="card-actions">
-                                <a target="_blank" href="https://medium.com/@serbelga/material-components-bottomappbar-kotlin-part-i-6c248600f6d3"><paper-button>View</paper-button></a>
-                            </div>
-                        </div>
-                        <div class="card card-mini">
-                            <div class="card-image">
-                                <img src="../../src/img/posts/3.jpg">
-                            </div>
+                            <div class="post-description">
                             <div class="card-subtitle">Material Components: BottomAppBar (Flutter)</div>
                             <div class="card-actions">
                                 <a target="_blank" href="https://medium.com/@serbelga/material-components-bottomappbar-flutter-9008a6e54382"><paper-button>View</paper-button></a>
                             </div>
+</div>
+                            
+                        </div>
+                        <div class="post">
+                            <div class="post-image">
+                                <img src="../../src/img/posts/2.jpg">
+                            </div>
+                            <div class="post-description">
+                            <div class="card-subtitle">Material Components Android: BottomAppBar — Part I</div>
+                            <div class="card-actions">
+                                <a target="_blank" href="https://medium.com/@serbelga/material-components-bottomappbar-kotlin-part-i-6c248600f6d3"><paper-button>View</paper-button></a>
+                            </div>
+</div>
+                            
+                        </div>
+                        <div class="post">
+                            <div class="post-image">
+                                <img src="../../src/img/posts/2.jpg">
+                            </div>
+                            <div class="post-description">
+                            <div class="card-subtitle">Material Components Android: BottomAppBar — Part II</div>
+                            <div class="card-actions">
+                                <a target="_blank" href="https://medium.com/@serbelga/material-components-android-bottomappbar-part-ii-1ae0079ec3a6"><paper-button>View</paper-button></a>
+                            </div>
+</div>
+                            
+                        </div>
+                        <div class="post">
+                            <div class="post-image">
+                                <img src="../../src/img/posts/4.jpg">
+                            </div>
+                            <div class="post-description">
+                            <div class="card-subtitle">Android Architecture Components: Navigation — Part I</div>
+                            <div class="card-actions">
+                                <a target="_blank" href="https://medium.com/@serbelga/android-architecture-components-navigation-part-i-f77e115f2c31"><paper-button>View</paper-button></a>
+                            </div>
+</div>
+                            
                         </div>
                     </div>
                 </div>
