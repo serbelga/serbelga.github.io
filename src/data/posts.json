@@ -1,0 +1,28 @@
+ [
+    {
+      "title": "Material Components: BottomAppBar (Flutter)",
+      "url": "https://medium.com/@serbelga/material-components-bottomappbar-flutter-9008a6e54382",
+      "thumbnail": "src/img/posts/material_components_flutter_bottomappbar.jpg"
+    },
+   {
+     "title": "Material Components Android: BottomAppBar - Part I",
+     "url": "https://medium.com/@serbelga/material-components-bottomappbar-kotlin-part-i-6c248600f6d3",
+     "thumbnail": "src/img/posts/material_components_android_bottomappbar.jpg"
+   },
+   {
+     "title": "Material Components Android: BottomAppBar - Part II",
+     "url": "https://medium.com/@serbelga/material-components-android-bottomappbar-part-ii-1ae0079ec3a6",
+     "thumbnail": "src/img/posts/material_components_android_bottomappbar.jpg"
+   },
+   {
+     "title": "Material Design Android: Shape, Color & Typography",
+     "url": "https://medium.com/@serbelga/material-theming-android-shape-color-typography-2c968a0b6ae4",
+     "thumbnail": "src/img/posts/material_design_android_theming.jpg"
+   },
+   {
+     "title": "Transitions in Android Navigation Architecture Component",
+     "url": "https://medium.com/@serbelga/shared-elements-in-android-navigation-architecture-component-bc5e7922ecdf",
+     "thumbnail": "src/img/posts/navigation_transition_shared_elements.png"
+   }
+ ]
+

@@ -1,1 +1,67 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+}
+
+$mdc-theme-primary: #424242; // primary color
+$mdc-theme-secondary: #033cda; // secondary color
+$mdc-typography-font-family: 'Montserrat', sans-serif;
+$mdc-typography-styles-button: (
+  font-family: 'Roboto Condensed'
+);
+$mdc-typography-styles-headline2: (
+  font-family: 'Roboto Condensed'
+);
+$mdc-typography-styles-headline4: (
+  font-family: 'Montserrat'
+);
+$mdc-typography-styles-headline5: (
+  font-family: 'Roboto Condensed'
+);
+$mdc-typography-styles-body1: (
+  color: rgba(0,0,0,0.6)
+);
+$mdc-shape-small-component-radius: 0px;
+$mdc-shape-medium-component-radius: 0px;
+$mdc-shape-large-component-radius: 0px;
+
+
+@import "~@angular-mdc/theme/material";
+@import "~@angular-mdc/theme/material-components-web";
+
+.demo-top-app-bar-themed {
+  @include mdc-top-app-bar-fill-color(rgba(255, 255, 255, 0.98));
+  @include mdc-top-app-bar-icon-ink-color($mdc-theme-primary);
+  .mdc-tab-bar {
+    margin-top: 1em;
+
+    @media (max-width: 599px) {
+      margin-top: .5em;
+    }
+  }
+}
+
+.demo-drawer-app-content {
+  padding-top: 124px;
+  overflow: hidden;
+  position: relative;
+}
+
+.behance-icon-button {
+  @include mdc-icon-button-ink-color($material-color-grey-700);
+}
+
+.github-icon-button {
+  @include mdc-icon-button-ink-color($material-color-blue-grey-700);
+}
+
+.medium-icon-button {
+  @include mdc-icon-button-ink-color($material-color-teal-400);
+}
+
+.linkedin-icon-button {
+  @include mdc-icon-button-ink-color($material-color-blue-a400);
+}
+
+.twitter-icon-button {
+  @include mdc-icon-button-ink-color($material-color-blue-400);
+}
