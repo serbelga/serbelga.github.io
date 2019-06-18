@@ -17,6 +17,10 @@ $mdc-typography-styles-headline4: (
 $mdc-typography-styles-headline5: (
   font-family: 'Roboto Condensed'
 );
+$mdc-typography-styles-headline6: (
+  font-family: 'Roboto Condensed',
+  color: #212121
+);
 $mdc-typography-styles-body1: (
   color: rgba(0,0,0,0.6)
 );
@@ -46,6 +50,11 @@ $mdc-shape-large-component-radius: 0px;
   position: relative;
 }
 
+.demo-card {
+  width: 75%;
+  margin: 16px;
+}
+
 .behance-icon-button {
   @include mdc-icon-button-ink-color($material-color-grey-700);
 }
@@ -64,4 +73,15 @@ $mdc-shape-large-component-radius: 0px;
 
 .twitter-icon-button {
   @include mdc-icon-button-ink-color($material-color-blue-400);
+}
+
+.content-column {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+a {
+  text-decoration: none;
+  color: initial;
 }

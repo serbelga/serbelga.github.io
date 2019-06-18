@@ -39,6 +39,7 @@ const appRoutes: Routes = [
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MdcCardModule,
     MdcFabModule,
     MdcIconModule,
     MdcMenuModule,

@@ -2,9 +2,11 @@
 <mdc-top-app-bar fixed [fixedAdjustElement]="fixedContent" class="demo-top-app-bar-themed">
   <mdc-top-app-bar-row>
     <mdc-top-app-bar-section align="start">
-      <button mdcTopAppBarNavIcon>
-        <mdc-icon>menu</mdc-icon>
-      </button>
+      <mdc-tab-bar #mdcTabBar fade fixed>
+        <mdc-tab-scroller>
+          <mdc-tab routerLink="{{tab.router}}" *ngFor="let tab of tabs" [label]="tab.label"></mdc-tab>
+        </mdc-tab-scroller>
+      </mdc-tab-bar>
     </mdc-top-app-bar-section>
     <mdc-top-app-bar-section align="end">
       <button mdcIconButton class="behance-icon-button">
@@ -74,6 +76,7 @@
       </button>
     </mdc-top-app-bar-section>
   </mdc-top-app-bar-row>
+  <!--
   <mdc-top-app-bar-row>
     <mdc-top-app-bar-section>
       <mdc-tab-bar #mdcTabBar align="center">
@@ -83,6 +86,7 @@
       </mdc-tab-bar>
     </mdc-top-app-bar-section>
   </mdc-top-app-bar-row>
+  -->
 </mdc-top-app-bar>
 
 <!--
@@ -106,7 +110,7 @@
 <p>Activated tab: {{ mdcTabBar.activeTabIndex }}</p>
 -->
 
-<div #fixedContent class="demo-drawer-app-content">
+<div #fixedContent>
   <router-outlet></router-outlet>
 </div>
 

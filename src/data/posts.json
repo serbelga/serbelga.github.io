@@ -17,12 +17,12 @@
    {
      "title": "Material Design Android: Shape, Color & Typography",
      "url": "https://medium.com/@serbelga/material-theming-android-shape-color-typography-2c968a0b6ae4",
-     "thumbnail": "src/img/posts/material_design_android_theming.jpg"
+     "thumbnail": "./img/posts/material_design_android_theming.jpg"
    },
    {
      "title": "Transitions in Android Navigation Architecture Component",
      "url": "https://medium.com/@serbelga/shared-elements-in-android-navigation-architecture-component-bc5e7922ecdf",
-     "thumbnail": "src/img/posts/navigation_transition_shared_elements.png"
+     "thumbnail": "./src/img/posts/navigation_transition_shared_elements.png"
    }
  ]
 
