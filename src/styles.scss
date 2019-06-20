@@ -55,7 +55,7 @@ $mdc-shape-large-component-radius: 0px;
 }
 
 .bio-card {
-  width: 240px;
+  width: 55%;
 }
 
 .behance-icon-button {
@@ -83,6 +83,11 @@ $mdc-shape-large-component-radius: 0px;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   grid-gap: 24px;
   margin: 24px;
+}
+
+.about-content {
+  justify-content: center;
+  display: flex;
 }
 
 a {

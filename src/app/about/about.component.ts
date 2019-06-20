@@ -7,6 +7,7 @@ import bio from 'src/data/bio.json';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
+  name = bio.name;
   bio = bio.description;
   constructor() { }
 
