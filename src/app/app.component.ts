@@ -14,7 +14,7 @@ import { MdcTabActivatedEvent } from '@angular-mdc/web';
 export class AppComponent {
   title = 'sergiobelda-me-app';
   word = data.item;
-  bio = bio.description;
+  contact = bio.contact;
   tabs = [
     { label: 'Posts', router: 'posts' },
     { label: 'Projects', router: 'projects' },

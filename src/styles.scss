@@ -51,8 +51,11 @@ $mdc-shape-large-component-radius: 0px;
 }
 
 .demo-card {
-  width: 75%;
-  margin: 16px;
+  margin: 24px;
+}
+
+.bio-card {
+  width: 240px;
 }
 
 .behance-icon-button {
@@ -75,10 +78,11 @@ $mdc-shape-large-component-radius: 0px;
   @include mdc-icon-button-ink-color($material-color-blue-400);
 }
 
-.content-column {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
+.content-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-gap: 24px;
+  margin: 24px;
 }
 
 a {
