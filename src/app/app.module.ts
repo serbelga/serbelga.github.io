@@ -15,7 +15,10 @@ import {
   MdcTabScrollerModule,
   MdcTabBarModule,
   MdcTabIndicatorModule,
-  MdcCardModule
+  MdcCardModule,
+  MdcImageListModule,
+  MdcDrawerModule,
+  MdcListModule
 } from '@angular-mdc/web';
 import { AboutComponent } from './about/about.component';
 import { PostsComponent } from './posts/posts.component';
@@ -50,8 +53,11 @@ const appRoutes: Routes = [
     MdcTabModule,
     MdcTabScrollerModule,
     MdcTabBarModule,
+    MdcListModule,
+    MdcImageListModule,
     MdcTabIndicatorModule,
     MdcCardModule,
+    MdcDrawerModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only

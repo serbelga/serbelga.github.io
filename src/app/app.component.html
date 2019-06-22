@@ -2,6 +2,9 @@
 <mdc-top-app-bar fixed [fixedAdjustElement]="fixedContent" class="demo-top-app-bar-themed">
   <mdc-top-app-bar-row>
     <mdc-top-app-bar-section align="start">
+      <button class="mdc-button" mdcTopAppBarNavIcon (click)="appDrawer.open = !appDrawer.open">
+        <mdc-icon>menu</mdc-icon>
+      </button>
       <mdc-tab-bar #mdcTabBar fade fixed>
         <mdc-tab-scroller>
           <mdc-tab routerLink="{{tab.router}}" *ngFor="let tab of tabs" [label]="tab.label"></mdc-tab>
@@ -117,7 +120,23 @@
 <p>Activated tab: {{ mdcTabBar.activeTabIndex }}</p>
 -->
 
-<div #fixedContent>
-  <router-outlet></router-outlet>
+<div>
+  <mdc-drawer #appDrawer drawer="modal">
+    <mdc-drawer-header>
+      <h3 mdcDrawerTitle>Menu</h3>
+    </mdc-drawer-header>
+    <mdc-drawer-content>
+      <mdc-list #mdcList>
+        <mdc-list-item routerLink="{{item.router}}" *ngFor="let item of tabs">
+          {{item.label}}
+        </mdc-list-item>
+      </mdc-list>
+    </mdc-drawer-content>
+  </mdc-drawer>
+
+  <div #fixedContent>
+    <router-outlet></router-outlet>
+  </div>
 </div>
+
 

@@ -1,7 +1,7 @@
 <div class="content-grid">
-  <mdc-card outlined *ngFor="let post of posts" class="demo-card">
-    <img src="{{post.thumbnail}}">
-    <div>
+  <mdc-card outlined *ngFor="let post of posts" class="post-card">
+    <img src="{{post.thumbnail}}" >
+    <div class="post-card-title">
       <div mdcHeadline6>{{post.title}}</div>
     </div>
     <mdc-card-actions>

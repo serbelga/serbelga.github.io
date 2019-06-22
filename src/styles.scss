@@ -38,8 +38,14 @@ $mdc-shape-large-component-radius: 0px;
   .mdc-tab-bar {
     margin-top: 1em;
 
-    @media (max-width: 599px) {
-      margin-top: .5em;
+    @media (max-width: 719px) {
+      visibility: hidden;
+    }
+  }
+
+  .mdc-button {
+    @media (min-width: 719px) {
+      display: none;
     }
   }
 }
@@ -50,12 +56,24 @@ $mdc-shape-large-component-radius: 0px;
   position: relative;
 }
 
-.demo-card {
+.post-card {
   margin: 24px;
 }
 
-.bio-card {
-  width: 55%;
+.post-card img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+}
+
+.post-card-title {
+  margin: 8px;
+}
+
+.bio-section {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
 }
 
 .behance-icon-button {
@@ -86,11 +104,16 @@ $mdc-shape-large-component-radius: 0px;
 }
 
 .about-content {
+  flex-direction: column;
   justify-content: center;
   display: flex;
+  margin: 24px;
+  align-items: center;
 }
 
 a {
   text-decoration: none;
   color: initial;
 }
+
+
