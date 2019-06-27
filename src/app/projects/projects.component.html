@@ -1,3 +1,9 @@
-<p>
-  projects works!
-</p>
+<div class="projects-content">
+  <div *ngFor="let project of projects">
+    <div mdcHeadline4>{{project.title}}</div>
+    <div class="project">
+      <img class="project-img" *ngIf="notEmpty(project.thumbnail)" src="{{project.thumbnail}}" alt="Photo" height="180">
+      <iframe *ngIf="notEmpty(project.video_url)" width="560" height="315" [src]="transform(project.video_url)" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>

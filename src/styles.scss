@@ -71,9 +71,12 @@ $mdc-shape-large-component-radius: 0px;
 }
 
 .bio-section {
-  width: 75%;
   display: flex;
   flex-direction: column;
+
+  @media (min-width: 719px) {
+    width: 55%;
+  }
 }
 
 .behance-icon-button {
@@ -116,4 +119,22 @@ a {
   color: initial;
 }
 
+.projects-content {
+  flex-direction: column;
+  justify-content: center;
+  display: flex;
+  margin: 24px;
+  align-items: center;
+}
 
+.project {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column
+}
+
+.project-img {
+  border: 1px solid $material-color-grey-400;
+  object-fit: contain;
+  margin-bottom: 24px;
+}
