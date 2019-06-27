@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"about-content\">\r\n  <div class=\"bio-section\">\r\n    <img src=\"/assets/about/profile.jpg\" alt=\"Photo\" width=\"180\" height=\"180\" style=\"margin-bottom: 24px;\">\r\n    <mdc-card outlined>\r\n      <div style=\"margin: 24px;\">\r\n        <div mdcHeadline5>{{name}}</div>\r\n        <div mdcBody1 style=\"margin-top: 16px;\">\r\n          {{bio}}\r\n        </div>\r\n      </div>\r\n    </mdc-card>\r\n  </div>\r\n</div>\r\n\r\n"
+module.exports = "<div class=\"about-content\">\n  <div class=\"bio-section\">\n    <img src=\"/assets/about/profile.jpg\" alt=\"Photo\" width=\"180\" height=\"180\" style=\"margin-bottom: 24px;\">\n    <mdc-card outlined>\n      <div style=\"margin: 24px;\">\n        <div mdcHeadline5>{{name}}</div>\n        <div mdcBody1 style=\"margin-top: 16px;\">\n          {{bio}}\n        </div>\n      </div>\n    </mdc-card>\n  </div>\n</div>\n\n"
 
 /***/ }),
 
@@ -41,7 +41,7 @@ module.exports = "<div class=\"about-content\">\r\n  <div class=\"bio-section\">
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n<mdc-top-app-bar fixed [fixedAdjustElement]=\"fixedContent\" class=\"demo-top-app-bar-themed\">\r\n  <mdc-top-app-bar-row>\r\n    <mdc-top-app-bar-section align=\"start\">\r\n      <button class=\"mdc-button\" mdcTopAppBarNavIcon (click)=\"appDrawer.open = !appDrawer.open\">\r\n        <mdc-icon>menu</mdc-icon>\r\n      </button>\r\n      <mdc-tab-bar #mdcTabBar fade fixed>\r\n        <mdc-tab-scroller>\r\n          <mdc-tab routerLink=\"{{tab.router}}\" *ngFor=\"let tab of tabs\" [label]=\"tab.label\"></mdc-tab>\r\n        </mdc-tab-scroller>\r\n      </mdc-tab-bar>\r\n    </mdc-top-app-bar-section>\r\n    <mdc-top-app-bar-section align=\"end\">\r\n      <a target=\"_blank\" href=\"{{contact.behance}}\"><button mdcIconButton class=\"behance-icon-button\">\r\n        <mdc-icon>\r\n          <svg viewBox=\"0 0 24 24\" preserveAspectRatio=\"xMidYMid meet\" focusable=\"false\"\r\n               style=\"pointer-events: none; display: block; width: 100%; height: 100%;\">\r\n            <g>\r\n              <path d=\"M9.7,11.2c1.3-0.6,2-1.6,2-3.1c0-2.9-2.2-3.7-4.7-3.7H0v14.8h7.2c2.7,0,5.2-1.3,5.2-4.3C12.4,13.1,11.5,11.7,9.7,11.2\r\n\tL9.7,11.2z M3.2,6.9h3c1.2,0,2.2,0.3,2.2,1.7c0,1.3-0.8,1.8-2,1.8H3.2C3.2,10.4,3.2,6.9,3.2,6.9z M6.7,16.7H3.2v-4.1h3.5\r\n\tc1.4,0,2.3,0.6,2.3,2.1C9.1,16.2,8,16.7,6.7,16.7L6.7,16.7z M21.7,6.7h-6V5.2h6V6.7L21.7,6.7z M24,14c0-3.2-1.9-5.8-5.2-5.8\r\n\tc-3.3,0-5.5,2.5-5.5,5.7c0,3.3,2.1,5.6,5.5,5.6c2.6,0,4.2-1.1,5-3.6h-2.6c-0.3,0.9-1.4,1.4-2.3,1.4c-1.7,0-2.6-1-2.6-2.7H24\r\n\tC24,14.4,24,14.2,24,14z M16.3,12.7c0.1-1.4,1-2.3,2.4-2.3c1.5,0,2.2,0.9,2.3,2.3H16.3z\"></path>\r\n            </g>\r\n          </svg>\r\n        </mdc-icon>\r\n      </button>\r\n      </a>\r\n      <a target=\"_blank\" href=\"{{contact.github}}\"><button mdcIconButton class=\"github-icon-button\">\r\n        <mdc-icon>\r\n          <svg viewBox=\"0 0 24 24\" preserveAspectRatio=\"xMidYMid meet\" focusable=\"false\"\r\n               style=\"pointer-events: none; display: block; width: 100%; height: 100%;\">\r\n            <g>\r\n              <path d=\"M8,18.8C8,18.9,7.9,19,7.8,19c-0.2,0-0.3-0.1-0.3-0.2c0-0.1,0.1-0.2,0.3-0.2C7.9,18.7,8,18.7,8,18.8z M6.5,18.6\r\n\tc0,0.1,0.1,0.2,0.2,0.2c0.1,0,0.3,0,0.3-0.1c0-0.1-0.1-0.2-0.2-0.3C6.7,18.5,6.6,18.5,6.5,18.6L6.5,18.6z M8.7,18.5\r\n\tc-0.1,0-0.2,0.1-0.2,0.2c0,0.1,0.1,0.2,0.3,0.1c0.1,0,0.2-0.1,0.2-0.2C8.9,18.6,8.8,18.5,8.7,18.5z M11.8,0C5.1,0,0,5.1,0,11.8\r\n\tc0,5.4,3.4,10,8.2,11.6C8.8,23.5,9,23.1,9,22.8c0-0.3,0-2,0-3c0,0-3.4,0.7-4.1-1.4c0,0-0.6-1.4-1.3-1.8c0,0-1.1-0.8,0.1-0.7\r\n\tc0,0,1.2,0.1,1.9,1.2c1.1,1.9,2.8,1.3,3.5,1c0.1-0.8,0.4-1.3,0.8-1.6c-2.7-0.3-5.4-0.7-5.4-5.3c0-1.3,0.4-2,1.1-2.8\r\n\tC5.4,8,5,6.7,5.7,5C6.7,4.7,9,6.3,9,6.3c1-0.3,2-0.4,3-0.4s2.1,0.1,3,0.4c0,0,2.3-1.6,3.3-1.3c0.7,1.7,0.3,3,0.1,3.3\r\n\tc0.8,0.9,1.2,1.5,1.2,2.8c0,4.7-2.9,5-5.6,5.3c0.4,0.4,0.8,1.1,0.8,2.2c0,1.6,0,3.6,0,4c0,0.3,0.2,0.7,0.8,0.6\r\n\tc4.8-1.6,8.1-6.2,8.1-11.6C24,5.1,18.6,0,11.8,0z M4.7,16.7c-0.1,0,0,0.2,0,0.3C4.8,17,4.9,17.1,5,17c0.1,0,0-0.2,0-0.3\r\n\tC4.9,16.7,4.8,16.6,4.7,16.7z M4.2,16.3c0,0.1,0,0.1,0.1,0.2c0.1,0,0.2,0,0.2,0c0-0.1,0-0.1-0.1-0.2C4.3,16.2,4.2,16.2,4.2,16.3z\r\n\t M5.7,18c-0.1,0.1,0,0.2,0.1,0.3c0.1,0.1,0.3,0.1,0.3,0c0.1-0.1,0-0.2-0.1-0.3C6,18,5.8,17.9,5.7,18z M5.2,17.3\r\n\tc-0.1,0-0.1,0.2,0,0.3s0.2,0.2,0.3,0.1c0.1-0.1,0.1-0.2,0-0.3C5.4,17.3,5.3,17.2,5.2,17.3L5.2,17.3z\"></path>\r\n            </g>\r\n          </svg>\r\n        </mdc-icon>\r\n      </button>\r\n      </a>\r\n      <a target=\"_blank\" href=\"{{contact.medium}}\"><button mdcIconButton class=\"medium-icon-button\">\r\n        <mdc-icon>\r\n          <svg viewBox=\"0 0 24 24\" preserveAspectRatio=\"xMidYMid meet\" focusable=\"false\"\r\n               style=\"pointer-events: none; display: block; width: 100%; height: 100%;\">\r\n            <g>\r\n              <path d=\"M2.9,6.3c0-0.3-0.1-0.6-0.3-0.8L0.4,2.8V2.4h7l5.4,11.8l4.7-11.8h6.6v0.4l-1.9,1.8c-0.2,0.1-0.2,0.3-0.2,0.5v13.5\r\n\tc0,0.2,0,0.4,0.2,0.5L24,21v0.4h-9.4V21l1.9-1.9c0.2-0.2,0.2-0.2,0.2-0.5V7.7l-5.4,13.7h-0.7L4.3,7.7v9.2c-0.1,0.4,0.1,0.8,0.3,1.1\r\n\tL7.2,21v0.4H0.1V21l2.5-3.1c0.3-0.3,0.4-0.7,0.3-1.1V6.3z\"></path>\r\n            </g>\r\n          </svg>\r\n        </mdc-icon>\r\n      </button>\r\n      </a>\r\n      <a target=\"_blank\" href=\"{{contact.linkedin}}\">\r\n\t<button mdcIconButton class=\"linkedin-icon-button\">\r\n\t  <mdc-icon>\r\n\t    <svg aria-hidden=\"true\" focusable=\"false\" data-prefix=\"fab\" data-icon=\"linkedin-in\" class=\"svg-inline--fa fa-linkedin-in fa-w-14\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 448 512\"><path fill=\"currentColor\" d=\"M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z\"></path></svg>\r\n\t  </mdc-icon>\r\n\t</button>\r\n      </a>\r\n      <a target=\"_blank\" href=\"{{contact.twitter}}\">\r\n\t<button mdcIconButton class=\"twitter-icon-button\">\r\n\t  <mdc-icon>\r\n\t    <svg viewBox=\"0 0 24 24\" preserveAspectRatio=\"xMidYMid meet\" focusable=\"false\"\r\n               style=\"pointer-events: none; display: block; width: 100%; height: 100%;\">\r\n\t       <g>\r\n\t\t <path d=\"M21.5,7.1c0,0.2,0,0.4,0,0.6c0,6.5-4.9,14-14,14c-2.8,0-5.4-0.8-7.6-2.2c0.4,0,0.8,0.1,1.2,0.1c2.3,0,4.4-0.8,6.1-2.1\r\n\t\t c-2.2,0-4-1.5-4.6-3.4c0.3,0,0.6,0.1,0.9,0.1c0.4,0,0.9-0.1,1.3-0.2C2.7,13.5,1,11.6,1,9.2V9.1c0.7,0.4,1.4,0.6,2.2,0.6\r\n\t\t C1.9,8.8,1,7.3,1,5.6c0-0.9,0.2-1.8,0.7-2.5c2.4,3,6.1,4.9,10.1,5.1c-0.1-0.4-0.1-0.7-0.1-1.1c0-2.7,2.2-4.9,4.9-4.9\r\n\t\t c1.4,0,2.7,0.6,3.6,1.6c1.1-0.2,2.2-0.6,3.1-1.2c-0.4,1.1-1.1,2.1-2.2,2.7c1-0.1,1.9-0.4,2.8-0.8C23.3,5.5,22.5,6.4,21.5,7.1\r\n\t\t L21.5,7.1z\"></path>\r\n            </g>\r\n          </svg>\r\n        </mdc-icon>\r\n\t</button>\r\n      </a>\r\n    </mdc-top-app-bar-section>\r\n  </mdc-top-app-bar-row>\r\n  <!--\r\n  <mdc-top-app-bar-row>\r\n    <mdc-top-app-bar-section>\r\n      <mdc-tab-bar #mdcTabBar align=\"center\">\r\n        <mdc-tab-scroller>\r\n          <mdc-tab routerLink=\"{{tab.router}}\" *ngFor=\"let tab of tabs\" [label]=\"tab.label\"></mdc-tab>\r\n        </mdc-tab-scroller>\r\n      </mdc-tab-bar>\r\n    </mdc-top-app-bar-section>\r\n  </mdc-top-app-bar-row>\r\n  -->\r\n</mdc-top-app-bar>\r\n\r\n<!--\r\n<div #fixedContent class=\"demo-drawer-app-content\">\r\n\r\n  <div style=\"text-align: center; \">\r\n    <div mdcHeadline4>\r\n      Sergio Belda\r\n    </div>\r\n    <mdc-card class=\"demo-card\" outlined>\r\n      <div mdcBody1>\r\n        {{bio}}\r\n      </div>\r\n\r\n    </mdc-card>\r\n\r\n\r\n  </div>\r\n</div>\r\n\r\n<p>Activated tab: {{ mdcTabBar.activeTabIndex }}</p>\r\n-->\r\n\r\n<div>\r\n  <mdc-drawer #appDrawer drawer=\"modal\">\r\n    <mdc-drawer-header>\r\n      <h3 mdcDrawerTitle>Menu</h3>\r\n    </mdc-drawer-header>\r\n    <mdc-drawer-content>\r\n      <mdc-list #mdcList>\r\n        <mdc-list-item routerLink=\"{{item.router}}\" *ngFor=\"let item of tabs\">\r\n          {{item.label}}\r\n        </mdc-list-item>\r\n      </mdc-list>\r\n    </mdc-drawer-content>\r\n  </mdc-drawer>\r\n\r\n  <div #fixedContent>\r\n    <router-outlet></router-outlet>\r\n  </div>\r\n</div>\r\n\r\n\r\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<mdc-top-app-bar fixed [fixedAdjustElement]=\"fixedContent\" class=\"demo-top-app-bar-themed\">\n  <mdc-top-app-bar-row>\n    <mdc-top-app-bar-section align=\"start\">\n      <button class=\"mdc-button\" mdcTopAppBarNavIcon (click)=\"appDrawer.open = !appDrawer.open\">\n        <mdc-icon>menu</mdc-icon>\n      </button>\n      <mdc-tab-bar #mdcTabBar fade fixed>\n        <mdc-tab-scroller>\n          <mdc-tab routerLink=\"{{tab.router}}\" *ngFor=\"let tab of tabs\" [label]=\"tab.label\"></mdc-tab>\n        </mdc-tab-scroller>\n      </mdc-tab-bar>\n    </mdc-top-app-bar-section>\n    <mdc-top-app-bar-section align=\"end\">\n      <a target=\"_blank\" href=\"{{contact.behance}}\"><button mdcIconButton class=\"behance-icon-button\">\n        <mdc-icon>\n          <svg viewBox=\"0 0 24 24\" preserveAspectRatio=\"xMidYMid meet\" focusable=\"false\"\n               style=\"pointer-events: none; display: block; width: 100%; height: 100%;\">\n            <g>\n              <path d=\"M9.7,11.2c1.3-0.6,2-1.6,2-3.1c0-2.9-2.2-3.7-4.7-3.7H0v14.8h7.2c2.7,0,5.2-1.3,5.2-4.3C12.4,13.1,11.5,11.7,9.7,11.2\n\tL9.7,11.2z M3.2,6.9h3c1.2,0,2.2,0.3,2.2,1.7c0,1.3-0.8,1.8-2,1.8H3.2C3.2,10.4,3.2,6.9,3.2,6.9z M6.7,16.7H3.2v-4.1h3.5\n\tc1.4,0,2.3,0.6,2.3,2.1C9.1,16.2,8,16.7,6.7,16.7L6.7,16.7z M21.7,6.7h-6V5.2h6V6.7L21.7,6.7z M24,14c0-3.2-1.9-5.8-5.2-5.8\n\tc-3.3,0-5.5,2.5-5.5,5.7c0,3.3,2.1,5.6,5.5,5.6c2.6,0,4.2-1.1,5-3.6h-2.6c-0.3,0.9-1.4,1.4-2.3,1.4c-1.7,0-2.6-1-2.6-2.7H24\n\tC24,14.4,24,14.2,24,14z M16.3,12.7c0.1-1.4,1-2.3,2.4-2.3c1.5,0,2.2,0.9,2.3,2.3H16.3z\"></path>\n            </g>\n          </svg>\n        </mdc-icon>\n      </button>\n      </a>\n      <a target=\"_blank\" href=\"{{contact.github}}\"><button mdcIconButton class=\"github-icon-button\">\n        <mdc-icon>\n          <svg viewBox=\"0 0 24 24\" preserveAspectRatio=\"xMidYMid meet\" focusable=\"false\"\n               style=\"pointer-events: none; display: block; width: 100%; height: 100%;\">\n            <g>\n              <path d=\"M8,18.8C8,18.9,7.9,19,7.8,19c-0.2,0-0.3-0.1-0.3-0.2c0-0.1,0.1-0.2,0.3-0.2C7.9,18.7,8,18.7,8,18.8z M6.5,18.6\n\tc0,0.1,0.1,0.2,0.2,0.2c0.1,0,0.3,0,0.3-0.1c0-0.1-0.1-0.2-0.2-0.3C6.7,18.5,6.6,18.5,6.5,18.6L6.5,18.6z M8.7,18.5\n\tc-0.1,0-0.2,0.1-0.2,0.2c0,0.1,0.1,0.2,0.3,0.1c0.1,0,0.2-0.1,0.2-0.2C8.9,18.6,8.8,18.5,8.7,18.5z M11.8,0C5.1,0,0,5.1,0,11.8\n\tc0,5.4,3.4,10,8.2,11.6C8.8,23.5,9,23.1,9,22.8c0-0.3,0-2,0-3c0,0-3.4,0.7-4.1-1.4c0,0-0.6-1.4-1.3-1.8c0,0-1.1-0.8,0.1-0.7\n\tc0,0,1.2,0.1,1.9,1.2c1.1,1.9,2.8,1.3,3.5,1c0.1-0.8,0.4-1.3,0.8-1.6c-2.7-0.3-5.4-0.7-5.4-5.3c0-1.3,0.4-2,1.1-2.8\n\tC5.4,8,5,6.7,5.7,5C6.7,4.7,9,6.3,9,6.3c1-0.3,2-0.4,3-0.4s2.1,0.1,3,0.4c0,0,2.3-1.6,3.3-1.3c0.7,1.7,0.3,3,0.1,3.3\n\tc0.8,0.9,1.2,1.5,1.2,2.8c0,4.7-2.9,5-5.6,5.3c0.4,0.4,0.8,1.1,0.8,2.2c0,1.6,0,3.6,0,4c0,0.3,0.2,0.7,0.8,0.6\n\tc4.8-1.6,8.1-6.2,8.1-11.6C24,5.1,18.6,0,11.8,0z M4.7,16.7c-0.1,0,0,0.2,0,0.3C4.8,17,4.9,17.1,5,17c0.1,0,0-0.2,0-0.3\n\tC4.9,16.7,4.8,16.6,4.7,16.7z M4.2,16.3c0,0.1,0,0.1,0.1,0.2c0.1,0,0.2,0,0.2,0c0-0.1,0-0.1-0.1-0.2C4.3,16.2,4.2,16.2,4.2,16.3z\n\t M5.7,18c-0.1,0.1,0,0.2,0.1,0.3c0.1,0.1,0.3,0.1,0.3,0c0.1-0.1,0-0.2-0.1-0.3C6,18,5.8,17.9,5.7,18z M5.2,17.3\n\tc-0.1,0-0.1,0.2,0,0.3s0.2,0.2,0.3,0.1c0.1-0.1,0.1-0.2,0-0.3C5.4,17.3,5.3,17.2,5.2,17.3L5.2,17.3z\"></path>\n            </g>\n          </svg>\n        </mdc-icon>\n      </button>\n      </a>\n      <a target=\"_blank\" href=\"{{contact.medium}}\"><button mdcIconButton class=\"medium-icon-button\">\n        <mdc-icon>\n          <svg viewBox=\"0 0 24 24\" preserveAspectRatio=\"xMidYMid meet\" focusable=\"false\"\n               style=\"pointer-events: none; display: block; width: 100%; height: 100%;\">\n            <g>\n              <path d=\"M2.9,6.3c0-0.3-0.1-0.6-0.3-0.8L0.4,2.8V2.4h7l5.4,11.8l4.7-11.8h6.6v0.4l-1.9,1.8c-0.2,0.1-0.2,0.3-0.2,0.5v13.5\n\tc0,0.2,0,0.4,0.2,0.5L24,21v0.4h-9.4V21l1.9-1.9c0.2-0.2,0.2-0.2,0.2-0.5V7.7l-5.4,13.7h-0.7L4.3,7.7v9.2c-0.1,0.4,0.1,0.8,0.3,1.1\n\tL7.2,21v0.4H0.1V21l2.5-3.1c0.3-0.3,0.4-0.7,0.3-1.1V6.3z\"></path>\n            </g>\n          </svg>\n        </mdc-icon>\n      </button>\n      </a>\n      <a target=\"_blank\" href=\"{{contact.linkedin}}\">\n\t<button mdcIconButton class=\"linkedin-icon-button\">\n\t  <mdc-icon>\n\t    <svg aria-hidden=\"true\" focusable=\"false\" data-prefix=\"fab\" data-icon=\"linkedin-in\" class=\"svg-inline--fa fa-linkedin-in fa-w-14\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 448 512\"><path fill=\"currentColor\" d=\"M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z\"></path></svg>\n\t  </mdc-icon>\n\t</button>\n      </a>\n      <a target=\"_blank\" href=\"{{contact.twitter}}\">\n\t<button mdcIconButton class=\"twitter-icon-button\">\n\t  <mdc-icon>\n\t    <svg viewBox=\"0 0 24 24\" preserveAspectRatio=\"xMidYMid meet\" focusable=\"false\"\n               style=\"pointer-events: none; display: block; width: 100%; height: 100%;\">\n\t       <g>\n\t\t <path d=\"M21.5,7.1c0,0.2,0,0.4,0,0.6c0,6.5-4.9,14-14,14c-2.8,0-5.4-0.8-7.6-2.2c0.4,0,0.8,0.1,1.2,0.1c2.3,0,4.4-0.8,6.1-2.1\n\t\t c-2.2,0-4-1.5-4.6-3.4c0.3,0,0.6,0.1,0.9,0.1c0.4,0,0.9-0.1,1.3-0.2C2.7,13.5,1,11.6,1,9.2V9.1c0.7,0.4,1.4,0.6,2.2,0.6\n\t\t C1.9,8.8,1,7.3,1,5.6c0-0.9,0.2-1.8,0.7-2.5c2.4,3,6.1,4.9,10.1,5.1c-0.1-0.4-0.1-0.7-0.1-1.1c0-2.7,2.2-4.9,4.9-4.9\n\t\t c1.4,0,2.7,0.6,3.6,1.6c1.1-0.2,2.2-0.6,3.1-1.2c-0.4,1.1-1.1,2.1-2.2,2.7c1-0.1,1.9-0.4,2.8-0.8C23.3,5.5,22.5,6.4,21.5,7.1\n\t\t L21.5,7.1z\"></path>\n            </g>\n          </svg>\n        </mdc-icon>\n\t</button>\n      </a>\n    </mdc-top-app-bar-section>\n  </mdc-top-app-bar-row>\n  <!--\n  <mdc-top-app-bar-row>\n    <mdc-top-app-bar-section>\n      <mdc-tab-bar #mdcTabBar align=\"center\">\n        <mdc-tab-scroller>\n          <mdc-tab routerLink=\"{{tab.router}}\" *ngFor=\"let tab of tabs\" [label]=\"tab.label\"></mdc-tab>\n        </mdc-tab-scroller>\n      </mdc-tab-bar>\n    </mdc-top-app-bar-section>\n  </mdc-top-app-bar-row>\n  -->\n</mdc-top-app-bar>\n\n<!--\n<div #fixedContent class=\"demo-drawer-app-content\">\n\n  <div style=\"text-align: center; \">\n    <div mdcHeadline4>\n      Sergio Belda\n    </div>\n    <mdc-card class=\"demo-card\" outlined>\n      <div mdcBody1>\n        {{bio}}\n      </div>\n\n    </mdc-card>\n\n\n  </div>\n</div>\n\n<p>Activated tab: {{ mdcTabBar.activeTabIndex }}</p>\n-->\n\n<div>\n  <mdc-drawer #appDrawer drawer=\"modal\">\n    <mdc-drawer-header>\n      <h3 mdcDrawerTitle>Menu</h3>\n    </mdc-drawer-header>\n    <mdc-drawer-content>\n      <mdc-list #mdcList>\n        <mdc-list-item routerLink=\"{{item.router}}\" *ngFor=\"let item of tabs\">\n          {{item.label}}\n        </mdc-list-item>\n      </mdc-list>\n    </mdc-drawer-content>\n  </mdc-drawer>\n\n  <div #fixedContent>\n    <router-outlet></router-outlet>\n  </div>\n</div>\n\n\n"
 
 /***/ }),
 
@@ -52,7 +52,7 @@ module.exports = "<!--The content below is only a placeholder and can be replace
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"content-grid\">\r\n  <mdc-card outlined *ngFor=\"let post of posts\" class=\"post-card\">\r\n    <img src=\"{{post.thumbnail}}\" >\r\n    <div class=\"post-card-title\">\r\n      <div mdcHeadline6>{{post.title}}</div>\r\n    </div>\r\n    <mdc-card-actions>\r\n      <mdc-card-action-buttons>\r\n        <a target=\"_blank\" href=\"{{post.url}}\"><button mdc-button mdcCardAction=\"button\" outlined>Read</button></a>\r\n      </mdc-card-action-buttons>\r\n    </mdc-card-actions>\r\n  </mdc-card>\r\n</div>\r\n"
+module.exports = "<div class=\"content-grid\">\n  <mdc-card outlined *ngFor=\"let post of posts\" class=\"post-card\">\n    <img src=\"{{post.thumbnail}}\" >\n    <div class=\"post-card-title\">\n      <div mdcHeadline6>{{post.title}}</div>\n    </div>\n    <mdc-card-actions>\n      <mdc-card-action-buttons>\n        <a target=\"_blank\" href=\"{{post.url}}\"><button mdc-button mdcCardAction=\"button\" outlined>Read</button></a>\n      </mdc-card-action-buttons>\n    </mdc-card-actions>\n  </mdc-card>\n</div>\n"
 
 /***/ }),
 
@@ -63,7 +63,7 @@ module.exports = "<div class=\"content-grid\">\r\n  <mdc-card outlined *ngFor=\"
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\r\n  projects works!\r\n</p>\r\n"
+module.exports = "<div class=\"projects-content\">\n  <div *ngFor=\"let project of projects\">\n    <div mdcHeadline4>{{project.title}}</div>\n    <div class=\"project\">\n      <img class=\"project-img\" *ngIf=\"notEmpty(project.thumbnail)\" src=\"{{project.thumbnail}}\" alt=\"Photo\" height=\"180\">\n      <iframe *ngIf=\"notEmpty(project.video_url)\" width=\"560\" height=\"315\" [src]=\"transform(project.video_url)\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -191,7 +191,7 @@ let AppComponent = class AppComponent {
         this.contact = src_data_bio_json__WEBPACK_IMPORTED_MODULE_3__.contact;
         this.tabs = [
             { label: 'Posts', router: 'posts' },
-            // { label: 'Projects', router: 'projects' },
+            { label: 'Projects', router: 'projects' },
             { label: 'About', router: 'about' }
         ];
         this.navStart = router.events.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["filter"])(evt => evt instanceof _angular_router__WEBPACK_IMPORTED_MODULE_5__["NavigationStart"]));
@@ -211,10 +211,13 @@ let AppComponent = class AppComponent {
                     this.mdcTabBar.activeTabIndex = 0;
                     this.mdcList.setSelectedIndex(0);
                     break;
-                // case '/projects' : this.mdcTabBar.activeTabIndex = 1 ; this.mdcList.setSelectedIndex(1) ; break;
-                case '/about':
+                case '/projects':
                     this.mdcTabBar.activeTabIndex = 1;
                     this.mdcList.setSelectedIndex(1);
+                    break;
+                case '/about':
+                    this.mdcTabBar.activeTabIndex = 2;
+                    this.mdcList.setSelectedIndex(2);
                     break;
             }
         });
@@ -389,10 +392,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProjectsComponent", function() { return ProjectsComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var src_data_projects_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/data/projects.json */ "./src/data/projects.json");
+var src_data_projects_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webpack_require__.t(/*! src/data/projects.json */ "./src/data/projects.json", 1);
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+
+
 
 
 let ProjectsComponent = class ProjectsComponent {
-    constructor() { }
+    constructor(sanitizer) {
+        this.sanitizer = sanitizer;
+        this.projects = src_data_projects_json__WEBPACK_IMPORTED_MODULE_2__;
+    }
+    transform(url) {
+        return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+    }
+    notEmpty(field) {
+        return field !== '';
+    }
     ngOnInit() {
     }
 };
@@ -402,7 +419,7 @@ ProjectsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         template: __webpack_require__(/*! raw-loader!./projects.component.html */ "./node_modules/raw-loader/index.js!./src/app/projects/projects.component.html"),
         styles: [__webpack_require__(/*! ./projects.component.scss */ "./src/app/projects/projects.component.scss")]
     }),
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["DomSanitizer"]])
 ], ProjectsComponent);
 
 
@@ -416,7 +433,7 @@ ProjectsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /*! exports provided: name, description, contact, default */
 /***/ (function(module) {
 
-module.exports = {"name":"SERGIO BELDA","description":"Software Engineer by the Polytechnic University of Valencia. Currently working on an entrepreneur project for Android in the entrepreneurship space, Start.Inf, at UPV. Passionate about software development and new technologies. Interested in the development of applications for mobile devices, design of user interfaces, web applications and IoT. Moreover, I'm attracted by the development through agile techniques, and the development of model-driven software.\n I have knowledge about different programming languages as Java, C#, C, Python, Javascript, Kotlin... Also, I have some ability in many multimedia design applications as Sketch, Adobe Photoshop and Adobe Illustrator.","contact":{"behance":"https://www.behance.net/sdagal8081d5","twitter":"https://twitter.com/SergioBeldaG","medium":"https://medium.com/@serbelga","github":"https://github.com/serbelga","linkedin":"https://www.linkedin.com/in/sergio-belda-galbis/"}};
+module.exports = {"name":"SERGIO BELDA","description":"Software Engineer by the Polytechnic University of Valencia. Passionate about software development and new technologies. My main interests are the development of Android applications, the design of user interfaces, the development of IoT projects, as well as the augmented reality projects and multimodal interfaces design.","contact":{"behance":"https://www.behance.net/sdagal8081d5","twitter":"https://twitter.com/SergioBeldaG","medium":"https://medium.com/@serbelga","github":"https://github.com/serbelga","linkedin":"https://www.linkedin.com/in/sergio-belda-galbis/"}};
 
 /***/ }),
 
@@ -439,6 +456,17 @@ module.exports = {"item":"Button"};
 /***/ (function(module) {
 
 module.exports = [{"title":"Material Components: BottomAppBar (Flutter)","url":"https://medium.com/@serbelga/material-components-bottomappbar-flutter-9008a6e54382","thumbnail":"/assets/posts/material_components_flutter_bottomappbar.jpg"},{"title":"Material Components Android: BottomAppBar - Part I","url":"https://medium.com/@serbelga/material-components-bottomappbar-kotlin-part-i-6c248600f6d3","thumbnail":"/assets/posts/material_components_android_bottomappbar.jpg"},{"title":"Material Components Android: BottomAppBar - Part II","url":"https://medium.com/@serbelga/material-components-android-bottomappbar-part-ii-1ae0079ec3a6","thumbnail":"/assets/posts/material_components_android_bottomappbar.jpg"},{"title":"Material Design Android: Shape, Color & Typography","url":"https://medium.com/@serbelga/material-theming-android-shape-color-typography-2c968a0b6ae4","thumbnail":"/assets/posts/material_design_android_theming.jpg"},{"title":"Transitions in Android Navigation Architecture Component","url":"https://medium.com/@serbelga/shared-elements-in-android-navigation-architecture-component-bc5e7922ecdf","thumbnail":"/assets/posts/navigation_transition_shared_elements.png"}];
+
+/***/ }),
+
+/***/ "./src/data/projects.json":
+/*!********************************!*\
+  !*** ./src/data/projects.json ***!
+  \********************************/
+/*! exports provided: 0, default */
+/***/ (function(module) {
+
+module.exports = [{"title":"PymApp","url":"","thumbnail":"/assets/projects/pymapp.jpg","video_url":"https://www.youtube.com/embed/lA2q7zM1IZ0","description":""}];
 
 /***/ }),
 
@@ -503,7 +531,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\Users\ser12\WebStormProjects\serbelga.github.io\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/sergiobelda/WebstormProjects/serbelga.github.io_angular/src/main.ts */"./src/main.ts");
 
 
 /***/ })
