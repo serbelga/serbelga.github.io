@@ -23,6 +23,11 @@
      "title": "Transitions in Android Navigation Architecture Component",
      "url": "https://medium.com/@serbelga/shared-elements-in-android-navigation-architecture-component-bc5e7922ecdf",
      "thumbnail": "/assets/posts/navigation_transition_shared_elements.png"
-   }
+   },
+   {
+     "title": "Build a weather station with Google Cloud IoT, Cloud Firestore, Mongoose OS & Android Jetpack",
+     "url": "https://medium.com/@serbelga/build-a-weather-station-with-google-cloud-iot-cloud-firestore-mongoose-os-android-jetpack-350556d7a",
+     "thumbnail": "https://cdn-images-1.medium.com/max/2400/1*7KCEXkmDxHMS7FWG8sNplQ.jpeg"
+   },
  ]
 
