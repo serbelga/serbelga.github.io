@@ -29,12 +29,15 @@ $mdc-shape-medium-component-radius: 0px;
 $mdc-shape-large-component-radius: 0px;
 
 
+
 @import "~@angular-mdc/theme/material";
 @import "~@angular-mdc/theme/material-components-web";
 
 .demo-top-app-bar-themed {
   @include mdc-top-app-bar-fill-color(rgba(255, 255, 255, 0.98));
   @include mdc-top-app-bar-icon-ink-color($mdc-theme-primary);
+  //@include mdc-tab-ink-color($mdc-theme-secondary);
+  //@include mdc-tab-indicator-underline-color($mdc-theme-secondary);
   .mdc-tab-bar {
     margin-top: 1em;
 
@@ -48,6 +51,10 @@ $mdc-shape-large-component-radius: 0px;
       display: none;
     }
   }
+
+  .mdc-tab {
+    letter-spacing: 0.1px;
+  }
 }
 
 .demo-drawer-app-content {
@@ -58,6 +65,11 @@ $mdc-shape-large-component-radius: 0px;
 
 .post-card {
   margin: 24px;
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.post-card:hover {
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
 
 .post-card img {
@@ -120,21 +132,37 @@ a {
 }
 
 .projects-content {
+  /*
   flex-direction: column;
   justify-content: center;
   display: flex;
+  */
   margin: 24px;
+  /*
   align-items: center;
+  */
 }
 
 .project {
   margin-top: 24px;
   display: flex;
-  flex-direction: column
+  flex-direction: row
 }
 
 .project-img {
   border: 1px solid $material-color-grey-400;
   object-fit: contain;
-  margin-bottom: 24px;
+}
+
+.project-info {
+  margin-left: 24px;
+  margin-right: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.slick-prev, .slick-next {
+  color: red;
+  background: red;
 }

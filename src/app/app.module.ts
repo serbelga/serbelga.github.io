@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { SlickModule } from 'ngx-slick';
 import {
   MdcFabModule,
   MdcIconModule,
@@ -58,6 +58,7 @@ const appRoutes: Routes = [
     MdcTabIndicatorModule,
     MdcCardModule,
     MdcDrawerModule,
+    SlickModule.forRoot(),
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
