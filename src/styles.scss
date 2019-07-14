@@ -11,8 +11,13 @@ $mdc-typography-styles-button: (
 $mdc-typography-styles-headline2: (
   font-family: 'Roboto Condensed'
 );
+$mdc-typography-styles-headline3: (
+  font-family: 'Montserrat',
+  color: #212121
+);
 $mdc-typography-styles-headline4: (
-  font-family: 'Montserrat'
+  font-family: 'Montserrat',
+  color: $mdc-theme-primary
 );
 $mdc-typography-styles-headline5: (
   font-family: 'Roboto Condensed'
@@ -57,6 +62,11 @@ $mdc-shape-large-component-radius: 0px;
   }
 }
 
+.demo-drawer--accessible {
+  @include mdc-drawer-activated-overlay-color($mdc-theme-secondary);
+  @include mdc-drawer-item-activated-text-ink-color($mdc-theme-secondary);
+  @include mdc-drawer-item-activated-icon-ink-color($mdc-theme-secondary);
+}
 .demo-drawer-app-content {
   padding-top: 124px;
   overflow: hidden;
@@ -132,34 +142,58 @@ a {
 }
 
 .projects-content {
-  /*
-  flex-direction: column;
-  justify-content: center;
-  display: flex;
-  */
   margin: 24px;
-  /*
-  align-items: center;
-  */
 }
 
 .project {
-  margin-top: 24px;
-  display: flex;
-  flex-direction: row
+  width: 80%;
+  margin-bottom: 16px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid $material-color-grey-300
+}
+
+.last-item .project {
+  border: 0px;
+}
+
+
+.project-description {
+  margin-bottom: 16px;
+}
+
+.project-title {
+  margin-left: 16px;
+  margin-bottom: 24px;
 }
 
 .project-img {
-  border: 1px solid $material-color-grey-400;
+  border: 1px solid $material-color-grey-300;
   object-fit: contain;
 }
 
 .project-info {
-  margin-left: 24px;
-  margin-right: 24px;
+  display: flex;
+  flex-direction: row;
+  @media (max-width: 719px) {
+    flex-direction: column;
+  }
+}
+
+.project-info-add {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-left: 24px;
+  @media (max-width: 719px) {
+    margin-top: 24px;
+    margin-left: 0px;
+  }
+}
+
+
+.project-button-row {
+  display: flex;
+  flex-direction: row;
 }
 
 .slick-prev, .slick-next {
