@@ -17,16 +17,16 @@
    {
      "title": "Material Design Android: Shape, Color & Typography",
      "url": "https://medium.com/@serbelga/material-theming-android-shape-color-typography-2c968a0b6ae4",
-     "thumbnail": "/assets/posts/material_design_android_theming.jpg"
+     "thumbnail": "https://raw.githubusercontent.com/serbelga/serbelga.github.io/data/img/Material_Theming.jpg"
    },
    {
      "title": "Transitions in Android Navigation Architecture Component",
      "url": "https://medium.com/@serbelga/shared-elements-in-android-navigation-architecture-component-bc5e7922ecdf",
-     "thumbnail": "/assets/posts/navigation_transition_shared_elements.png"
+     "thumbnail": "https://raw.githubusercontent.com/serbelga/serbelga.github.io/data/img/Android_Transitions.png"
    },
    {
      "title": "Build a weather station with Google Cloud IoT, Cloud Firestore, Mongoose OS & Android Jetpack",
      "url": "https://medium.com/@serbelga/build-a-weather-station-with-google-cloud-iot-cloud-firestore-mongoose-os-android-jetpack-350556d7a",
-     "thumbnail": "https://cdn-images-1.medium.com/max/2400/1*7KCEXkmDxHMS7FWG8sNplQ.jpeg"
+     "thumbnail": "https://raw.githubusercontent.com/serbelga/serbelga.github.io/data/img/Google_IoT.jpg"
    }
  ]
