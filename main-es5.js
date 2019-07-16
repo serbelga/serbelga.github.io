@@ -267,11 +267,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var ngx_slick__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ngx-slick */ "./node_modules/ngx-slick/ngx-slick.umd.js");
 /* harmony import */ var ngx_slick__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(ngx_slick__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _angular_mdc_web__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular-mdc/web */ "./node_modules/@angular-mdc/web/esm5/web.es5.js");
-/* harmony import */ var _about_about_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./about/about.component */ "./src/app/about/about.component.ts");
-/* harmony import */ var _posts_posts_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./posts/posts.component */ "./src/app/posts/posts.component.ts");
-/* harmony import */ var _projects_projects_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./projects/projects.component */ "./src/app/projects/projects.component.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+/* harmony import */ var _angular_mdc_web__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular-mdc/web */ "./node_modules/@angular-mdc/web/esm5/web.es5.js");
+/* harmony import */ var _about_about_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./about/about.component */ "./src/app/about/about.component.ts");
+/* harmony import */ var _posts_posts_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./posts/posts.component */ "./src/app/posts/posts.component.ts");
+/* harmony import */ var _projects_projects_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./projects/projects.component */ "./src/app/projects/projects.component.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm5/router.js");
+
 
 
 
@@ -284,10 +286,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var appRoutes = [
-    { path: '', component: _posts_posts_component__WEBPACK_IMPORTED_MODULE_8__["PostsComponent"] },
-    { path: 'about', component: _about_about_component__WEBPACK_IMPORTED_MODULE_7__["AboutComponent"] },
-    { path: 'posts', component: _posts_posts_component__WEBPACK_IMPORTED_MODULE_8__["PostsComponent"] },
-    { path: 'projects', component: _projects_projects_component__WEBPACK_IMPORTED_MODULE_9__["ProjectsComponent"] }
+    { path: '', component: _posts_posts_component__WEBPACK_IMPORTED_MODULE_9__["PostsComponent"] },
+    { path: 'about', component: _about_about_component__WEBPACK_IMPORTED_MODULE_8__["AboutComponent"] },
+    { path: 'posts', component: _posts_posts_component__WEBPACK_IMPORTED_MODULE_9__["PostsComponent"] },
+    { path: 'projects', component: _projects_projects_component__WEBPACK_IMPORTED_MODULE_10__["ProjectsComponent"] }
 ];
 var AppModule = /** @class */ (function () {
     function AppModule() {
@@ -296,31 +298,32 @@ var AppModule = /** @class */ (function () {
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
             declarations: [
                 _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
-                _about_about_component__WEBPACK_IMPORTED_MODULE_7__["AboutComponent"],
-                _posts_posts_component__WEBPACK_IMPORTED_MODULE_8__["PostsComponent"],
-                _projects_projects_component__WEBPACK_IMPORTED_MODULE_9__["ProjectsComponent"]
+                _about_about_component__WEBPACK_IMPORTED_MODULE_8__["AboutComponent"],
+                _posts_posts_component__WEBPACK_IMPORTED_MODULE_9__["PostsComponent"],
+                _projects_projects_component__WEBPACK_IMPORTED_MODULE_10__["ProjectsComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HttpClientModule"],
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
-                _angular_mdc_web__WEBPACK_IMPORTED_MODULE_6__["MdcCardModule"],
-                _angular_mdc_web__WEBPACK_IMPORTED_MODULE_6__["MdcFabModule"],
-                _angular_mdc_web__WEBPACK_IMPORTED_MODULE_6__["MdcIconModule"],
-                _angular_mdc_web__WEBPACK_IMPORTED_MODULE_6__["MdcMenuModule"],
-                _angular_mdc_web__WEBPACK_IMPORTED_MODULE_6__["MdcIconButtonModule"],
-                _angular_mdc_web__WEBPACK_IMPORTED_MODULE_6__["MdcButtonModule"],
-                _angular_mdc_web__WEBPACK_IMPORTED_MODULE_6__["MdcTypographyModule"],
-                _angular_mdc_web__WEBPACK_IMPORTED_MODULE_6__["MdcTopAppBarModule"],
-                _angular_mdc_web__WEBPACK_IMPORTED_MODULE_6__["MdcTabModule"],
-                _angular_mdc_web__WEBPACK_IMPORTED_MODULE_6__["MdcTabScrollerModule"],
-                _angular_mdc_web__WEBPACK_IMPORTED_MODULE_6__["MdcTabBarModule"],
-                _angular_mdc_web__WEBPACK_IMPORTED_MODULE_6__["MdcListModule"],
-                _angular_mdc_web__WEBPACK_IMPORTED_MODULE_6__["MdcImageListModule"],
-                _angular_mdc_web__WEBPACK_IMPORTED_MODULE_6__["MdcTabIndicatorModule"],
-                _angular_mdc_web__WEBPACK_IMPORTED_MODULE_6__["MdcCardModule"],
-                _angular_mdc_web__WEBPACK_IMPORTED_MODULE_6__["MdcDrawerModule"],
+                _angular_mdc_web__WEBPACK_IMPORTED_MODULE_7__["MdcCardModule"],
+                _angular_mdc_web__WEBPACK_IMPORTED_MODULE_7__["MdcFabModule"],
+                _angular_mdc_web__WEBPACK_IMPORTED_MODULE_7__["MdcIconModule"],
+                _angular_mdc_web__WEBPACK_IMPORTED_MODULE_7__["MdcMenuModule"],
+                _angular_mdc_web__WEBPACK_IMPORTED_MODULE_7__["MdcIconButtonModule"],
+                _angular_mdc_web__WEBPACK_IMPORTED_MODULE_7__["MdcButtonModule"],
+                _angular_mdc_web__WEBPACK_IMPORTED_MODULE_7__["MdcTypographyModule"],
+                _angular_mdc_web__WEBPACK_IMPORTED_MODULE_7__["MdcTopAppBarModule"],
+                _angular_mdc_web__WEBPACK_IMPORTED_MODULE_7__["MdcTabModule"],
+                _angular_mdc_web__WEBPACK_IMPORTED_MODULE_7__["MdcTabScrollerModule"],
+                _angular_mdc_web__WEBPACK_IMPORTED_MODULE_7__["MdcTabBarModule"],
+                _angular_mdc_web__WEBPACK_IMPORTED_MODULE_7__["MdcListModule"],
+                _angular_mdc_web__WEBPACK_IMPORTED_MODULE_7__["MdcImageListModule"],
+                _angular_mdc_web__WEBPACK_IMPORTED_MODULE_7__["MdcTabIndicatorModule"],
+                _angular_mdc_web__WEBPACK_IMPORTED_MODULE_7__["MdcCardModule"],
+                _angular_mdc_web__WEBPACK_IMPORTED_MODULE_7__["MdcDrawerModule"],
                 ngx_slick__WEBPACK_IMPORTED_MODULE_5__["SlickModule"].forRoot(),
-                _angular_router__WEBPACK_IMPORTED_MODULE_10__["RouterModule"].forRoot(appRoutes, { enableTracing: true } // <-- debugging purposes only
+                _angular_router__WEBPACK_IMPORTED_MODULE_11__["RouterModule"].forRoot(appRoutes, { enableTracing: true } // <-- debugging purposes only
                 )
             ],
             providers: [],
@@ -357,16 +360,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PostsComponent", function() { return PostsComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var src_data_posts_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/data/posts.json */ "./src/data/posts.json");
-var src_data_posts_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webpack_require__.t(/*! src/data/posts.json */ "./src/data/posts.json", 1);
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 
 
 
 var PostsComponent = /** @class */ (function () {
-    function PostsComponent() {
-        this.posts = src_data_posts_json__WEBPACK_IMPORTED_MODULE_2__;
+    function PostsComponent(http) {
+        this.http = http;
+        this.postsUrl = 'https://raw.githubusercontent.com/serbelga/serbelga.github.io/data/data/posts.json';
     }
     PostsComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.http.get(this.postsUrl).subscribe(function (data) {
+            console.log(data);
+            _this.posts = data;
+        });
     };
     PostsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -374,7 +382,7 @@ var PostsComponent = /** @class */ (function () {
             template: __webpack_require__(/*! raw-loader!./posts.component.html */ "./node_modules/raw-loader/index.js!./src/app/posts/posts.component.html"),
             styles: [__webpack_require__(/*! ./posts.component.scss */ "./src/app/posts/posts.component.scss")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
     ], PostsComponent);
     return PostsComponent;
 }());
@@ -476,17 +484,6 @@ module.exports = {"item":"Button"};
 
 /***/ }),
 
-/***/ "./src/data/posts.json":
-/*!*****************************!*\
-  !*** ./src/data/posts.json ***!
-  \*****************************/
-/*! exports provided: 0, 1, 2, 3, 4, 5, default */
-/***/ (function(module) {
-
-module.exports = [{"title":"Material Components: BottomAppBar (Flutter)","url":"https://medium.com/@serbelga/material-components-bottomappbar-flutter-9008a6e54382","thumbnail":"/assets/posts/material_components_flutter_bottomappbar.jpg"},{"title":"Material Components Android: BottomAppBar - Part I","url":"https://medium.com/@serbelga/material-components-bottomappbar-kotlin-part-i-6c248600f6d3","thumbnail":"/assets/posts/material_components_android_bottomappbar.jpg"},{"title":"Material Components Android: BottomAppBar - Part II","url":"https://medium.com/@serbelga/material-components-android-bottomappbar-part-ii-1ae0079ec3a6","thumbnail":"/assets/posts/material_components_android_bottomappbar.jpg"},{"title":"Material Design Android: Shape, Color & Typography","url":"https://medium.com/@serbelga/material-theming-android-shape-color-typography-2c968a0b6ae4","thumbnail":"/assets/posts/material_design_android_theming.jpg"},{"title":"Transitions in Android Navigation Architecture Component","url":"https://medium.com/@serbelga/shared-elements-in-android-navigation-architecture-component-bc5e7922ecdf","thumbnail":"/assets/posts/navigation_transition_shared_elements.png"},{"title":"Build a weather station with Google Cloud IoT, Cloud Firestore, Mongoose OS & Android Jetpack","url":"https://medium.com/@serbelga/build-a-weather-station-with-google-cloud-iot-cloud-firestore-mongoose-os-android-jetpack-350556d7a","thumbnail":"https://cdn-images-1.medium.com/max/2400/1*7KCEXkmDxHMS7FWG8sNplQ.jpeg"}];
-
-/***/ }),
-
 /***/ "./src/data/projects.json":
 /*!********************************!*\
   !*** ./src/data/projects.json ***!
@@ -559,7 +556,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/sergiobelda/WebstormProjects/serbelga.github.io_angular/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/sergiobelda/WebstormProjects/Portfolio/serbelga.github.io_angular/src/main.ts */"./src/main.ts");
 
 
 /***/ })
