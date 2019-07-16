@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SlickModule } from 'ngx-slick';
+import { HttpClientModule } from '@angular/common/http';
 import {
   MdcFabModule,
   MdcIconModule,
@@ -41,6 +42,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     AppRoutingModule,
     MdcCardModule,
     MdcFabModule,
