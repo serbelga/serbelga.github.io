@@ -1,0 +1,19 @@
+[
+  {
+    "title": "PymApp",
+    "url": "",
+    "thumbnail": "https://raw.githubusercontent.com/serbelga/serbelga.github.io/data/img/PymApp.jpg",
+    "youtube_video_url": "https://www.youtube.com/watch?v=lA2q7zM1IZ0",
+    "medium_url": "",
+    "github_url": "",
+    "description": "PymApp is an app that brings small businesses closer to any user interested in their products in a fast, comfortable and intuitive way. Thanks to PymApp anyone can discover the best prices and new establishments in a single space."
+  },
+  {
+    "title": "Weather Station IoT",
+    "url": "",
+    "thumbnail": "https://raw.githubusercontent.com/serbelga/serbelga.github.io/data/img/Weather_Station.jpg",
+    "youtube_video_url": "",
+    "medium_url": "https://medium.com/@serbelga/build-a-weather-station-with-google-cloud-iot-cloud-firestore-mongoose-os-android-jetpack-350556d7a",
+    "github_url": "https://github.com/serbelga/IoT_Google_Cloud_Weather"
+  }
+]
