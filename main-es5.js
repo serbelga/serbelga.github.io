@@ -414,17 +414,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ProjectsComponent", function() { return ProjectsComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var src_data_projects_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/data/projects.json */ "./src/data/projects.json");
-var src_data_projects_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webpack_require__.t(/*! src/data/projects.json */ "./src/data/projects.json", 1);
-/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm5/platform-browser.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
 
 
 
 
 var ProjectsComponent = /** @class */ (function () {
-    function ProjectsComponent(sanitizer) {
+    function ProjectsComponent(sanitizer, http) {
         this.sanitizer = sanitizer;
-        this.projects = src_data_projects_json__WEBPACK_IMPORTED_MODULE_2__;
+        this.http = http;
+        this.projectsUrl = 'https://raw.githubusercontent.com/serbelga/serbelga.github.io/data/data/projects.json';
         this.slides = [
             { img: 'http://placehold.it/350x150/000000' },
             { img: 'http://placehold.it/350x150/111111' },
@@ -439,13 +439,18 @@ var ProjectsComponent = /** @class */ (function () {
         ];
         this.slideConfig = { slidesToShow: 4, slidesToScroll: 4 };
     }
+    ProjectsComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.http.get(this.projectsUrl).subscribe(function (data) {
+            console.log(data);
+            _this.projects = data;
+        });
+    };
     ProjectsComponent.prototype.transform = function (url) {
         return this.sanitizer.bypassSecurityTrustResourceUrl(url);
     };
     ProjectsComponent.prototype.notEmpty = function (field) {
         return field !== '';
-    };
-    ProjectsComponent.prototype.ngOnInit = function () {
     };
     ProjectsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -453,7 +458,7 @@ var ProjectsComponent = /** @class */ (function () {
             template: __webpack_require__(/*! raw-loader!./projects.component.html */ "./node_modules/raw-loader/index.js!./src/app/projects/projects.component.html"),
             styles: [__webpack_require__(/*! ./projects.component.scss */ "./src/app/projects/projects.component.scss")]
         }),
-        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_3__["DomSanitizer"]])
+        tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["DomSanitizer"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"]])
     ], ProjectsComponent);
     return ProjectsComponent;
 }());
@@ -481,17 +486,6 @@ module.exports = {"name":"SERGIO BELDA","description":"Software Engineer by the 
 /***/ (function(module) {
 
 module.exports = {"item":"Button"};
-
-/***/ }),
-
-/***/ "./src/data/projects.json":
-/*!********************************!*\
-  !*** ./src/data/projects.json ***!
-  \********************************/
-/*! exports provided: 0, default */
-/***/ (function(module) {
-
-module.exports = [{"title":"PymApp","url":"","thumbnail":"/assets/projects/pymapp.jpg","youtube_video_url":"https://www.youtube.com/watch?v=lA2q7zM1IZ0","medium_url":"","github_url":"","description":"PymApp is an app that brings small businesses closer to any user interested in their products in a fast, comfortable and intuitive way. Thanks to PymApp anyone can discover the best prices and new establishments in a single space."}];
 
 /***/ }),
 
