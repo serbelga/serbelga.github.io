@@ -14,6 +14,7 @@
     "thumbnail": "https://raw.githubusercontent.com/serbelga/serbelga.github.io/data/img/Weather_Station.jpg",
     "youtube_video_url": "",
     "medium_url": "https://medium.com/@serbelga/build-a-weather-station-with-google-cloud-iot-cloud-firestore-mongoose-os-android-jetpack-350556d7a",
-    "github_url": "https://github.com/serbelga/IoT_Google_Cloud_Weather"
+    "github_url": "https://github.com/serbelga/IoT_Google_Cloud_Weather",
+    "description": "Weather Station IoT in a system developed using Google Cloud IoT Core, Cloud Firestore, Mongoose OS & Android Jetpack. This development works as a first contact with Google Cloud IoT and Mongoose OS. Many Android Jetpack components (LiveData, ViewModel, ...) and interesting things of this framework are used to build the Frontend of the system."
   }
 ]
