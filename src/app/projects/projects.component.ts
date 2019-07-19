@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import projects from 'src/data/projects.json';
 import {DomSanitizer} from '@angular/platform-browser';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-projects',
@@ -8,7 +8,8 @@ import {DomSanitizer} from '@angular/platform-browser';
   styleUrls: ['./projects.component.scss']
 })
 export class ProjectsComponent implements OnInit {
-  projects = projects;
+  projects: any;
+  projectsUrl = 'https://raw.githubusercontent.com/serbelga/serbelga.github.io/data/data/projects.json';
   slides = [
     {img: 'http://placehold.it/350x150/000000'},
     {img: 'http://placehold.it/350x150/111111'},
@@ -22,13 +23,20 @@ export class ProjectsComponent implements OnInit {
     {img: 'http://placehold.it/350x150/666666'}
   ];
   slideConfig = {slidesToShow: 4, slidesToScroll: 4};
-  constructor(private sanitizer: DomSanitizer) { }
+  constructor(private sanitizer: DomSanitizer, private http: HttpClient) { }
+  ngOnInit() {
+    this.http.get(this.projectsUrl).subscribe(
+      data => {
+        console.log(data);
+        this.projects = data;
+      }
+    );
+  }
+
   transform(url) {
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
   notEmpty(field) {
     return field !== '';
-  }
-  ngOnInit() {
   }
 }
