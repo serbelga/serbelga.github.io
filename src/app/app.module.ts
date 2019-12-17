@@ -63,7 +63,7 @@ const appRoutes: Routes = [
     SlickModule.forRoot(),
     RouterModule.forRoot(
       appRoutes,
-      { enableTracing: true } // <-- debugging purposes only
+      { useHash : true }
     )
   ],
   providers: [],

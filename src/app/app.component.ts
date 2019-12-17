@@ -1,5 +1,4 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
-import data from 'src/data/data.json';
 import bio from 'src/data/bio.json';
 
 import {MdcList, MdcTabActivatedEvent, MdcTabBar} from '@angular-mdc/web';
@@ -17,7 +16,6 @@ export class AppComponent implements OnInit {
   @ViewChild('mdcTabBar', {static: false}) mdcTabBar: MdcTabBar;
   @ViewChild('mdcList', {static: false}) mdcList: MdcList;
   title = 'sergiobelda-me-app';
-  word = data.item;
   contact = bio.contact;
   tabs = [
     { label: 'Posts', router: 'posts' },
