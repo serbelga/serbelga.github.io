@@ -169,14 +169,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var src_data_data_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/data/data.json */ "./src/data/data.json");
-var src_data_data_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webpack_require__.t(/*! src/data/data.json */ "./src/data/data.json", 1);
-/* harmony import */ var src_data_bio_json__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! src/data/bio.json */ "./src/data/bio.json");
-var src_data_bio_json__WEBPACK_IMPORTED_MODULE_3___namespace = /*#__PURE__*/__webpack_require__.t(/*! src/data/bio.json */ "./src/data/bio.json", 1);
-/* harmony import */ var _angular_mdc_web__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular-mdc/web */ "./node_modules/@angular-mdc/web/esm2015/web.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
-
+/* harmony import */ var src_data_bio_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/data/bio.json */ "./src/data/bio.json");
+var src_data_bio_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webpack_require__.t(/*! src/data/bio.json */ "./src/data/bio.json", 1);
+/* harmony import */ var _angular_mdc_web__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular-mdc/web */ "./node_modules/@angular-mdc/web/esm2015/web.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
 
 
 
@@ -187,14 +184,13 @@ let AppComponent = class AppComponent {
     constructor(router) {
         this.router = router;
         this.title = 'sergiobelda-me-app';
-        this.word = src_data_data_json__WEBPACK_IMPORTED_MODULE_2__.item;
-        this.contact = src_data_bio_json__WEBPACK_IMPORTED_MODULE_3__.contact;
+        this.contact = src_data_bio_json__WEBPACK_IMPORTED_MODULE_2__.contact;
         this.tabs = [
             { label: 'Posts', router: 'posts' },
             { label: 'Projects', router: 'projects' },
             { label: 'About', router: 'about' }
         ];
-        this.navStart = router.events.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["filter"])(evt => evt instanceof _angular_router__WEBPACK_IMPORTED_MODULE_5__["NavigationStart"]));
+        this.navStart = router.events.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["filter"])(evt => evt instanceof _angular_router__WEBPACK_IMPORTED_MODULE_4__["NavigationStart"]));
     }
     ngOnInit() {
         this.navStart.subscribe(evt => {
@@ -225,11 +221,11 @@ let AppComponent = class AppComponent {
 };
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('mdcTabBar', { static: false }),
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_mdc_web__WEBPACK_IMPORTED_MODULE_4__["MdcTabBar"])
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_mdc_web__WEBPACK_IMPORTED_MODULE_3__["MdcTabBar"])
 ], AppComponent.prototype, "mdcTabBar", void 0);
 tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('mdcList', { static: false }),
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_mdc_web__WEBPACK_IMPORTED_MODULE_4__["MdcList"])
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_mdc_web__WEBPACK_IMPORTED_MODULE_3__["MdcList"])
 ], AppComponent.prototype, "mdcList", void 0);
 AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
@@ -237,7 +233,7 @@ AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         template: __webpack_require__(/*! raw-loader!./app.component.html */ "./node_modules/raw-loader/index.js!./src/app/app.component.html"),
         styles: [__webpack_require__(/*! ./app.component.scss */ "./src/app/app.component.scss")]
     }),
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_5__["Router"]])
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]])
 ], AppComponent);
 
 
@@ -316,8 +312,7 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _angular_mdc_web__WEBPACK_IMPORTED_MODULE_7__["MdcCardModule"],
             _angular_mdc_web__WEBPACK_IMPORTED_MODULE_7__["MdcDrawerModule"],
             ngx_slick__WEBPACK_IMPORTED_MODULE_5__["SlickModule"].forRoot(),
-            _angular_router__WEBPACK_IMPORTED_MODULE_11__["RouterModule"].forRoot(appRoutes, { enableTracing: true } // <-- debugging purposes only
-            )
+            _angular_router__WEBPACK_IMPORTED_MODULE_11__["RouterModule"].forRoot(appRoutes, { useHash: true })
         ],
         providers: [],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
@@ -462,17 +457,6 @@ ProjectsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 /***/ (function(module) {
 
 module.exports = {"name":"SERGIO BELDA","description":"Software Engineer by the Polytechnic University of Valencia. Passionate about software development and new technologies. My main interests are the development of Android applications, the design of user interfaces, the development of IoT projects, as well as the augmented reality projects and multimodal interfaces design.","contact":{"behance":"https://www.behance.net/sdagal8081d5","twitter":"https://twitter.com/SergioBeldaG","medium":"https://medium.com/@serbelga","github":"https://github.com/serbelga","linkedin":"https://www.linkedin.com/in/sergio-belda-galbis/"}};
-
-/***/ }),
-
-/***/ "./src/data/data.json":
-/*!****************************!*\
-  !*** ./src/data/data.json ***!
-  \****************************/
-/*! exports provided: item, default */
-/***/ (function(module) {
-
-module.exports = {"item":"Button"};
 
 /***/ }),
 
