@@ -15,5 +15,13 @@
     "youtube_video_url": "",
     "medium_url": "https://medium.com/@serbelga/build-a-weather-station-with-google-cloud-iot-cloud-firestore-mongoose-os-android-jetpack-350556d7a",
     "github_url": "https://github.com/serbelga/IoT_Google_Cloud_Weather"
+  },
+  {
+    "title": "Kinect Video Player",
+    "url": "",
+    "thumbnail": "https://raw.githubusercontent.com/serbelga/serbelga.github.io/data/img/Video_Player.png",
+    "youtube_video_url": "https://www.youtube.com/watch?v=vK4wj_WkfM0",
+    "github_url": "https://https://github.com/serbelga/Kinect_Video_Player",
+    "description": "The Kinect Media Player video player allows you to watch videos and be controlled remotely by the user through gestures and actions. Once the video starts playing, it can be paused, played, or restarted. At the bottom a timeline corresponding to different moments of the video appears. It can be controlled by gestures. By sliding left or right, you can increase and decrease the volume, and by making a circle with your left hand you can go back 10 seconds."
   }
 ]
