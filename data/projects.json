@@ -33,6 +33,6 @@
     "youtube_video_url": "",
     "medium_url": "",
     "github_url": "https://github.com/serbelga/Mr_Musicphile_Actions_on_Google",
-    "description": "Mr Musicphile is an agent to find information about artists, lyrics, songs of an artists that contain a specific word, songs by feels and songs by genres. Developed using Dialogflow and Cloud Functions."
+    "description": "Mr Musicphile is an agent to find information about artists, lyrics, artists songs that contain a specific word, songs by feels and songs by genres. Developed using Dialogflow and Cloud Functions."
   }
 ]
