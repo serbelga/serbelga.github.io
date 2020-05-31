@@ -6,25 +6,28 @@ $mdc-theme-primary: #424242; // primary color
 $mdc-theme-secondary: #033cda; // secondary color
 $mdc-typography-font-family: 'Montserrat', sans-serif;
 $mdc-typography-styles-button: (
-  font-family: 'Roboto Condensed'
-);
-$mdc-typography-styles-headline2: (
-  font-family: 'Roboto Condensed'
-);
-$mdc-typography-styles-headline3: (
-  font-family: 'Montserrat',
-  color: #212121
-);
-$mdc-typography-styles-headline4: (
   font-family: 'Roboto Condensed',
   color: $mdc-theme-primary
 );
+$mdc-typography-styles-headline2: (
+  font-family: 'Roboto Condensed',
+  color: $mdc-theme-primary
+);
+$mdc-typography-styles-headline3: (
+  font-family: 'Montserrat',
+  color: $mdc-theme-primary
+);
+$mdc-typography-styles-headline4: (
+  font-family: 'Montserrat',
+  color: $mdc-theme-primary
+);
 $mdc-typography-styles-headline5: (
-  font-family: 'Roboto Condensed'
+  font-family: 'Montserrat',
+  color: $mdc-theme-primary
 );
 $mdc-typography-styles-headline6: (
-  font-family: 'Roboto Condensed',
-  color: #212121
+  font-family: 'Montserrat',
+  color: $mdc-theme-primary
 );
 $mdc-typography-styles-body1: (
   color: rgba(0,0,0,0.6)
@@ -33,16 +36,14 @@ $mdc-shape-small-component-radius: 0px;
 $mdc-shape-medium-component-radius: 0px;
 $mdc-shape-large-component-radius: 0px;
 
-
-
 @import "~@angular-mdc/theme/material";
 @import "~@angular-mdc/theme/material-components-web";
 
 .demo-top-app-bar-themed {
   @include mdc-top-app-bar-fill-color(rgba(255, 255, 255, 0.98));
   @include mdc-top-app-bar-icon-ink-color($mdc-theme-primary);
-  //@include mdc-tab-ink-color($mdc-theme-secondary);
-  //@include mdc-tab-indicator-underline-color($mdc-theme-secondary);
+  // @include mdc-tab-ink-color($mdc-theme-secondary);
+  // @include mdc-tab-indicator-underline-color($mdc-theme-secondary);
   .mdc-tab-bar {
     margin-top: 1em;
 
@@ -75,16 +76,21 @@ $mdc-shape-large-component-radius: 0px;
 
 .post-card {
   margin: 24px;
+  width: 70%;
+  max-width: 640px;
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  @include mdc-card-outline($material-color-grey-200)
 }
 
+/*
 .post-card:hover {
   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
 }
+ */
 
 .post-card img {
   width: 100%;
-  height: 140px;
+  height: 200px;
   object-fit: cover;
 }
 
@@ -156,7 +162,6 @@ a {
   border: 0;
 }
 
-
 .project-description {
   margin-bottom: 16px;
 }
@@ -190,7 +195,6 @@ a {
   }
 }
 
-
 .project-button-row {
   display: flex;
   flex-direction: row;
@@ -203,4 +207,20 @@ a {
 .slick-prev, .slick-next {
   color: red;
   background: red;
+}
+
+.chip-secondary {
+  @include mdc-chip-fill-color(white);
+  @include mdc-chip-ink-color($mdc-theme-primary);
+  @include mdc-chip-outline(1px, solid, $material-color-grey-400);
+  // Disable clickable
+  pointer-events: none;
+  cursor: default;
+}
+
+.medium-icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  fill: $material-color-teal-400;
 }

@@ -17,6 +17,7 @@ import {
   MdcTabBarModule,
   MdcTabIndicatorModule,
   MdcCardModule,
+  MdcChipsModule,
   MdcImageListModule,
   MdcDrawerModule,
   MdcListModule
@@ -24,7 +25,7 @@ import {
 import { AboutComponent } from './about/about.component';
 import { PostsComponent } from './posts/posts.component';
 import { ProjectsComponent } from './projects/projects.component';
-import {Routes, RouterModule} from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 
 const appRoutes: Routes = [
   { path: '', component: PostsComponent },
@@ -59,6 +60,7 @@ const appRoutes: Routes = [
     MdcImageListModule,
     MdcTabIndicatorModule,
     MdcCardModule,
+    MdcChipsModule,
     MdcDrawerModule,
     SlickModule.forRoot(),
     RouterModule.forRoot(
