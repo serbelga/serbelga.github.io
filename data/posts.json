@@ -2,36 +2,64 @@
    {
       "title":"Material Design Motion for Android",
       "url":"https://proandroiddev.com/material-design-motion-for-android-396da62edb1c?source=friends_link&sk=5fa8356ac9d4200eb9617b409a238d41",
-      "thumbnail":"https://raw.githubusercontent.com/serbelga/serbelga.github.io/data/img/Material_Motion.png"
+      "thumbnail":"https://raw.githubusercontent.com/serbelga/serbelga.github.io/data/img/Material_Motion.png",
+      "tags":[
+         "Android",
+         "Material"
+      ]
    },
    {
       "title":"Update Android CameraX",
       "url":"https://medium.com/@serbelga/update-android-camerax-4a44c3e4cdcc",
-      "thumbnail":"https://raw.githubusercontent.com/serbelga/serbelga.github.io/data/img/Camera_X.jpg"
+      "thumbnail":"https://raw.githubusercontent.com/serbelga/serbelga.github.io/data/img/Camera_X.jpg",
+      "tags":[
+         "Android",
+         "Camera"
+      ]
    },
    {
       "title":"Build a weather station with Google Cloud IoT, Cloud Firestore, Mongoose OS & Android Jetpack",
       "url":"https://medium.com/@serbelga/build-a-weather-station-with-google-cloud-iot-cloud-firestore-mongoose-os-android-jetpack-350556d7a",
-      "thumbnail":"https://raw.githubusercontent.com/serbelga/serbelga.github.io/data/img/Google_IoT.jpg"
+      "thumbnail":"https://raw.githubusercontent.com/serbelga/serbelga.github.io/data/img/Google_IoT.jpg",
+      "tags":[
+         "Android",
+         "IoT",
+         "Google Cloud"
+      ]
    },
    {
       "title":"Transitions in Android Navigation Architecture Component",
       "url":"https://medium.com/@serbelga/shared-elements-in-android-navigation-architecture-component-bc5e7922ecdf",
-      "thumbnail":"https://raw.githubusercontent.com/serbelga/serbelga.github.io/data/img/Android_Transitions.png"
+      "thumbnail":"https://raw.githubusercontent.com/serbelga/serbelga.github.io/data/img/Android_Transitions.png",
+      "tags":[
+         "Android"
+      ]
    },
    {
       "title":"Material Components Flutter: BottomAppBar",
       "url":"https://medium.com/@serbelga/material-components-bottomappbar-flutter-9008a6e54382",
-      "thumbnail":"https://raw.githubusercontent.com/serbelga/serbelga.github.io/data/img/Flutter_BottomAppBar.jpg"
+      "thumbnail":"https://raw.githubusercontent.com/serbelga/serbelga.github.io/data/img/Flutter_BottomAppBar.jpg",
+      "tags":[
+         "Flutter",
+         "Material"
+      ]
    },
    {
       "title":"Material Components Android: BottomAppBar - Part I",
       "url":"https://medium.com/@serbelga/material-components-bottomappbar-kotlin-part-i-6c248600f6d3",
-      "thumbnail":"https://raw.githubusercontent.com/serbelga/serbelga.github.io/data/img/Android_BottomAppBar.jpg"
+      "thumbnail":"https://raw.githubusercontent.com/serbelga/serbelga.github.io/data/img/Android_BottomAppBar.jpg",
+      "tags":[
+         "Flutter",
+         "Material"
+      ]
    },
    {
       "title":"Material Components Android: BottomAppBar - Part II",
       "url":"https://medium.com/@serbelga/material-components-android-bottomappbar-part-ii-1ae0079ec3a6",
-      "thumbnail":"https://raw.githubusercontent.com/serbelga/serbelga.github.io/data/img/Android_BottomAppBar.jpg"
+      "thumbnail":"https://raw.githubusercontent.com/serbelga/serbelga.github.io/data/img/Android_BottomAppBar.jpg",
+      "tags":[
+         "Flutter",
+         "Material"
+      ]
    }
 ]
