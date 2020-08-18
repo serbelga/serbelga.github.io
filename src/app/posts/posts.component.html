@@ -5,17 +5,25 @@
       <div mdcHeadline6>{{post.title}}</div>
     </div>
     <mdc-chip-set>
-      <mdc-chip class="chip-secondary" *ngFor="let tag of post.tags">
+      <mdc-chip *ngFor="let tag of post.tags"
+                [ngClass]="{
+                'chip-android': tag.includes('Android'),
+                'chip-flutter': tag.includes('Flutter'),
+                'chip-iot': tag.includes('IoT'),
+                'chip-material': tag.includes('Material'),
+                'chip-gcloud': tag.includes('Google Cloud'),
+                'chip-camera': tag.includes('Camera')
+                }" >
         <mdc-chip-text>{{tag}}</mdc-chip-text>
       </mdc-chip>
     </mdc-chip-set>
     <mdc-card-actions style="">
       <mdc-card-action-icons>
         <a target="_blank" href="{{post.url}}">
-          <button style="width: 120px;" mdc-button mdcCardAction="button" outlined>
+          <button mdc-button outlined>
             <mdc-icon>
               <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
-                   style="pointer-events: none;" class="medium-icon">
+                   style="pointer-events: none;">
                 <g>
                   <path d="M2.9,6.3c0-0.3-0.1-0.6-0.3-0.8L0.4,2.8V2.4h7l5.4,11.8l4.7-11.8h6.6v0.4l-1.9,1.8c-0.2,0.1-0.2,0.3-0.2,0.5v13.5
 	c0,0.2,0,0.4,0.2,0.5L24,21v0.4h-9.4V21l1.9-1.9c0.2-0.2,0.2-0.2,0.2-0.5V7.7l-5.4,13.7h-0.7L4.3,7.7v9.2c-0.1,0.4,0.1,0.8,0.3,1.1
@@ -23,7 +31,7 @@
                 </g>
               </svg>
             </mdc-icon>
-            Read
+            Read on Medium
           </button>
         </a>
       </mdc-card-action-icons>

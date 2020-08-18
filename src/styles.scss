@@ -32,8 +32,8 @@ $mdc-typography-styles-headline6: (
 $mdc-typography-styles-body1: (
   color: rgba(0,0,0,0.6)
 );
-$mdc-shape-small-component-radius: 0px;
-$mdc-shape-medium-component-radius: 0px;
+$mdc-shape-small-component-radius: 8px;
+$mdc-shape-medium-component-radius: 12px;
 $mdc-shape-large-component-radius: 0px;
 
 @import "~@angular-mdc/theme/material";
@@ -63,6 +63,12 @@ $mdc-shape-large-component-radius: 0px;
   }
 }
 
+.mdc-button {
+  @include mdc-button-outline-color($material-color-grey-200);
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
 .demo-drawer--accessible {
   @include mdc-drawer-activated-overlay-color($mdc-theme-secondary);
   @include mdc-drawer-item-activated-text-ink-color($mdc-theme-secondary);
@@ -80,22 +86,6 @@ $mdc-shape-large-component-radius: 0px;
   max-width: 640px;
   transition: all 0.3s cubic-bezier(.25,.8,.25,1);
   @include mdc-card-outline($material-color-grey-200)
-}
-
-/*
-.post-card:hover {
-  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-}
- */
-
-.post-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.post-card-title {
-  margin: 8px;
 }
 
 .bio-section {
@@ -147,19 +137,31 @@ a {
   color: initial;
 }
 
-.projects-content {
+.post-card {
   margin: 24px;
+  width: 70%;
+  max-width: 640px;
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  @include mdc-card-outline($material-color-grey-200)
 }
 
-.project {
-  width: 80%;
-  margin-bottom: 16px;
-  padding-bottom: 24px;
-  border-bottom: 1px solid $material-color-grey-300
+.post-card img {
+  border-radius: $mdc-shape-medium-component-radius $mdc-shape-medium-component-radius 0px 0px;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
 }
 
-.last-item .project {
-  border: 0;
+.post-card-title {
+  margin: 8px;
+}
+
+.project-card {
+  margin: 24px;
+  width: 70%;
+  max-width: 720px;
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  @include mdc-card-outline($material-color-grey-200)
 }
 
 .project-description {
@@ -167,13 +169,19 @@ a {
 }
 
 .project-title {
-  margin-left: 16px;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 
 .project-img {
-  border: 1px solid $material-color-grey-300;
+  border: 1px solid $material-color-grey-200;
+  border-radius: $mdc-shape-small-component-radius;
   object-fit: contain;
+  margin-left: 24px;
+  margin-top: 24px;
+}
+
+.project-details {
+  margin: 24px;
 }
 
 .project-info {
@@ -188,34 +196,42 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-left: 24px;
   @media (max-width: 719px) {
     margin-top: 24px;
     margin-left: 0;
   }
 }
 
-.project-button-row {
-  display: flex;
-  flex-direction: row;
-}
-
-.project-button {
-  margin-right: 4px;
-}
-
-.slick-prev, .slick-next {
-  color: red;
-  background: red;
-}
-
-.chip-secondary {
-  @include mdc-chip-fill-color(white);
+mdc-chip {
+  @include mdc-chip-fill-color($material-color-grey-50);
   @include mdc-chip-ink-color($mdc-theme-primary);
-  @include mdc-chip-outline(1px, solid, $material-color-grey-400);
   // Disable clickable
   pointer-events: none;
   cursor: default;
+}
+
+.chip-material {
+  @include mdc-chip-fill-color($material-color-deep-purple-200);
+}
+
+.chip-android {
+  @include mdc-chip-fill-color($material-color-teal-200);
+}
+
+.chip-flutter {
+  @include mdc-chip-fill-color($material-color-light-blue-200);
+}
+
+.chip-iot {
+  @include mdc-chip-fill-color($material-color-yellow-200);
+}
+
+.chip-gcloud {
+  @include mdc-chip-fill-color($material-color-blue-200);
+}
+
+.chip-camera {
+  @include mdc-chip-fill-color($material-color-deep-orange-200);
 }
 
 .medium-icon {
@@ -223,4 +239,9 @@ a {
   width: 100%;
   height: 100%;
   fill: $material-color-teal-400;
+}
+
+.about-img {
+  margin-bottom: 24px;
+  border-radius: $mdc-shape-small-component-radius;
 }
