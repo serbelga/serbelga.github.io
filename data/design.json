@@ -6,29 +6,25 @@
         "title": "ToDo_meter",
         "images": [
           "https://raw.githubusercontent.com/serbelga/serbelga.github.io/data/img/ToDo_meter.jpg"
-        ],
-        "description": ""
+        ]
       },
       {
         "title": "Gramophone",
         "images": [
           "https://raw.githubusercontent.com/serbelga/serbelga.github.io/data/img/Gramophone.jpg"
-        ],
-        "description": ""
+        ]
       },
       {
         "title": "IoT Weather Station",
         "images": [
           "https://raw.githubusercontent.com/serbelga/serbelga.github.io/data/img/Weather_Station.jpg"
-        ],
-        "description": ""
+        ]
       },
       {
         "title": "PymApp",
         "images": [
           "https://raw.githubusercontent.com/serbelga/serbelga.github.io/data/img/PymApp.jpg"
-        ],
-        "description": ""
+        ]
       }
     ]
   }
