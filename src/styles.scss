@@ -18,7 +18,7 @@ $mdc-typography-styles-headline3: (
   color: $mdc-theme-primary
 );
 $mdc-typography-styles-headline4: (
-  font-family: 'Montserrat',
+  font-family: 'Roboto Condensed',
   color: $mdc-theme-primary
 );
 $mdc-typography-styles-headline5: (
@@ -168,10 +168,6 @@ a {
   margin-bottom: 16px;
 }
 
-.project-title {
-  margin-bottom: 16px;
-}
-
 .project-img {
   border: 1px solid $material-color-grey-200;
   border-radius: $mdc-shape-small-component-radius;
@@ -244,4 +240,42 @@ mdc-chip {
 .about-img {
   margin-bottom: 24px;
   border-radius: $mdc-shape-small-component-radius;
+}
+
+.design-card {
+  margin: 24px;
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+  @include mdc-card-outline($material-color-grey-200);
+
+  &:last-child {
+    position: relative;
+    &::after {
+      position: absolute;
+      content: '';
+      right: -24px;
+      width: 24px;
+      height: 100%;
+    }
+  }
+}
+
+.design-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.design-details {
+  margin: 24px;
+}
+
+.design-img {
+  border: 1px solid $material-color-grey-200;
+  border-radius: $mdc-shape-small-component-radius;
+  object-fit: contain;
+  margin: 24px 24px 0 24px;
+}
+
+.horizontal-list {
+  display: flex;
+  overflow-x: scroll;
 }

@@ -1,0 +1,19 @@
+<div>
+  <div *ngFor="let section of designs" style="display: flex; flex-direction: column;">
+    <div mdcHeadline4 style="align-self: center;">{{section.name}}</div>
+    <div class="horizontal-list">
+      <mdc-card outlined *ngFor="let design of section.items" class="design-card">
+        <div class="design-info">
+          <div style="display: flex; flex-direction: row;">
+            <img *ngFor="let image of design.images" class="design-img" src="{{image}}" alt="Photo"
+                 height="240"
+                 width="240">
+          </div>
+          <div class="design-details">
+            <div mdcHeadline6>{{design.title}}</div>
+          </div>
+        </div>
+      </mdc-card>
+    </div>
+  </div>
+</div>

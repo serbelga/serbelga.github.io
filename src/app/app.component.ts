@@ -20,6 +20,7 @@ export class AppComponent implements OnInit {
   tabs = [
     { label: 'Posts', router: 'posts' },
     { label: 'Projects', router: 'projects' },
+    { label: 'Design', router:  'design' },
     { label: 'About', router:  'about' }
   ];
 
@@ -38,7 +39,8 @@ export class AppComponent implements OnInit {
         case '/' : this.mdcTabBar.activeTabIndex = 0 ; this.mdcList.setSelectedIndex(0) ; break;
         case '/posts' : this.mdcTabBar.activeTabIndex = 0 ; this.mdcList.setSelectedIndex(0) ; break;
         case '/projects' : this.mdcTabBar.activeTabIndex = 1 ; this.mdcList.setSelectedIndex(1) ; break;
-        case '/about' : this.mdcTabBar.activeTabIndex = 2 ; this.mdcList.setSelectedIndex(2) ; break;
+        case '/design' : this.mdcTabBar.activeTabIndex = 2 ; this.mdcList.setSelectedIndex(2) ; break;
+        case '/about' : this.mdcTabBar.activeTabIndex = 2 ; this.mdcList.setSelectedIndex(3) ; break;
       }
     });
   }
