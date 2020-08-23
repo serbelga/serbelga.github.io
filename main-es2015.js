@@ -45,6 +45,17 @@ module.exports = "<!--The content below is only a placeholder and can be replace
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/index.js!./src/app/design/design.component.html":
+/*!************************************************************************!*\
+  !*** ./node_modules/raw-loader!./src/app/design/design.component.html ***!
+  \************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div>\n  <div *ngFor=\"let section of designs\" style=\"display: flex; flex-direction: column;\">\n    <div mdcHeadline4 style=\"align-self: center;\">{{section.name}}</div>\n    <div class=\"horizontal-list\">\n      <mdc-card outlined *ngFor=\"let design of section.items\" class=\"design-card\">\n        <div class=\"design-info\">\n          <div style=\"display: flex; flex-direction: row;\">\n            <img *ngFor=\"let image of design.images\" class=\"design-img\" src=\"{{image}}\" alt=\"Photo\"\n                 height=\"240\"\n                 width=\"240\">\n          </div>\n          <div class=\"design-details\">\n            <div mdcHeadline6>{{design.title}}</div>\n          </div>\n        </div>\n      </mdc-card>\n    </div>\n  </div>\n</div>\n"
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/index.js!./src/app/posts/posts.component.html":
 /*!**********************************************************************!*\
   !*** ./node_modules/raw-loader!./src/app/posts/posts.component.html ***!
@@ -188,6 +199,7 @@ let AppComponent = class AppComponent {
         this.tabs = [
             { label: 'Posts', router: 'posts' },
             { label: 'Projects', router: 'projects' },
+            { label: 'Design', router: 'design' },
             { label: 'About', router: 'about' }
         ];
         this.navStart = router.events.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["filter"])(evt => evt instanceof _angular_router__WEBPACK_IMPORTED_MODULE_4__["NavigationStart"]));
@@ -211,9 +223,13 @@ let AppComponent = class AppComponent {
                     this.mdcTabBar.activeTabIndex = 1;
                     this.mdcList.setSelectedIndex(1);
                     break;
-                case '/about':
+                case '/design':
                     this.mdcTabBar.activeTabIndex = 2;
                     this.mdcList.setSelectedIndex(2);
+                    break;
+                case '/about':
+                    this.mdcTabBar.activeTabIndex = 2;
+                    this.mdcList.setSelectedIndex(3);
                     break;
             }
         });
@@ -262,7 +278,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _about_about_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./about/about.component */ "./src/app/about/about.component.ts");
 /* harmony import */ var _posts_posts_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./posts/posts.component */ "./src/app/posts/posts.component.ts");
 /* harmony import */ var _projects_projects_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./projects/projects.component */ "./src/app/projects/projects.component.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _design_design_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./design/design.component */ "./src/app/design/design.component.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+
 
 
 
@@ -279,7 +297,8 @@ const appRoutes = [
     { path: '', component: _posts_posts_component__WEBPACK_IMPORTED_MODULE_9__["PostsComponent"] },
     { path: 'about', component: _about_about_component__WEBPACK_IMPORTED_MODULE_8__["AboutComponent"] },
     { path: 'posts', component: _posts_posts_component__WEBPACK_IMPORTED_MODULE_9__["PostsComponent"] },
-    { path: 'projects', component: _projects_projects_component__WEBPACK_IMPORTED_MODULE_10__["ProjectsComponent"] }
+    { path: 'projects', component: _projects_projects_component__WEBPACK_IMPORTED_MODULE_10__["ProjectsComponent"] },
+    { path: 'design', component: _design_design_component__WEBPACK_IMPORTED_MODULE_11__["DesignComponent"] }
 ];
 let AppModule = class AppModule {
 };
@@ -289,7 +308,8 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
             _about_about_component__WEBPACK_IMPORTED_MODULE_8__["AboutComponent"],
             _posts_posts_component__WEBPACK_IMPORTED_MODULE_9__["PostsComponent"],
-            _projects_projects_component__WEBPACK_IMPORTED_MODULE_10__["ProjectsComponent"]
+            _projects_projects_component__WEBPACK_IMPORTED_MODULE_10__["ProjectsComponent"],
+            _design_design_component__WEBPACK_IMPORTED_MODULE_11__["DesignComponent"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
@@ -313,12 +333,73 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
             _angular_mdc_web__WEBPACK_IMPORTED_MODULE_7__["MdcChipsModule"],
             _angular_mdc_web__WEBPACK_IMPORTED_MODULE_7__["MdcDrawerModule"],
             ngx_slick__WEBPACK_IMPORTED_MODULE_5__["SlickModule"].forRoot(),
-            _angular_router__WEBPACK_IMPORTED_MODULE_11__["RouterModule"].forRoot(appRoutes, { useHash: true })
+            _angular_router__WEBPACK_IMPORTED_MODULE_12__["RouterModule"].forRoot(appRoutes, { useHash: true })
         ],
         providers: [],
         bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
     })
 ], AppModule);
+
+
+
+/***/ }),
+
+/***/ "./src/app/design/design.component.scss":
+/*!**********************************************!*\
+  !*** ./src/app/design/design.component.scss ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2Rlc2lnbi9kZXNpZ24uY29tcG9uZW50LnNjc3MifQ== */"
+
+/***/ }),
+
+/***/ "./src/app/design/design.component.ts":
+/*!********************************************!*\
+  !*** ./src/app/design/design.component.ts ***!
+  \********************************************/
+/*! exports provided: DesignComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DesignComponent", function() { return DesignComponent; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+
+
+
+
+let DesignComponent = class DesignComponent {
+    constructor(sanitizer, http) {
+        this.sanitizer = sanitizer;
+        this.http = http;
+        this.designsUrl = 'https://raw.githubusercontent.com/serbelga/serbelga.github.io/data/data/design.json';
+    }
+    ngOnInit() {
+        this.http.get(this.designsUrl).subscribe(data => {
+            console.log(data);
+            this.designs = data;
+        });
+    }
+    transform(url) {
+        return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+    }
+    notEmpty(field) {
+        return field !== '';
+    }
+};
+DesignComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
+        selector: 'app-design',
+        template: __webpack_require__(/*! raw-loader!./design.component.html */ "./node_modules/raw-loader/index.js!./src/app/design/design.component.html"),
+        styles: [__webpack_require__(/*! ./design.component.scss */ "./src/app/design/design.component.scss")]
+    }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["DomSanitizer"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"]])
+], DesignComponent);
 
 
 
