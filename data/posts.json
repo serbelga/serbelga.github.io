@@ -1,7 +1,15 @@
 [
    {
+      "title":"Android Jetpack Compose: Navigation",
+      "url":"https://proandroiddev.com/android-jetpack-compose-navigation-1cdfc488b891",
+      "thumbnail":"https://raw.githubusercontent.com/serbelga/serbelga.github.io/data/img/navigation_compose.jpg",
+      "tags":[
+         "Android"
+      ]
+   },
+   {
       "title":"Material Design Motion for Android",
-      "url":"https://proandroiddev.com/material-design-motion-for-android-396da62edb1c?source=friends_link&sk=5fa8356ac9d4200eb9617b409a238d41",
+      "url":"https://proandroiddev.com/material-design-motion-for-android-396da62edb1c",
       "thumbnail":"https://raw.githubusercontent.com/serbelga/serbelga.github.io/data/img/Material_Motion.png",
       "tags":[
          "Android",
