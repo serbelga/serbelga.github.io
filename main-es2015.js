@@ -30,7 +30,7 @@ webpackEmptyAsyncContext.id = "./$$_lazy_route_resource lazy recursive";
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"about-content\">\n  <div class=\"bio-section\">\n    <img src=\"/assets/about/profile.jpg\" alt=\"Photo\" width=\"180\" height=\"180\" class=\"about-img\">\n    <mdc-card outlined>\n      <div style=\"margin: 24px;\">\n        <div mdcHeadline5>{{name}}</div>\n        <div mdcBody1 style=\"margin-top: 16px;\">\n          {{bio}}\n        </div>\n      </div>\n    </mdc-card>\n  </div>\n</div>\n\n"
+module.exports = "<div class=\"content about-content\">\n  <div class=\"bio-section\">\n    <img src=\"{{bio.profile}}\" alt=\"Photo\" width=\"180\" height=\"180\" class=\"about-img\">\n    <div class=\"card\">\n      <div style=\"margin: 24px;\">\n        <h5>{{bio.name}}</h5>\n        <div class=\"body1\" style=\"margin-top: 16px;\">\n          {{bio.description}}\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -41,7 +41,7 @@ module.exports = "<div class=\"about-content\">\n  <div class=\"bio-section\">\n
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<mdc-top-app-bar fixed [fixedAdjustElement]=\"fixedContent\" class=\"demo-top-app-bar-themed\">\n  <mdc-top-app-bar-row>\n    <mdc-top-app-bar-section align=\"start\">\n      <button class=\"mdc-button\" mdcTopAppBarNavIcon (click)=\"appDrawer.open = !appDrawer.open\">\n        <mdc-icon>menu</mdc-icon>\n      </button>\n      <mdc-tab-bar #mdcTabBar fade fixed>\n        <mdc-tab-scroller>\n          <mdc-tab routerLink=\"{{tab.router}}\" *ngFor=\"let tab of tabs\" [label]=\"tab.label\"></mdc-tab>\n        </mdc-tab-scroller>\n      </mdc-tab-bar>\n    </mdc-top-app-bar-section>\n    <mdc-top-app-bar-section align=\"end\">\n      <a target=\"_blank\" href=\"{{contact.github}}\"><button mdcIconButton class=\"github-icon-button\">\n        <mdc-icon>\n          <svg viewBox=\"0 0 24 24\" preserveAspectRatio=\"xMidYMid meet\" focusable=\"false\"\n               style=\"pointer-events: none; display: block; width: 100%; height: 100%;\">\n            <g>\n              <path d=\"M8,18.8C8,18.9,7.9,19,7.8,19c-0.2,0-0.3-0.1-0.3-0.2c0-0.1,0.1-0.2,0.3-0.2C7.9,18.7,8,18.7,8,18.8z M6.5,18.6\n\tc0,0.1,0.1,0.2,0.2,0.2c0.1,0,0.3,0,0.3-0.1c0-0.1-0.1-0.2-0.2-0.3C6.7,18.5,6.6,18.5,6.5,18.6L6.5,18.6z M8.7,18.5\n\tc-0.1,0-0.2,0.1-0.2,0.2c0,0.1,0.1,0.2,0.3,0.1c0.1,0,0.2-0.1,0.2-0.2C8.9,18.6,8.8,18.5,8.7,18.5z M11.8,0C5.1,0,0,5.1,0,11.8\n\tc0,5.4,3.4,10,8.2,11.6C8.8,23.5,9,23.1,9,22.8c0-0.3,0-2,0-3c0,0-3.4,0.7-4.1-1.4c0,0-0.6-1.4-1.3-1.8c0,0-1.1-0.8,0.1-0.7\n\tc0,0,1.2,0.1,1.9,1.2c1.1,1.9,2.8,1.3,3.5,1c0.1-0.8,0.4-1.3,0.8-1.6c-2.7-0.3-5.4-0.7-5.4-5.3c0-1.3,0.4-2,1.1-2.8\n\tC5.4,8,5,6.7,5.7,5C6.7,4.7,9,6.3,9,6.3c1-0.3,2-0.4,3-0.4s2.1,0.1,3,0.4c0,0,2.3-1.6,3.3-1.3c0.7,1.7,0.3,3,0.1,3.3\n\tc0.8,0.9,1.2,1.5,1.2,2.8c0,4.7-2.9,5-5.6,5.3c0.4,0.4,0.8,1.1,0.8,2.2c0,1.6,0,3.6,0,4c0,0.3,0.2,0.7,0.8,0.6\n\tc4.8-1.6,8.1-6.2,8.1-11.6C24,5.1,18.6,0,11.8,0z M4.7,16.7c-0.1,0,0,0.2,0,0.3C4.8,17,4.9,17.1,5,17c0.1,0,0-0.2,0-0.3\n\tC4.9,16.7,4.8,16.6,4.7,16.7z M4.2,16.3c0,0.1,0,0.1,0.1,0.2c0.1,0,0.2,0,0.2,0c0-0.1,0-0.1-0.1-0.2C4.3,16.2,4.2,16.2,4.2,16.3z\n\t M5.7,18c-0.1,0.1,0,0.2,0.1,0.3c0.1,0.1,0.3,0.1,0.3,0c0.1-0.1,0-0.2-0.1-0.3C6,18,5.8,17.9,5.7,18z M5.2,17.3\n\tc-0.1,0-0.1,0.2,0,0.3s0.2,0.2,0.3,0.1c0.1-0.1,0.1-0.2,0-0.3C5.4,17.3,5.3,17.2,5.2,17.3L5.2,17.3z\"></path>\n            </g>\n          </svg>\n        </mdc-icon>\n      </button>\n      </a>\n      <a target=\"_blank\" href=\"{{contact.medium}}\"><button mdcIconButton class=\"medium-icon-button\">\n        <mdc-icon>\n          <svg viewBox=\"0 0 24 24\" preserveAspectRatio=\"xMidYMid meet\" focusable=\"false\"\n               style=\"pointer-events: none; display: block; width: 100%; height: 100%;\">\n            <g>\n              <path d=\"M2.9,6.3c0-0.3-0.1-0.6-0.3-0.8L0.4,2.8V2.4h7l5.4,11.8l4.7-11.8h6.6v0.4l-1.9,1.8c-0.2,0.1-0.2,0.3-0.2,0.5v13.5\n\tc0,0.2,0,0.4,0.2,0.5L24,21v0.4h-9.4V21l1.9-1.9c0.2-0.2,0.2-0.2,0.2-0.5V7.7l-5.4,13.7h-0.7L4.3,7.7v9.2c-0.1,0.4,0.1,0.8,0.3,1.1\n\tL7.2,21v0.4H0.1V21l2.5-3.1c0.3-0.3,0.4-0.7,0.3-1.1V6.3z\"></path>\n            </g>\n          </svg>\n        </mdc-icon>\n      </button>\n      </a>\n      <a target=\"_blank\" href=\"{{contact.linkedin}}\">\n\t<button mdcIconButton class=\"linkedin-icon-button\">\n\t  <mdc-icon>\n\t    <svg aria-hidden=\"true\" focusable=\"false\" data-prefix=\"fab\" data-icon=\"linkedin-in\" class=\"svg-inline--fa fa-linkedin-in fa-w-14\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 448 512\"><path fill=\"currentColor\" d=\"M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z\"></path></svg>\n\t  </mdc-icon>\n\t</button>\n      </a>\n      <a target=\"_blank\" href=\"{{contact.twitter}}\">\n\t<button mdcIconButton class=\"twitter-icon-button\">\n\t  <mdc-icon>\n\t    <svg viewBox=\"0 0 24 24\" preserveAspectRatio=\"xMidYMid meet\" focusable=\"false\"\n               style=\"pointer-events: none; display: block; width: 100%; height: 100%;\">\n\t       <g>\n\t\t <path d=\"M21.5,7.1c0,0.2,0,0.4,0,0.6c0,6.5-4.9,14-14,14c-2.8,0-5.4-0.8-7.6-2.2c0.4,0,0.8,0.1,1.2,0.1c2.3,0,4.4-0.8,6.1-2.1\n\t\t c-2.2,0-4-1.5-4.6-3.4c0.3,0,0.6,0.1,0.9,0.1c0.4,0,0.9-0.1,1.3-0.2C2.7,13.5,1,11.6,1,9.2V9.1c0.7,0.4,1.4,0.6,2.2,0.6\n\t\t C1.9,8.8,1,7.3,1,5.6c0-0.9,0.2-1.8,0.7-2.5c2.4,3,6.1,4.9,10.1,5.1c-0.1-0.4-0.1-0.7-0.1-1.1c0-2.7,2.2-4.9,4.9-4.9\n\t\t c1.4,0,2.7,0.6,3.6,1.6c1.1-0.2,2.2-0.6,3.1-1.2c-0.4,1.1-1.1,2.1-2.2,2.7c1-0.1,1.9-0.4,2.8-0.8C23.3,5.5,22.5,6.4,21.5,7.1\n\t\t L21.5,7.1z\"></path>\n            </g>\n          </svg>\n        </mdc-icon>\n\t</button>\n      </a>\n    </mdc-top-app-bar-section>\n  </mdc-top-app-bar-row>\n  <!--\n  <mdc-top-app-bar-row>\n    <mdc-top-app-bar-section>\n      <mdc-tab-bar #mdcTabBar align=\"center\">\n        <mdc-tab-scroller>\n          <mdc-tab routerLink=\"{{tab.router}}\" *ngFor=\"let tab of tabs\" [label]=\"tab.label\"></mdc-tab>\n        </mdc-tab-scroller>\n      </mdc-tab-bar>\n    </mdc-top-app-bar-section>\n  </mdc-top-app-bar-row>\n  -->\n</mdc-top-app-bar>\n\n<!--\n<div #fixedContent class=\"demo-drawer-app-content\">\n\n  <div style=\"text-align: center; \">\n    <div mdcHeadline4>\n      Sergio Belda\n    </div>\n    <mdc-card class=\"demo-card\" outlined>\n      <div mdcBody1>\n        {{bio}}\n      </div>\n\n    </mdc-card>\n\n\n  </div>\n</div>\n\n<p>Activated tab: {{ mdcTabBar.activeTabIndex }}</p>\n-->\n\n<div>\n  <mdc-drawer #appDrawer drawer=\"modal\" class=\"demo-drawer--accessible\">\n    <mdc-drawer-header>\n      <h3 mdcDrawerTitle>Menu</h3>\n    </mdc-drawer-header>\n    <mdc-drawer-content>\n      <mdc-list #mdcList>\n        <mdc-list-item routerLink=\"{{item.router}}\" *ngFor=\"let item of tabs\">\n          {{item.label}}\n        </mdc-list-item>\n      </mdc-list>\n    </mdc-drawer-content>\n  </mdc-drawer>\n\n  <div #fixedContent>\n    <router-outlet></router-outlet>\n  </div>\n</div>\n\n\n"
+module.exports = "<div [class]=\"themeService.presentTheme$ | async\">\n  <mwc-drawer type=\"modal\" hasHeader>\n    <h6 slot=\"title\">\n      Menu\n    </h6>\n    <mwc-list activatable>\n      <mwc-list-item routerLink=\"{{tab.router}}\" *ngFor=\"let tab of tabs\">{{tab.label}}</mwc-list-item>\n    </mwc-list>\n    <div slot=\"appContent\">\n      <mwc-top-app-bar-fixed>\n        <mwc-icon-button class=\"top-app-bar-menu-icon-button\" icon=\"menu\" slot=\"navigationIcon\"></mwc-icon-button>\n        <mwc-tab-bar class=\"top-app-bar-tab-bar\" activeIndex=\"1\" slot=\"title\">\n          <mwc-tab stacked routerLink=\"{{tab.router}}\" *ngFor=\"let tab of tabs\" [label]=\"tab.label\"\n                   isMinWidthIndicator></mwc-tab>\n        </mwc-tab-bar>\n\n        <div *ngIf=\"bio\" slot=\"actionItems\" style=\"display: flex\">\n          <a href=\"{{bio.contact.github}}\" target=\"_blank\">\n            <mwc-icon-button class=\"github-icon-button\">\n              <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\">\n                <path\n                  d=\"M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z\"/>\n              </svg>\n            </mwc-icon-button>\n          </a>\n          <a href=\"{{bio.contact.medium}}\" target=\"_blank\">\n            <mwc-icon-button class=\"medium-icon-button\">\n              <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\"\n                   clip-rule=\"evenodd\">\n                <path\n                  d=\"M2.846 6.887c.03-.295-.083-.586-.303-.784l-2.24-2.7v-.403h6.958l5.378 11.795 4.728-11.795h6.633v.403l-1.916 1.837c-.165.126-.247.333-.213.538v13.498c-.034.204.048.411.213.537l1.871 1.837v.403h-9.412v-.403l1.939-1.882c.19-.19.19-.246.19-.537v-10.91l-5.389 13.688h-.728l-6.275-13.688v9.174c-.052.385.076.774.347 1.052l2.521 3.058v.404h-7.148v-.404l2.521-3.058c.27-.279.39-.67.325-1.052v-10.608z\"/>\n              </svg>\n            </mwc-icon-button>\n          </a>\n          <a href=\"{{bio.contact.linkedin}}\" target=\"_blank\">\n            <mwc-icon-button class=\"linkedin-icon-button\">\n              <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 448 512\">\n                <path\n                  d=\"M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z\"></path>\n              </svg>\n            </mwc-icon-button>\n          </a>\n          <a href=\"{{bio.contact.twitter}}\" target=\"_blank\">\n            <mwc-icon-button class=\"twitter-icon-button\">\n              <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\">\n                <path\n                  d=\"M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z\"/>\n              </svg>\n            </mwc-icon-button>\n          </a>\n        </div>\n        <div style=\"width: 24px;\" slot=\"actionItems\"></div>\n        <mwc-icon-button\n          *ngIf=\" (themeService.presentTheme$ | async) == 'theme-light'; else themeDark\"\n          icon=\"brightness_4\"\n          slot=\"actionItems\"\n          class=\"toggle-theme-icon-button\"\n          (click)=\"themeService.changeTheme('theme-dark')\">\n        </mwc-icon-button>\n        <ng-template #themeDark>\n          <mwc-icon-button\n            icon=\"brightness_5\"\n            slot=\"actionItems\"\n            class=\"toggle-theme-icon-button\"\n            (click)=\"themeService.changeTheme('theme-light')\">\n          </mwc-icon-button>\n        </ng-template>\n        <div>\n          <router-outlet></router-outlet>\n        </div>\n      </mwc-top-app-bar-fixed>\n    </div>\n  </mwc-drawer>\n</div>\n"
 
 /***/ }),
 
@@ -52,7 +52,7 @@ module.exports = "<!--The content below is only a placeholder and can be replace
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\n  <div *ngFor=\"let section of designs\" style=\"display: flex; flex-direction: column;\">\n    <div mdcHeadline4 style=\"align-self: center;\">{{section.name}}</div>\n    <div class=\"horizontal-list\">\n      <mdc-card outlined *ngFor=\"let design of section.items\" class=\"design-card\">\n        <div class=\"design-info\">\n          <div style=\"display: flex; flex-direction: row;\">\n            <img *ngFor=\"let image of design.images\" class=\"design-img\" src=\"{{image}}\" alt=\"Photo\"\n                 height=\"240\"\n                 width=\"240\">\n          </div>\n          <div class=\"design-details\">\n            <div mdcHeadline6>{{design.title}}</div>\n          </div>\n        </div>\n      </mdc-card>\n    </div>\n  </div>\n</div>\n"
+module.exports = "<div style=\"min-height: 100vh;\">\n  <div *ngFor=\"let section of designs\" style=\"display: flex; flex-direction: column;\">\n    <h4 style=\"align-self: center;\">{{section.name}}</h4>\n    <div class=\"horizontal-list\">\n      <div *ngFor=\"let design of section.items\" class=\"card design-card\">\n        <div class=\"design-info\">\n          <div style=\"display: flex; flex-direction: row;\">\n            <img *ngFor=\"let image of design.images\" class=\"design-img\" src=\"{{image}}\" alt=\"Photo\"\n                 height=\"240\"\n                 width=\"240\">\n          </div>\n          <div class=\"design-details\">\n            <h6>{{design.title}}</h6>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -63,7 +63,7 @@ module.exports = "<div>\n  <div *ngFor=\"let section of designs\" style=\"displa
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div style=\"display: flex; flex-direction: column; align-items: center;\">\n  <mdc-card outlined *ngFor=\"let post of posts\" class=\"post-card\">\n    <img src=\"{{post.thumbnail}}\" >\n    <div class=\"post-card-title\">\n      <div mdcHeadline6>{{post.title}}</div>\n    </div>\n    <mdc-chip-set>\n      <mdc-chip *ngFor=\"let tag of post.tags\"\n                [ngClass]=\"{\n                'chip-android': tag.includes('Android'),\n                'chip-flutter': tag.includes('Flutter'),\n                'chip-iot': tag.includes('IoT'),\n                'chip-material': tag.includes('Material'),\n                'chip-gcloud': tag.includes('Google Cloud'),\n                'chip-camera': tag.includes('Camera')\n                }\" >\n        <mdc-chip-text>{{tag}}</mdc-chip-text>\n      </mdc-chip>\n    </mdc-chip-set>\n    <mdc-card-actions style=\"\">\n      <mdc-card-action-icons>\n        <a target=\"_blank\" href=\"{{post.url}}\">\n          <button mdc-button outlined>\n            <mdc-icon>\n              <svg viewBox=\"0 0 24 24\" preserveAspectRatio=\"xMidYMid meet\" focusable=\"false\"\n                   style=\"pointer-events: none;\">\n                <g>\n                  <path d=\"M2.9,6.3c0-0.3-0.1-0.6-0.3-0.8L0.4,2.8V2.4h7l5.4,11.8l4.7-11.8h6.6v0.4l-1.9,1.8c-0.2,0.1-0.2,0.3-0.2,0.5v13.5\n\tc0,0.2,0,0.4,0.2,0.5L24,21v0.4h-9.4V21l1.9-1.9c0.2-0.2,0.2-0.2,0.2-0.5V7.7l-5.4,13.7h-0.7L4.3,7.7v9.2c-0.1,0.4,0.1,0.8,0.3,1.1\n\tL7.2,21v0.4H0.1V21l2.5-3.1c0.3-0.3,0.4-0.7,0.3-1.1V6.3z\"></path>\n                </g>\n              </svg>\n            </mdc-icon>\n            Read on Medium\n          </button>\n        </a>\n      </mdc-card-action-icons>\n    </mdc-card-actions>\n  </mdc-card>\n</div>\n"
+module.exports = "<div class=\"content\">\n  <div class=\"card post-card\" *ngFor=\"let post of posts\">\n    <img src=\"{{post.thumbnail}}\" >\n    <h6 class=\"post-card-title\">\n      {{post.title}}\n    </h6>\n    <div class=\"card_actions\">\n      <a href=\"{{post.url}}\" target=\"_blank\">\n        <mwc-button label=\"Read on Medium\" outlined>\n          <svg fill=\"var(--primary)\" slot=\"icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\"><path d=\"M2.846 6.887c.03-.295-.083-.586-.303-.784l-2.24-2.7v-.403h6.958l5.378 11.795 4.728-11.795h6.633v.403l-1.916 1.837c-.165.126-.247.333-.213.538v13.498c-.034.204.048.411.213.537l1.871 1.837v.403h-9.412v-.403l1.939-1.882c.19-.19.19-.246.19-.537v-10.91l-5.389 13.688h-.728l-6.275-13.688v9.174c-.052.385.076.774.347 1.052l2.521 3.058v.404h-7.148v-.404l2.521-3.058c.27-.279.39-.67.325-1.052v-10.608z\"/></svg>\n        </mwc-button>\n      </a>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -74,18 +74,18 @@ module.exports = "<div style=\"display: flex; flex-direction: column; align-item
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div style=\"display: flex; flex-direction: column; align-items: center;\">\n  <mdc-card outlined *ngFor=\"let project of projects\" class=\"project-card\">\n    <div class=\"project-info\">\n      <div>\n        <img class=\"project-img\" *ngIf=\"notEmpty(project.thumbnail)\" src=\"{{project.thumbnail}}\" alt=\"Photo\"\n             height=\"180\"\n             width=\"180\">\n      </div>\n      <div class=\"project-details\">\n        <div mdcHeadline5 class=\"project-title\">{{project.title}}</div>\n        <div class=\"project-info-add\">\n          <div mdcBody1 class=\"project-description\">\n            {{project.description}}\n          </div>\n        </div>\n      </div>\n    </div>\n    <mdc-card-actions style=\"\">\n      <mdc-card-action-icons>\n        <a target=\"_blank\" *ngIf=\"notEmpty(project.youtube_video_url)\" href=\"{{project.youtube_video_url}}\">\n          <button mdc-button outlined>\n            <mdc-icon>\n              <svg viewBox=\"0 0 24 24\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n                <title>Artboard</title>\n                <g id=\"Artboard\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n                  <path d=\"M23.4981818,6.64 C23.2227273,5.60090909 22.4086364,4.78272727 21.3763636,4.50454545 C19.5054545,4 12,4 12,4 C12,4 4.49454545,4 2.62363636,4.50454545 C1.59136364,4.78272727 0.777272727,5.60090909 0.501818182,6.64 C0,8.52454545 0,12.4545455 0,12.4545455 C0,12.4545455 0,16.3845455 0.501818182,18.2690909 C0.777272727,19.3081818 1.59136364,20.1263636 2.62363636,20.4045455 C4.49454545,20.9090909 12,20.9090909 12,20.9090909 C12,20.9090909 19.5054545,20.9090909 21.3763636,20.4045455 C22.4086364,20.1263636 23.2227273,19.3081818 23.4981818,18.2690909 C24,16.3845455 24,12.4545455 24,12.4545455 C24,12.4545455 24,8.52454545 23.4981818,6.64 Z\" id=\"1\" fill=\"#FF0000\" fill-rule=\"nonzero\"></path>\n                  <polygon id=\"0\" fill=\"#FFFFFF\" fill-rule=\"nonzero\" points=\"9.54545455 16.0231818 15.8181818 12.4545455 9.54545455 8.88590909\"></polygon>\n                </g>\n              </svg>\n            </mdc-icon>\n            Youtube\n          </button>\n        </a>\n        <a target=\"_blank\" *ngIf=\"notEmpty(project.medium_url)\" href=\"{{project.medium_url}}\">\n          <button mdc-button outlined>\n            <mdc-icon>\n              <svg viewBox=\"0 0 24 24\" preserveAspectRatio=\"xMidYMid meet\" focusable=\"false\"\n                   style=\"pointer-events: none; display: block; width: 100%; height: 100%;\">\n                <g>\n                  <path d=\"M2.9,6.3c0-0.3-0.1-0.6-0.3-0.8L0.4,2.8V2.4h7l5.4,11.8l4.7-11.8h6.6v0.4l-1.9,1.8c-0.2,0.1-0.2,0.3-0.2,0.5v13.5\n\tc0,0.2,0,0.4,0.2,0.5L24,21v0.4h-9.4V21l1.9-1.9c0.2-0.2,0.2-0.2,0.2-0.5V7.7l-5.4,13.7h-0.7L4.3,7.7v9.2c-0.1,0.4,0.1,0.8,0.3,1.1\n\tL7.2,21v0.4H0.1V21l2.5-3.1c0.3-0.3,0.4-0.7,0.3-1.1V6.3z\"></path>\n                </g>\n              </svg>\n            </mdc-icon>\n            Read on Medium\n          </button>\n        </a>\n        <a target=\"_blank\" *ngIf=\"notEmpty(project.github_url)\" href=\"{{project.github_url}}\">\n          <button mdc-button outlined>\n            <mdc-icon>\n              <svg viewBox=\"0 0 24 24\" preserveAspectRatio=\"xMidYMid meet\" focusable=\"false\"\n                   style=\"pointer-events: none; display: block; width: 100%; height: 100%;\">\n                <g>\n                  <path d=\"M8,18.8C8,18.9,7.9,19,7.8,19c-0.2,0-0.3-0.1-0.3-0.2c0-0.1,0.1-0.2,0.3-0.2C7.9,18.7,8,18.7,8,18.8z M6.5,18.6\n\tc0,0.1,0.1,0.2,0.2,0.2c0.1,0,0.3,0,0.3-0.1c0-0.1-0.1-0.2-0.2-0.3C6.7,18.5,6.6,18.5,6.5,18.6L6.5,18.6z M8.7,18.5\n\tc-0.1,0-0.2,0.1-0.2,0.2c0,0.1,0.1,0.2,0.3,0.1c0.1,0,0.2-0.1,0.2-0.2C8.9,18.6,8.8,18.5,8.7,18.5z M11.8,0C5.1,0,0,5.1,0,11.8\n\tc0,5.4,3.4,10,8.2,11.6C8.8,23.5,9,23.1,9,22.8c0-0.3,0-2,0-3c0,0-3.4,0.7-4.1-1.4c0,0-0.6-1.4-1.3-1.8c0,0-1.1-0.8,0.1-0.7\n\tc0,0,1.2,0.1,1.9,1.2c1.1,1.9,2.8,1.3,3.5,1c0.1-0.8,0.4-1.3,0.8-1.6c-2.7-0.3-5.4-0.7-5.4-5.3c0-1.3,0.4-2,1.1-2.8\n\tC5.4,8,5,6.7,5.7,5C6.7,4.7,9,6.3,9,6.3c1-0.3,2-0.4,3-0.4s2.1,0.1,3,0.4c0,0,2.3-1.6,3.3-1.3c0.7,1.7,0.3,3,0.1,3.3\n\tc0.8,0.9,1.2,1.5,1.2,2.8c0,4.7-2.9,5-5.6,5.3c0.4,0.4,0.8,1.1,0.8,2.2c0,1.6,0,3.6,0,4c0,0.3,0.2,0.7,0.8,0.6\n\tc4.8-1.6,8.1-6.2,8.1-11.6C24,5.1,18.6,0,11.8,0z M4.7,16.7c-0.1,0,0,0.2,0,0.3C4.8,17,4.9,17.1,5,17c0.1,0,0-0.2,0-0.3\n\tC4.9,16.7,4.8,16.6,4.7,16.7z M4.2,16.3c0,0.1,0,0.1,0.1,0.2c0.1,0,0.2,0,0.2,0c0-0.1,0-0.1-0.1-0.2C4.3,16.2,4.2,16.2,4.2,16.3z\n\t M5.7,18c-0.1,0.1,0,0.2,0.1,0.3c0.1,0.1,0.3,0.1,0.3,0c0.1-0.1,0-0.2-0.1-0.3C6,18,5.8,17.9,5.7,18z M5.2,17.3\n\tc-0.1,0-0.1,0.2,0,0.3s0.2,0.2,0.3,0.1c0.1-0.1,0.1-0.2,0-0.3C5.4,17.3,5.3,17.2,5.2,17.3L5.2,17.3z\"></path>\n                </g>\n              </svg>\n            </mdc-icon>\n            Visit project\n          </button>\n        </a>\n        <a target=\"_blank\" *ngIf=\"notEmpty(project.play_store_url)\" href=\"{{project.play_store_url}}\">\n          <button mdc-button outlined>\n            <mdc-icon>\n              <svg viewBox=\"0 0 24 24\" version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\">\n                <title>Artboard</title>\n                <defs>\n                  <linearGradient x1=\"0%\" y1=\"50.0198663%\" x2=\"100.017577%\" y2=\"50.0198663%\" id=\"linearGradient-1\">\n                    <stop stop-color=\"#63BE6B\" offset=\"0%\"></stop>\n                    <stop stop-color=\"#5BBC6A\" offset=\"50.6%\"></stop>\n                    <stop stop-color=\"#4AB96A\" offset=\"100%\"></stop>\n                  </linearGradient>\n                  <linearGradient x1=\"-0.0266963293%\" y1=\"50.0120145%\" x2=\"99.942158%\" y2=\"50.0120145%\" id=\"linearGradient-2\">\n                    <stop stop-color=\"#3EC6F2\" offset=\"0%\"></stop>\n                    <stop stop-color=\"#45AFE3\" offset=\"100%\"></stop>\n                  </linearGradient>\n                  <linearGradient x1=\"0.0420683611%\" y1=\"50.0367394%\" x2=\"99.9894829%\" y2=\"50.0367394%\" id=\"linearGradient-3\">\n                    <stop stop-color=\"#FAA51A\" offset=\"0%\"></stop>\n                    <stop stop-color=\"#FAB716\" offset=\"38.7%\"></stop>\n                    <stop stop-color=\"#FAC412\" offset=\"74.1%\"></stop>\n                    <stop stop-color=\"#FAC80F\" offset=\"100%\"></stop>\n                  </linearGradient>\n                  <linearGradient x1=\"0.0162601626%\" y1=\"49.9983515%\" x2=\"99.9985218%\" y2=\"49.9983515%\" id=\"linearGradient-4\">\n                    <stop stop-color=\"#EC3B50\" offset=\"0%\"></stop>\n                    <stop stop-color=\"#E7515B\" offset=\"100%\"></stop>\n                  </linearGradient>\n                </defs>\n                <g id=\"Artboard\" stroke=\"none\" stroke-width=\"1\" fill=\"none\" fill-rule=\"evenodd\">\n                  <path d=\"M15.4437039,7.31963841 L2.77056002,0.0763741948 C2.61131095,-0.0160930079 2.41096535,-0.0109559411 2.25685334,0.0815112616 C2.09760427,0.173978464 2,0.338364602 2,0.523299008 C2,0.523299008 2.00513707,1.19111769 2.01027413,2.29044999 L11.2415832,11.5217591 L15.4437039,7.31963841 Z\" id=\"Path\" fill=\"url(#linearGradient-1)\" fill-rule=\"nonzero\"></path>\n                  <path d=\"M2.01027413,2.29044999 C2.02568533,6.25626558 2.07191894,15.8831288 2.0924672,20.6760121 L11.2467203,11.5217591 L2.01027413,2.29044999 Z\" id=\"Path\" fill=\"url(#linearGradient-2)\" fill-rule=\"nonzero\"></path>\n                  <path d=\"M22.6972422,11.4652513 L15.4437039,7.31963841 L11.2364461,11.5217591 L15.9830959,16.2684088 L22.7023793,12.3539639 C22.8616283,12.2614967 22.9592326,12.0919735 22.9592326,11.9121761 C22.9592326,11.7272417 22.8564913,11.5577185 22.6972422,11.4652513 Z\" id=\"Path\" fill=\"url(#linearGradient-3)\" fill-rule=\"nonzero\"></path>\n                  <path d=\"M2.08733014,20.6760121 C2.09760427,22.3866554 2.10274134,23.4808506 2.10274134,23.4808506 C2.10274134,23.665785 2.20034561,23.8353082 2.35959468,23.9226384 C2.51884375,24.0151056 2.71405229,24.0151056 2.87330136,23.9226384 L15.9882329,16.2735459 L11.2415832,11.5268961 L2.08733014,20.6760121 Z\" id=\"Path\" fill=\"url(#linearGradient-4)\" fill-rule=\"nonzero\"></path>\n                </g>\n              </svg>\n            </mdc-icon>\n            Google Play\n          </button>\n        </a>\n      </mdc-card-action-icons>\n    </mdc-card-actions>\n  </mdc-card>\n</div>\n"
+module.exports = "<div class=\"content\">\n  <div *ngFor=\"let project of projects\" class=\"card project-card\">\n    <div class=\"project-info\">\n      <div>\n        <img class=\"project-img\" *ngIf=\"notEmpty(project.thumbnail)\" src=\"{{project.thumbnail}}\" alt=\"Photo\"\n             height=\"180\"\n             width=\"180\">\n      </div>\n      <div class=\"project-details\">\n        <h5 class=\"project-title\">{{project.title}}</h5>\n        <div class=\"project-info-add\">\n          <div class=\"project-description body1\">\n            {{project.description}}\n          </div>\n        </div>\n      </div>\n    </div>\n    <div class=\"card_actions\">\n      <a target=\"_blank\" *ngIf=\"notEmpty(project.youtube_video_url)\" href=\"{{project.youtube_video_url}}\">\n        <mwc-button label=\"Youtube\" outlined>\n          <img slot=\"icon\" src=\"./assets/youtube.svg\">\n        </mwc-button>\n      </a>\n      <a target=\"_blank\" *ngIf=\"notEmpty(project.medium_url)\" href=\"{{project.medium_url}}\">\n        <mwc-button  label=\"Read on Medium\" outlined>\n          <svg fill=\"var(--primary)\" slot=\"icon\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" xmlns=\"http://www.w3.org/2000/svg\" fill-rule=\"evenodd\" clip-rule=\"evenodd\"><path d=\"M2.846 6.887c.03-.295-.083-.586-.303-.784l-2.24-2.7v-.403h6.958l5.378 11.795 4.728-11.795h6.633v.403l-1.916 1.837c-.165.126-.247.333-.213.538v13.498c-.034.204.048.411.213.537l1.871 1.837v.403h-9.412v-.403l1.939-1.882c.19-.19.19-.246.19-.537v-10.91l-5.389 13.688h-.728l-6.275-13.688v9.174c-.052.385.076.774.347 1.052l2.521 3.058v.404h-7.148v-.404l2.521-3.058c.27-.279.39-.67.325-1.052v-10.608z\"/></svg>\n        </mwc-button>\n      </a>\n      <a target=\"_blank\" *ngIf=\"notEmpty(project.github_url)\" href=\"{{project.github_url}}\">\n        <mwc-button label=\"Visit project\" outlined>\n          <svg fill=\"var(--primary)\" slot=\"icon\" xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path d=\"M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z\"/></svg>\n        </mwc-button>\n      </a>\n      <a target=\"_blank\" *ngIf=\"notEmpty(project.play_store_url)\" href=\"{{project.play_store_url}}\">\n        <mwc-button label=\"Google Play\" outlined>\n          <img slot=\"icon\" src=\"./assets/play_store.svg\">\n        </mwc-button>\n      </a>\n    </div>\n  </div>\n</div>\n"
 
 /***/ }),
 
-/***/ "./src/app/about/about.component.scss":
-/*!********************************************!*\
-  !*** ./src/app/about/about.component.scss ***!
-  \********************************************/
+/***/ "./src/app/about/about.component.css":
+/*!*******************************************!*\
+  !*** ./src/app/about/about.component.css ***!
+  \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2Fib3V0L2Fib3V0LmNvbXBvbmVudC5zY3NzIn0= */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2Fib3V0L2Fib3V0LmNvbXBvbmVudC5jc3MifQ== */"
 
 /***/ }),
 
@@ -101,26 +101,39 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AboutComponent", function() { return AboutComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var src_data_bio_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/data/bio.json */ "./src/data/bio.json");
-var src_data_bio_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webpack_require__.t(/*! src/data/bio.json */ "./src/data/bio.json", 1);
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+
 
 
 
 let AboutComponent = class AboutComponent {
-    constructor() {
-        this.name = src_data_bio_json__WEBPACK_IMPORTED_MODULE_2__.name;
-        this.bio = src_data_bio_json__WEBPACK_IMPORTED_MODULE_2__.description;
+    constructor(sanitizer, http) {
+        this.sanitizer = sanitizer;
+        this.http = http;
+        this.bioUrl = 'https://raw.githubusercontent.com/serbelga/serbelga.github.io/data/data/bio.json';
     }
     ngOnInit() {
+        this.http.get(this.bioUrl).subscribe(data => {
+            console.log(data);
+            this.bio = data;
+        });
+    }
+    transform(url) {
+        return this.sanitizer.bypassSecurityTrustResourceUrl(url);
     }
 };
+AboutComponent.ctorParameters = () => [
+    { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["DomSanitizer"] },
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] }
+];
 AboutComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-about',
         template: __webpack_require__(/*! raw-loader!./about.component.html */ "./node_modules/raw-loader/index.js!./src/app/about/about.component.html"),
-        styles: [__webpack_require__(/*! ./about.component.scss */ "./src/app/about/about.component.scss")]
+        styles: [__webpack_require__(/*! ./about.component.css */ "./src/app/about/about.component.css")]
     }),
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["DomSanitizer"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"]])
 ], AboutComponent);
 
 
@@ -157,14 +170,14 @@ AppRoutingModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
-/***/ "./src/app/app.component.scss":
-/*!************************************!*\
-  !*** ./src/app/app.component.scss ***!
-  \************************************/
+/***/ "./src/app/app.component.css":
+/*!***********************************!*\
+  !*** ./src/app/app.component.css ***!
+  \***********************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuc2NzcyJ9 */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2FwcC5jb21wb25lbnQuY3NzIn0= */"
 
 /***/ }),
 
@@ -180,11 +193,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AppComponent", function() { return AppComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var src_data_bio_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/data/bio.json */ "./src/data/bio.json");
-var src_data_bio_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webpack_require__.t(/*! src/data/bio.json */ "./src/data/bio.json", 1);
-/* harmony import */ var _angular_mdc_web__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular-mdc/web */ "./node_modules/@angular-mdc/web/esm2015/web.js");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
-/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm2015/operators/index.js");
+/* harmony import */ var _theme_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./theme.service */ "./src/app/theme.service.ts");
+/* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+
 
 
 
@@ -192,64 +206,80 @@ var src_data_bio_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__we
 
 
 let AppComponent = class AppComponent {
-    constructor(router) {
+    constructor(router, sanitizer, http) {
         this.router = router;
-        this.title = 'sergiobelda-me-app';
-        this.contact = src_data_bio_json__WEBPACK_IMPORTED_MODULE_2__.contact;
+        this.sanitizer = sanitizer;
+        this.http = http;
+        this.bioUrl = 'https://raw.githubusercontent.com/serbelga/serbelga.github.io/data/data/bio.json';
+        this.title = 'serbelga-website';
         this.tabs = [
             { label: 'Posts', router: 'posts' },
             { label: 'Projects', router: 'projects' },
             { label: 'Design', router: 'design' },
             { label: 'About', router: 'about' }
         ];
-        this.navStart = router.events.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_5__["filter"])(evt => evt instanceof _angular_router__WEBPACK_IMPORTED_MODULE_4__["NavigationStart"]));
+        this.themeService = new _theme_service__WEBPACK_IMPORTED_MODULE_4__["ThemeService"]();
+        this.navStart = router.events.pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_3__["filter"])(evt => evt instanceof _angular_router__WEBPACK_IMPORTED_MODULE_2__["NavigationStart"]));
     }
     ngOnInit() {
+        this.http.get(this.bioUrl).subscribe(data => {
+            console.log(data);
+            this.bio = data;
+        });
+        const drawer = document.getElementsByTagName('mwc-drawer')[0];
+        const tabBar = document.getElementsByTagName('mwc-tab-bar')[0];
+        const drawerList = document.getElementsByTagName('mwc-list')[0];
+        if (drawer) {
+            const container = drawer.parentNode;
+            container.addEventListener('MDCTopAppBar:nav', () => {
+                drawer.open = !drawer.open;
+            });
+        }
         this.navStart.subscribe(evt => {
             switch (evt.url) {
                 case '/#':
-                    this.mdcTabBar.activeTabIndex = 0;
-                    this.mdcList.setSelectedIndex(0);
+                    tabBar.activeIndex = 0;
+                    drawerList.select(0);
                     break;
                 case '/':
-                    this.mdcTabBar.activeTabIndex = 0;
-                    this.mdcList.setSelectedIndex(0);
+                    tabBar.activeIndex = 0;
+                    drawerList.select(0);
                     break;
                 case '/posts':
-                    this.mdcTabBar.activeTabIndex = 0;
-                    this.mdcList.setSelectedIndex(0);
+                    tabBar.activeIndex = 0;
+                    drawerList.select(0);
                     break;
                 case '/projects':
-                    this.mdcTabBar.activeTabIndex = 1;
-                    this.mdcList.setSelectedIndex(1);
+                    tabBar.activeIndex = 1;
+                    drawerList.select(1);
                     break;
                 case '/design':
-                    this.mdcTabBar.activeTabIndex = 2;
-                    this.mdcList.setSelectedIndex(2);
+                    tabBar.activeIndex = 2;
+                    drawerList.select(2);
                     break;
                 case '/about':
-                    this.mdcTabBar.activeTabIndex = 2;
-                    this.mdcList.setSelectedIndex(3);
+                    tabBar.activeIndex = 3;
+                    drawerList.select(3);
                     break;
             }
         });
     }
+    transform(url) {
+        return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+    }
 };
-tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('mdcTabBar', { static: false }),
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_mdc_web__WEBPACK_IMPORTED_MODULE_3__["MdcTabBar"])
-], AppComponent.prototype, "mdcTabBar", void 0);
-tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
-    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])('mdcList', { static: false }),
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:type", _angular_mdc_web__WEBPACK_IMPORTED_MODULE_3__["MdcList"])
-], AppComponent.prototype, "mdcList", void 0);
+AppComponent.ctorParameters = () => [
+    { type: _angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"] },
+    { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__["DomSanitizer"] },
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HttpClient"] }
+];
 AppComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-root',
         template: __webpack_require__(/*! raw-loader!./app.component.html */ "./node_modules/raw-loader/index.js!./src/app/app.component.html"),
-        styles: [__webpack_require__(/*! ./app.component.scss */ "./src/app/app.component.scss")]
+        styles: [__webpack_require__(/*! ./app.component.css */ "./src/app/app.component.css")]
     }),
-    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_4__["Router"]])
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_router__WEBPACK_IMPORTED_MODULE_2__["Router"], _angular_platform_browser__WEBPACK_IMPORTED_MODULE_5__["DomSanitizer"], _angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HttpClient"]])
 ], AppComponent);
 
 
@@ -269,17 +299,34 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/platform-browser */ "./node_modules/@angular/platform-browser/fesm2015/platform-browser.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
-/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
-/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
-/* harmony import */ var ngx_slick__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ngx-slick */ "./node_modules/ngx-slick/ngx-slick.umd.js");
-/* harmony import */ var ngx_slick__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(ngx_slick__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
-/* harmony import */ var _angular_mdc_web__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular-mdc/web */ "./node_modules/@angular-mdc/web/esm2015/web.js");
-/* harmony import */ var _about_about_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./about/about.component */ "./src/app/about/about.component.ts");
-/* harmony import */ var _posts_posts_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./posts/posts.component */ "./src/app/posts/posts.component.ts");
-/* harmony import */ var _projects_projects_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./projects/projects.component */ "./src/app/projects/projects.component.ts");
-/* harmony import */ var _design_design_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./design/design.component */ "./src/app/design/design.component.ts");
-/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm2015/http.js");
+/* harmony import */ var _app_routing_module__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app-routing.module */ "./src/app/app-routing.module.ts");
+/* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
+/* harmony import */ var _material_mwc_button__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @material/mwc-button */ "./node_modules/@material/mwc-button/mwc-button.js");
+/* harmony import */ var _material_mwc_drawer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @material/mwc-drawer */ "./node_modules/@material/mwc-drawer/mwc-drawer.js");
+/* harmony import */ var _material_mwc_fab__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @material/mwc-fab */ "./node_modules/@material/mwc-fab/mwc-fab.js");
+/* harmony import */ var _material_mwc_icon__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @material/mwc-icon */ "./node_modules/@material/mwc-icon/mwc-icon.js");
+/* harmony import */ var _material_mwc_icon_button__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @material/mwc-icon-button */ "./node_modules/@material/mwc-icon-button/mwc-icon-button.js");
+/* harmony import */ var _material_mwc_icon_button_toggle__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! @material/mwc-icon-button-toggle */ "./node_modules/@material/mwc-icon-button-toggle/mwc-icon-button-toggle.js");
+/* harmony import */ var _material_mwc_menu__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @material/mwc-menu */ "./node_modules/@material/mwc-menu/mwc-menu.js");
+/* harmony import */ var _material_mwc_switch__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @material/mwc-switch */ "./node_modules/@material/mwc-switch/mwc-switch.js");
+/* harmony import */ var _material_mwc_tab_bar__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @material/mwc-tab-bar */ "./node_modules/@material/mwc-tab-bar/mwc-tab-bar.js");
+/* harmony import */ var _material_mwc_tab__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @material/mwc-tab */ "./node_modules/@material/mwc-tab/mwc-tab.js");
+/* harmony import */ var _material_mwc_top_app_bar_fixed__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! @material/mwc-top-app-bar-fixed */ "./node_modules/@material/mwc-top-app-bar-fixed/mwc-top-app-bar-fixed.js");
+/* harmony import */ var _posts_posts_component__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./posts/posts.component */ "./src/app/posts/posts.component.ts");
+/* harmony import */ var _projects_projects_component__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./projects/projects.component */ "./src/app/projects/projects.component.ts");
+/* harmony import */ var _angular_router__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! @angular/router */ "./node_modules/@angular/router/fesm2015/router.js");
+/* harmony import */ var _design_design_component__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./design/design.component */ "./src/app/design/design.component.ts");
+/* harmony import */ var _about_about_component__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./about/about.component */ "./src/app/about/about.component.ts");
+
+
+
+
+
+
+
+
+
 
 
 
@@ -294,49 +341,34 @@ __webpack_require__.r(__webpack_exports__);
 
 
 const appRoutes = [
-    { path: '', component: _posts_posts_component__WEBPACK_IMPORTED_MODULE_9__["PostsComponent"] },
-    { path: 'about', component: _about_about_component__WEBPACK_IMPORTED_MODULE_8__["AboutComponent"] },
-    { path: 'posts', component: _posts_posts_component__WEBPACK_IMPORTED_MODULE_9__["PostsComponent"] },
-    { path: 'projects', component: _projects_projects_component__WEBPACK_IMPORTED_MODULE_10__["ProjectsComponent"] },
-    { path: 'design', component: _design_design_component__WEBPACK_IMPORTED_MODULE_11__["DesignComponent"] }
+    { path: '', component: _posts_posts_component__WEBPACK_IMPORTED_MODULE_17__["PostsComponent"] },
+    { path: 'about', component: _about_about_component__WEBPACK_IMPORTED_MODULE_21__["AboutComponent"] },
+    { path: 'posts', component: _posts_posts_component__WEBPACK_IMPORTED_MODULE_17__["PostsComponent"] },
+    { path: 'projects', component: _projects_projects_component__WEBPACK_IMPORTED_MODULE_18__["ProjectsComponent"] },
+    { path: 'design', component: _design_design_component__WEBPACK_IMPORTED_MODULE_20__["DesignComponent"] }
 ];
 let AppModule = class AppModule {
 };
 AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_2__["NgModule"])({
         declarations: [
-            _app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"],
-            _about_about_component__WEBPACK_IMPORTED_MODULE_8__["AboutComponent"],
-            _posts_posts_component__WEBPACK_IMPORTED_MODULE_9__["PostsComponent"],
-            _projects_projects_component__WEBPACK_IMPORTED_MODULE_10__["ProjectsComponent"],
-            _design_design_component__WEBPACK_IMPORTED_MODULE_11__["DesignComponent"]
+            _app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"],
+            _posts_posts_component__WEBPACK_IMPORTED_MODULE_17__["PostsComponent"],
+            _projects_projects_component__WEBPACK_IMPORTED_MODULE_18__["ProjectsComponent"],
+            _design_design_component__WEBPACK_IMPORTED_MODULE_20__["DesignComponent"],
+            _about_about_component__WEBPACK_IMPORTED_MODULE_21__["AboutComponent"]
         ],
         imports: [
             _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
-            _angular_common_http__WEBPACK_IMPORTED_MODULE_6__["HttpClientModule"],
-            _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
-            _angular_mdc_web__WEBPACK_IMPORTED_MODULE_7__["MdcCardModule"],
-            _angular_mdc_web__WEBPACK_IMPORTED_MODULE_7__["MdcFabModule"],
-            _angular_mdc_web__WEBPACK_IMPORTED_MODULE_7__["MdcIconModule"],
-            _angular_mdc_web__WEBPACK_IMPORTED_MODULE_7__["MdcMenuModule"],
-            _angular_mdc_web__WEBPACK_IMPORTED_MODULE_7__["MdcIconButtonModule"],
-            _angular_mdc_web__WEBPACK_IMPORTED_MODULE_7__["MdcButtonModule"],
-            _angular_mdc_web__WEBPACK_IMPORTED_MODULE_7__["MdcTypographyModule"],
-            _angular_mdc_web__WEBPACK_IMPORTED_MODULE_7__["MdcTopAppBarModule"],
-            _angular_mdc_web__WEBPACK_IMPORTED_MODULE_7__["MdcTabModule"],
-            _angular_mdc_web__WEBPACK_IMPORTED_MODULE_7__["MdcTabScrollerModule"],
-            _angular_mdc_web__WEBPACK_IMPORTED_MODULE_7__["MdcTabBarModule"],
-            _angular_mdc_web__WEBPACK_IMPORTED_MODULE_7__["MdcListModule"],
-            _angular_mdc_web__WEBPACK_IMPORTED_MODULE_7__["MdcImageListModule"],
-            _angular_mdc_web__WEBPACK_IMPORTED_MODULE_7__["MdcTabIndicatorModule"],
-            _angular_mdc_web__WEBPACK_IMPORTED_MODULE_7__["MdcCardModule"],
-            _angular_mdc_web__WEBPACK_IMPORTED_MODULE_7__["MdcChipsModule"],
-            _angular_mdc_web__WEBPACK_IMPORTED_MODULE_7__["MdcDrawerModule"],
-            ngx_slick__WEBPACK_IMPORTED_MODULE_5__["SlickModule"].forRoot(),
-            _angular_router__WEBPACK_IMPORTED_MODULE_12__["RouterModule"].forRoot(appRoutes, { useHash: true })
+            _app_routing_module__WEBPACK_IMPORTED_MODULE_4__["AppRoutingModule"],
+            _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClientModule"],
+            _angular_router__WEBPACK_IMPORTED_MODULE_19__["RouterModule"].forRoot(appRoutes, { useHash: true })
         ],
         providers: [],
-        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
+        bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_5__["AppComponent"]],
+        schemas: [
+            _angular_core__WEBPACK_IMPORTED_MODULE_2__["CUSTOM_ELEMENTS_SCHEMA"]
+        ]
     })
 ], AppModule);
 
@@ -344,14 +376,14 @@ AppModule = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
-/***/ "./src/app/design/design.component.scss":
-/*!**********************************************!*\
-  !*** ./src/app/design/design.component.scss ***!
-  \**********************************************/
+/***/ "./src/app/design/design.component.css":
+/*!*********************************************!*\
+  !*** ./src/app/design/design.component.css ***!
+  \*********************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2Rlc2lnbi9kZXNpZ24uY29tcG9uZW50LnNjc3MifQ== */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL2Rlc2lnbi9kZXNpZ24uY29tcG9uZW50LmNzcyJ9 */"
 
 /***/ }),
 
@@ -388,15 +420,16 @@ let DesignComponent = class DesignComponent {
     transform(url) {
         return this.sanitizer.bypassSecurityTrustResourceUrl(url);
     }
-    notEmpty(field) {
-        return field !== '';
-    }
 };
+DesignComponent.ctorParameters = () => [
+    { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["DomSanitizer"] },
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] }
+];
 DesignComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-design',
         template: __webpack_require__(/*! raw-loader!./design.component.html */ "./node_modules/raw-loader/index.js!./src/app/design/design.component.html"),
-        styles: [__webpack_require__(/*! ./design.component.scss */ "./src/app/design/design.component.scss")]
+        styles: [__webpack_require__(/*! ./design.component.css */ "./src/app/design/design.component.css")]
     }),
     tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["DomSanitizer"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"]])
 ], DesignComponent);
@@ -405,14 +438,14 @@ DesignComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
-/***/ "./src/app/posts/posts.component.scss":
-/*!********************************************!*\
-  !*** ./src/app/posts/posts.component.scss ***!
-  \********************************************/
+/***/ "./src/app/posts/posts.component.css":
+/*!*******************************************!*\
+  !*** ./src/app/posts/posts.component.css ***!
+  \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Bvc3RzL3Bvc3RzLmNvbXBvbmVudC5zY3NzIn0= */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Bvc3RzL3Bvc3RzLmNvbXBvbmVudC5jc3MifQ== */"
 
 /***/ }),
 
@@ -444,11 +477,14 @@ let PostsComponent = class PostsComponent {
         });
     }
 };
+PostsComponent.ctorParameters = () => [
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }
+];
 PostsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-posts',
         template: __webpack_require__(/*! raw-loader!./posts.component.html */ "./node_modules/raw-loader/index.js!./src/app/posts/posts.component.html"),
-        styles: [__webpack_require__(/*! ./posts.component.scss */ "./src/app/posts/posts.component.scss")]
+        styles: [__webpack_require__(/*! ./posts.component.css */ "./src/app/posts/posts.component.css")]
     }),
     tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"]])
 ], PostsComponent);
@@ -457,14 +493,14 @@ PostsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
-/***/ "./src/app/projects/projects.component.scss":
-/*!**************************************************!*\
-  !*** ./src/app/projects/projects.component.scss ***!
-  \**************************************************/
+/***/ "./src/app/projects/projects.component.css":
+/*!*************************************************!*\
+  !*** ./src/app/projects/projects.component.css ***!
+  \*************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Byb2plY3RzL3Byb2plY3RzLmNvbXBvbmVudC5zY3NzIn0= */"
+module.exports = "\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiJzcmMvYXBwL3Byb2plY3RzL3Byb2plY3RzLmNvbXBvbmVudC5jc3MifQ== */"
 
 /***/ }),
 
@@ -505,11 +541,15 @@ let ProjectsComponent = class ProjectsComponent {
         return field !== '';
     }
 };
+ProjectsComponent.ctorParameters = () => [
+    { type: _angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["DomSanitizer"] },
+    { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"] }
+];
 ProjectsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
         selector: 'app-projects',
         template: __webpack_require__(/*! raw-loader!./projects.component.html */ "./node_modules/raw-loader/index.js!./src/app/projects/projects.component.html"),
-        styles: [__webpack_require__(/*! ./projects.component.scss */ "./src/app/projects/projects.component.scss")]
+        styles: [__webpack_require__(/*! ./projects.component.css */ "./src/app/projects/projects.component.css")]
     }),
     tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [_angular_platform_browser__WEBPACK_IMPORTED_MODULE_2__["DomSanitizer"], _angular_common_http__WEBPACK_IMPORTED_MODULE_3__["HttpClient"]])
 ], ProjectsComponent);
@@ -518,14 +558,39 @@ ProjectsComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
 
 /***/ }),
 
-/***/ "./src/data/bio.json":
-/*!***************************!*\
-  !*** ./src/data/bio.json ***!
-  \***************************/
-/*! exports provided: name, description, contact, default */
-/***/ (function(module) {
+/***/ "./src/app/theme.service.ts":
+/*!**********************************!*\
+  !*** ./src/app/theme.service.ts ***!
+  \**********************************/
+/*! exports provided: ThemeService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-module.exports = {"name":"SERGIO BELDA","description":"Software Engineer by the Polytechnic University of Valencia. Passionate about software development and new technologies. My main interests are the development of Android applications, the design of user interfaces, the development of IoT projects, as well as the augmented reality projects and multimodal interfaces design.","contact":{"twitter":"https://twitter.com/SergioBeldaG","medium":"https://medium.com/@serbelga","github":"https://github.com/serbelga","linkedin":"https://www.linkedin.com/in/sergio-belda-galbis/"}};
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ThemeService", function() { return ThemeService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm2015/core.js");
+/* harmony import */ var rxjs__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! rxjs */ "./node_modules/rxjs/_esm2015/index.js");
+
+
+
+let ThemeService = class ThemeService {
+    constructor() {
+        this.presentThemeSubject = new rxjs__WEBPACK_IMPORTED_MODULE_2__["BehaviorSubject"]('theme-light');
+        this.presentTheme$ = this.presentThemeSubject.asObservable();
+    }
+    changeTheme(theme) {
+        this.presentThemeSubject.next(theme);
+    }
+};
+ThemeService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+    Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+        providedIn: 'root',
+    }),
+    tslib__WEBPACK_IMPORTED_MODULE_0__["__metadata"]("design:paramtypes", [])
+], ThemeService);
+
+
 
 /***/ }),
 
@@ -577,8 +642,18 @@ __webpack_require__.r(__webpack_exports__);
 if (_environments_environment__WEBPACK_IMPORTED_MODULE_3__["environment"].production) {
     Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["enableProdMode"])();
 }
-Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformBrowserDynamic"])().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_2__["AppModule"])
-    .catch(err => console.error(err));
+function bootstrapModule() {
+    Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformBrowserDynamic"])().bootstrapModule(_app_app_module__WEBPACK_IMPORTED_MODULE_2__["AppModule"])
+        .catch(err => console.log(err));
+}
+if (window.WebComponents.ready) {
+    // Web Components are ready
+    bootstrapModule();
+}
+else {
+    // Wait for polyfills to load
+    window.addEventListener('WebComponentsReady', bootstrapModule);
+}
 
 
 /***/ }),
@@ -590,7 +665,7 @@ Object(_angular_platform_browser_dynamic__WEBPACK_IMPORTED_MODULE_1__["platformB
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/sergiobelda/WebstormProjects/Portfolio/serbelga.github.io_angular/src/main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! /Users/sergiobelda/WebstormProjects/serbelga-website/src/main.ts */"./src/main.ts");
 
 
 /***/ })
