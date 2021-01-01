@@ -13,7 +13,7 @@ export class PostsComponent implements OnInit {
   constructor(private http: HttpClient) {
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.http.get(this.postsUrl).subscribe(
       data => {
         console.log(data);

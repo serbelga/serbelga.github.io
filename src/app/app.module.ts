@@ -14,6 +14,7 @@ import '@material/mwc-menu';
 import '@material/mwc-switch';
 import '@material/mwc-tab-bar';
 import '@material/mwc-tab';
+import '@material/mwc-list';
 import '@material/mwc-top-app-bar-fixed';
 import { PostsComponent } from './posts/posts.component';
 import { ProjectsComponent } from './projects/projects.component';

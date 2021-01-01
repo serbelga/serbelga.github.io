@@ -14,7 +14,7 @@ export class ProjectsComponent implements OnInit {
   constructor(private sanitizer: DomSanitizer, private http: HttpClient) {
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.http.get(this.projectsUrl).subscribe(
       data => {
         console.log(data);
@@ -23,11 +23,7 @@ export class ProjectsComponent implements OnInit {
     );
   }
 
-  transform(url) {
-    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
-  }
-
-  notEmpty(field) {
+  notEmpty(field: string): boolean {
     return field !== '';
   }
 }

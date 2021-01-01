@@ -4,8 +4,9 @@ import {NavigationStart, Router} from '@angular/router';
 import {Observable} from 'rxjs';
 import {filter} from 'rxjs/operators';
 import {ThemeService} from './theme.service';
-import {DomSanitizer} from '@angular/platform-browser';
+import {DomSanitizer, SafeResourceUrl} from '@angular/platform-browser';
 import {HttpClient} from '@angular/common/http';
+import { List } from '@material/mwc-list';
 
 @Component({
   selector: 'app-root',
@@ -32,7 +33,7 @@ export class AppComponent implements OnInit {
     ) as Observable<NavigationStart>;
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.http.get(this.bioUrl).subscribe(
       data => {
         console.log(data);
@@ -41,13 +42,15 @@ export class AppComponent implements OnInit {
     );
     const drawer = document.getElementsByTagName('mwc-drawer')[0];
     const tabBar = document.getElementsByTagName('mwc-tab-bar')[0];
-    const drawerList = document.getElementsByTagName('mwc-list')[0];
+    const drawerList: List = document.getElementsByTagName('mwc-list')[0];
 
     if (drawer) {
       const container = drawer.parentNode;
-      container.addEventListener('MDCTopAppBar:nav', () => {
-        drawer.open = !drawer.open;
-      });
+      if (container) {
+        container.addEventListener('MDCTopAppBar:nav', () => {
+          drawer.open = !drawer.open;
+        });
+      }
     }
 
     this.navStart.subscribe(evt => {
@@ -78,9 +81,5 @@ export class AppComponent implements OnInit {
           break;
       }
     });
-  }
-
-  transform(url) {
-    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
 }

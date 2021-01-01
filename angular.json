@@ -3,9 +3,13 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "serbelga-website": {
+    "sergiobelda-dev": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:application": {
+          "strict": true
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -13,12 +17,12 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/serbelga-website",
+            "outputPath": "dist/sergiobelda-dev",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
-            "aot": false,
+            "aot": true,
             "assets": [
               "src/favicon.ico",
               "src/assets",
@@ -44,17 +48,20 @@
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
-              "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "2mb",
-                  "maximumError": "5mb"
+                  "maximumWarning": "500kb",
+                  "maximumError": "1mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "2kb",
+                  "maximumError": "4kb"
                 }
               ]
             }
@@ -63,18 +70,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "serbelga-website:build"
+            "browserTarget": "sergiobelda-dev:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "serbelga-website:build:production"
+              "browserTarget": "sergiobelda-dev:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "serbelga-website:build"
+            "browserTarget": "sergiobelda-dev:build"
           }
         },
         "test": {
@@ -116,15 +123,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "serbelga-website:serve"
+            "devServerTarget": "sergiobelda-dev:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "serbelga-website:serve:production"
+              "devServerTarget": "sergiobelda-dev:serve:production"
             }
           }
         }
       }
-    }},
-  "defaultProject": "serbelga-website"
+    }
+  },
+  "defaultProject": "sergiobelda-dev",
+  "cli": {
+    "analytics": "f4988166-8dff-4b7a-a1ae-2f9e58509ab8"
+  }
 }

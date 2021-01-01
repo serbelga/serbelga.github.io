@@ -14,16 +14,12 @@ export class DesignComponent implements OnInit {
   constructor(private sanitizer: DomSanitizer, private http: HttpClient) {
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.http.get(this.designsUrl).subscribe(
       data => {
         console.log(data);
         this.designs = data;
       }
     );
-  }
-
-  transform(url) {
-    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
 }

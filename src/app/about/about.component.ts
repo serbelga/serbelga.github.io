@@ -13,16 +13,12 @@ export class AboutComponent implements OnInit {
 
   constructor(private sanitizer: DomSanitizer, private http: HttpClient) {
   }
-  ngOnInit() {
+  ngOnInit(): void {
     this.http.get(this.bioUrl).subscribe(
       data => {
         console.log(data);
         this.bio = data;
       }
     );
-  }
-
-  transform(url) {
-    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
 }
