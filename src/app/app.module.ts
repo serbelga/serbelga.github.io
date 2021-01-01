@@ -1,32 +1,25 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SlickModule } from 'ngx-slick';
-import { HttpClientModule } from '@angular/common/http';
-import {
-  MdcFabModule,
-  MdcIconModule,
-  MdcMenuModule,
-  MdcIconButtonModule,
-  MdcButtonModule,
-  MdcTypographyModule,
-  MdcTopAppBarModule,
-  MdcTabModule,
-  MdcTabScrollerModule,
-  MdcTabBarModule,
-  MdcTabIndicatorModule,
-  MdcCardModule,
-  MdcChipsModule,
-  MdcImageListModule,
-  MdcDrawerModule,
-  MdcListModule
-} from '@angular-mdc/web';
-import { AboutComponent } from './about/about.component';
+
+import '@material/mwc-button';
+import '@material/mwc-drawer';
+import '@material/mwc-fab';
+import '@material/mwc-icon';
+import '@material/mwc-icon-button';
+import '@material/mwc-icon-button-toggle';
+import '@material/mwc-menu';
+import '@material/mwc-switch';
+import '@material/mwc-tab-bar';
+import '@material/mwc-tab';
+import '@material/mwc-top-app-bar-fixed';
 import { PostsComponent } from './posts/posts.component';
 import { ProjectsComponent } from './projects/projects.component';
-import { DesignComponent } from './design/design.component';
 import { Routes, RouterModule } from '@angular/router';
+import { DesignComponent } from './design/design.component';
+import { AboutComponent } from './about/about.component';
 
 const appRoutes: Routes = [
   { path: '', component: PostsComponent },
@@ -39,39 +32,24 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    AboutComponent,
     PostsComponent,
     ProjectsComponent,
-    DesignComponent
+    DesignComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule,
     AppRoutingModule,
-    MdcCardModule,
-    MdcFabModule,
-    MdcIconModule,
-    MdcMenuModule,
-    MdcIconButtonModule,
-    MdcButtonModule,
-    MdcTypographyModule,
-    MdcTopAppBarModule,
-    MdcTabModule,
-    MdcTabScrollerModule,
-    MdcTabBarModule,
-    MdcListModule,
-    MdcImageListModule,
-    MdcTabIndicatorModule,
-    MdcCardModule,
-    MdcChipsModule,
-    MdcDrawerModule,
-    SlickModule.forRoot(),
+    HttpClientModule,
     RouterModule.forRoot(
       appRoutes,
       { useHash : true }
     )
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [
+    CUSTOM_ELEMENTS_SCHEMA
+  ]
 })
 export class AppModule { }

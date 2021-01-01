@@ -1,17 +1,28 @@
-import { Component, OnInit } from '@angular/core';
-import bio from 'src/data/bio.json';
+import {Component, OnInit} from '@angular/core';
+import {DomSanitizer} from '@angular/platform-browser';
+import {HttpClient} from '@angular/common/http';
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
-  styleUrls: ['./about.component.scss']
+  styleUrls: ['./about.component.css']
 })
 export class AboutComponent implements OnInit {
-  name = bio.name;
-  bio = bio.description;
-  constructor() { }
+  bioUrl = 'https://raw.githubusercontent.com/serbelga/serbelga.github.io/data/data/bio.json';
+  bio: any;
 
+  constructor(private sanitizer: DomSanitizer, private http: HttpClient) {
+  }
   ngOnInit() {
+    this.http.get(this.bioUrl).subscribe(
+      data => {
+        console.log(data);
+        this.bio = data;
+      }
+    );
   }
 
+  transform(url) {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+  }
 }

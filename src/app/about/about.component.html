@@ -1,14 +1,13 @@
-<div class="about-content">
+<div class="content about-content">
   <div class="bio-section">
-    <img src="/assets/about/profile.jpg" alt="Photo" width="180" height="180" class="about-img">
-    <mdc-card outlined>
+    <img src="{{bio.profile}}" alt="Photo" width="180" height="180" class="about-img">
+    <div class="card">
       <div style="margin: 24px;">
-        <div mdcHeadline5>{{name}}</div>
-        <div mdcBody1 style="margin-top: 16px;">
-          {{bio}}
+        <h5>{{bio.name}}</h5>
+        <div class="body1" style="margin-top: 16px;">
+          {{bio.description}}
         </div>
       </div>
-    </mdc-card>
+    </div>
   </div>
 </div>
-

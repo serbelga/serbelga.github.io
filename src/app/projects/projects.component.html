@@ -1,5 +1,5 @@
-<div style="display: flex; flex-direction: column; align-items: center;">
-  <mdc-card outlined *ngFor="let project of projects" class="project-card">
+<div class="content">
+  <div *ngFor="let project of projects" class="card project-card">
     <div class="project-info">
       <div>
         <img class="project-img" *ngIf="notEmpty(project.thumbnail)" src="{{project.thumbnail}}" alt="Photo"
@@ -7,106 +7,35 @@
              width="180">
       </div>
       <div class="project-details">
-        <div mdcHeadline5 class="project-title">{{project.title}}</div>
+        <h5 class="project-title">{{project.title}}</h5>
         <div class="project-info-add">
-          <div mdcBody1 class="project-description">
+          <div class="project-description body1">
             {{project.description}}
           </div>
         </div>
       </div>
     </div>
-    <mdc-card-actions style="">
-      <mdc-card-action-icons>
-        <a target="_blank" *ngIf="notEmpty(project.youtube_video_url)" href="{{project.youtube_video_url}}">
-          <button mdc-button outlined>
-            <mdc-icon>
-              <svg viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <title>Artboard</title>
-                <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                  <path d="M23.4981818,6.64 C23.2227273,5.60090909 22.4086364,4.78272727 21.3763636,4.50454545 C19.5054545,4 12,4 12,4 C12,4 4.49454545,4 2.62363636,4.50454545 C1.59136364,4.78272727 0.777272727,5.60090909 0.501818182,6.64 C0,8.52454545 0,12.4545455 0,12.4545455 C0,12.4545455 0,16.3845455 0.501818182,18.2690909 C0.777272727,19.3081818 1.59136364,20.1263636 2.62363636,20.4045455 C4.49454545,20.9090909 12,20.9090909 12,20.9090909 C12,20.9090909 19.5054545,20.9090909 21.3763636,20.4045455 C22.4086364,20.1263636 23.2227273,19.3081818 23.4981818,18.2690909 C24,16.3845455 24,12.4545455 24,12.4545455 C24,12.4545455 24,8.52454545 23.4981818,6.64 Z" id="1" fill="#FF0000" fill-rule="nonzero"></path>
-                  <polygon id="0" fill="#FFFFFF" fill-rule="nonzero" points="9.54545455 16.0231818 15.8181818 12.4545455 9.54545455 8.88590909"></polygon>
-                </g>
-              </svg>
-            </mdc-icon>
-            Youtube
-          </button>
-        </a>
-        <a target="_blank" *ngIf="notEmpty(project.medium_url)" href="{{project.medium_url}}">
-          <button mdc-button outlined>
-            <mdc-icon>
-              <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
-                   style="pointer-events: none; display: block; width: 100%; height: 100%;">
-                <g>
-                  <path d="M2.9,6.3c0-0.3-0.1-0.6-0.3-0.8L0.4,2.8V2.4h7l5.4,11.8l4.7-11.8h6.6v0.4l-1.9,1.8c-0.2,0.1-0.2,0.3-0.2,0.5v13.5
-	c0,0.2,0,0.4,0.2,0.5L24,21v0.4h-9.4V21l1.9-1.9c0.2-0.2,0.2-0.2,0.2-0.5V7.7l-5.4,13.7h-0.7L4.3,7.7v9.2c-0.1,0.4,0.1,0.8,0.3,1.1
-	L7.2,21v0.4H0.1V21l2.5-3.1c0.3-0.3,0.4-0.7,0.3-1.1V6.3z"></path>
-                </g>
-              </svg>
-            </mdc-icon>
-            Read on Medium
-          </button>
-        </a>
-        <a target="_blank" *ngIf="notEmpty(project.github_url)" href="{{project.github_url}}">
-          <button mdc-button outlined>
-            <mdc-icon>
-              <svg viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" focusable="false"
-                   style="pointer-events: none; display: block; width: 100%; height: 100%;">
-                <g>
-                  <path d="M8,18.8C8,18.9,7.9,19,7.8,19c-0.2,0-0.3-0.1-0.3-0.2c0-0.1,0.1-0.2,0.3-0.2C7.9,18.7,8,18.7,8,18.8z M6.5,18.6
-	c0,0.1,0.1,0.2,0.2,0.2c0.1,0,0.3,0,0.3-0.1c0-0.1-0.1-0.2-0.2-0.3C6.7,18.5,6.6,18.5,6.5,18.6L6.5,18.6z M8.7,18.5
-	c-0.1,0-0.2,0.1-0.2,0.2c0,0.1,0.1,0.2,0.3,0.1c0.1,0,0.2-0.1,0.2-0.2C8.9,18.6,8.8,18.5,8.7,18.5z M11.8,0C5.1,0,0,5.1,0,11.8
-	c0,5.4,3.4,10,8.2,11.6C8.8,23.5,9,23.1,9,22.8c0-0.3,0-2,0-3c0,0-3.4,0.7-4.1-1.4c0,0-0.6-1.4-1.3-1.8c0,0-1.1-0.8,0.1-0.7
-	c0,0,1.2,0.1,1.9,1.2c1.1,1.9,2.8,1.3,3.5,1c0.1-0.8,0.4-1.3,0.8-1.6c-2.7-0.3-5.4-0.7-5.4-5.3c0-1.3,0.4-2,1.1-2.8
-	C5.4,8,5,6.7,5.7,5C6.7,4.7,9,6.3,9,6.3c1-0.3,2-0.4,3-0.4s2.1,0.1,3,0.4c0,0,2.3-1.6,3.3-1.3c0.7,1.7,0.3,3,0.1,3.3
-	c0.8,0.9,1.2,1.5,1.2,2.8c0,4.7-2.9,5-5.6,5.3c0.4,0.4,0.8,1.1,0.8,2.2c0,1.6,0,3.6,0,4c0,0.3,0.2,0.7,0.8,0.6
-	c4.8-1.6,8.1-6.2,8.1-11.6C24,5.1,18.6,0,11.8,0z M4.7,16.7c-0.1,0,0,0.2,0,0.3C4.8,17,4.9,17.1,5,17c0.1,0,0-0.2,0-0.3
-	C4.9,16.7,4.8,16.6,4.7,16.7z M4.2,16.3c0,0.1,0,0.1,0.1,0.2c0.1,0,0.2,0,0.2,0c0-0.1,0-0.1-0.1-0.2C4.3,16.2,4.2,16.2,4.2,16.3z
-	 M5.7,18c-0.1,0.1,0,0.2,0.1,0.3c0.1,0.1,0.3,0.1,0.3,0c0.1-0.1,0-0.2-0.1-0.3C6,18,5.8,17.9,5.7,18z M5.2,17.3
-	c-0.1,0-0.1,0.2,0,0.3s0.2,0.2,0.3,0.1c0.1-0.1,0.1-0.2,0-0.3C5.4,17.3,5.3,17.2,5.2,17.3L5.2,17.3z"></path>
-                </g>
-              </svg>
-            </mdc-icon>
-            Visit project
-          </button>
-        </a>
-        <a target="_blank" *ngIf="notEmpty(project.play_store_url)" href="{{project.play_store_url}}">
-          <button mdc-button outlined>
-            <mdc-icon>
-              <svg viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <title>Artboard</title>
-                <defs>
-                  <linearGradient x1="0%" y1="50.0198663%" x2="100.017577%" y2="50.0198663%" id="linearGradient-1">
-                    <stop stop-color="#63BE6B" offset="0%"></stop>
-                    <stop stop-color="#5BBC6A" offset="50.6%"></stop>
-                    <stop stop-color="#4AB96A" offset="100%"></stop>
-                  </linearGradient>
-                  <linearGradient x1="-0.0266963293%" y1="50.0120145%" x2="99.942158%" y2="50.0120145%" id="linearGradient-2">
-                    <stop stop-color="#3EC6F2" offset="0%"></stop>
-                    <stop stop-color="#45AFE3" offset="100%"></stop>
-                  </linearGradient>
-                  <linearGradient x1="0.0420683611%" y1="50.0367394%" x2="99.9894829%" y2="50.0367394%" id="linearGradient-3">
-                    <stop stop-color="#FAA51A" offset="0%"></stop>
-                    <stop stop-color="#FAB716" offset="38.7%"></stop>
-                    <stop stop-color="#FAC412" offset="74.1%"></stop>
-                    <stop stop-color="#FAC80F" offset="100%"></stop>
-                  </linearGradient>
-                  <linearGradient x1="0.0162601626%" y1="49.9983515%" x2="99.9985218%" y2="49.9983515%" id="linearGradient-4">
-                    <stop stop-color="#EC3B50" offset="0%"></stop>
-                    <stop stop-color="#E7515B" offset="100%"></stop>
-                  </linearGradient>
-                </defs>
-                <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                  <path d="M15.4437039,7.31963841 L2.77056002,0.0763741948 C2.61131095,-0.0160930079 2.41096535,-0.0109559411 2.25685334,0.0815112616 C2.09760427,0.173978464 2,0.338364602 2,0.523299008 C2,0.523299008 2.00513707,1.19111769 2.01027413,2.29044999 L11.2415832,11.5217591 L15.4437039,7.31963841 Z" id="Path" fill="url(#linearGradient-1)" fill-rule="nonzero"></path>
-                  <path d="M2.01027413,2.29044999 C2.02568533,6.25626558 2.07191894,15.8831288 2.0924672,20.6760121 L11.2467203,11.5217591 L2.01027413,2.29044999 Z" id="Path" fill="url(#linearGradient-2)" fill-rule="nonzero"></path>
-                  <path d="M22.6972422,11.4652513 L15.4437039,7.31963841 L11.2364461,11.5217591 L15.9830959,16.2684088 L22.7023793,12.3539639 C22.8616283,12.2614967 22.9592326,12.0919735 22.9592326,11.9121761 C22.9592326,11.7272417 22.8564913,11.5577185 22.6972422,11.4652513 Z" id="Path" fill="url(#linearGradient-3)" fill-rule="nonzero"></path>
-                  <path d="M2.08733014,20.6760121 C2.09760427,22.3866554 2.10274134,23.4808506 2.10274134,23.4808506 C2.10274134,23.665785 2.20034561,23.8353082 2.35959468,23.9226384 C2.51884375,24.0151056 2.71405229,24.0151056 2.87330136,23.9226384 L15.9882329,16.2735459 L11.2415832,11.5268961 L2.08733014,20.6760121 Z" id="Path" fill="url(#linearGradient-4)" fill-rule="nonzero"></path>
-                </g>
-              </svg>
-            </mdc-icon>
-            Google Play
-          </button>
-        </a>
-      </mdc-card-action-icons>
-    </mdc-card-actions>
-  </mdc-card>
+    <div class="card_actions">
+      <a target="_blank" *ngIf="notEmpty(project.youtube_video_url)" href="{{project.youtube_video_url}}">
+        <mwc-button label="Youtube" outlined>
+          <img slot="icon" src="./assets/youtube.svg">
+        </mwc-button>
+      </a>
+      <a target="_blank" *ngIf="notEmpty(project.medium_url)" href="{{project.medium_url}}">
+        <mwc-button  label="Read on Medium" outlined>
+          <svg fill="var(--primary)" slot="icon" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M2.846 6.887c.03-.295-.083-.586-.303-.784l-2.24-2.7v-.403h6.958l5.378 11.795 4.728-11.795h6.633v.403l-1.916 1.837c-.165.126-.247.333-.213.538v13.498c-.034.204.048.411.213.537l1.871 1.837v.403h-9.412v-.403l1.939-1.882c.19-.19.19-.246.19-.537v-10.91l-5.389 13.688h-.728l-6.275-13.688v9.174c-.052.385.076.774.347 1.052l2.521 3.058v.404h-7.148v-.404l2.521-3.058c.27-.279.39-.67.325-1.052v-10.608z"/></svg>
+        </mwc-button>
+      </a>
+      <a target="_blank" *ngIf="notEmpty(project.github_url)" href="{{project.github_url}}">
+        <mwc-button label="Visit project" outlined>
+          <svg fill="var(--primary)" slot="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+        </mwc-button>
+      </a>
+      <a target="_blank" *ngIf="notEmpty(project.play_store_url)" href="{{project.play_store_url}}">
+        <mwc-button label="Google Play" outlined>
+          <img slot="icon" src="./assets/play_store.svg">
+        </mwc-button>
+      </a>
+    </div>
+  </div>
 </div>
