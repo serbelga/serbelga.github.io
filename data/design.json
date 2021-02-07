@@ -5,25 +5,41 @@
       {
         "title": "ToDo_meter",
         "images": [
-          "https://raw.githubusercontent.com/serbelga/serbelga.github.io/data/img/ToDo_meter.jpg"
+          {
+              "url": "https://raw.githubusercontent.com/serbelga/serbelga.github.io/data/img/ToDo_meter.jpg",
+              "height": 240,
+              "width": 240
+          }
         ]
       },
       {
         "title": "Gramophone",
         "images": [
-          "https://raw.githubusercontent.com/serbelga/serbelga.github.io/data/img/Gramophone.jpg"
+          {
+              "url": "https://raw.githubusercontent.com/serbelga/serbelga.github.io/data/img/Gramophone.jpg",
+              "height": 240,
+              "width": 240
+          }
         ]
       },
       {
         "title": "IoT Weather Station",
         "images": [
-          "https://raw.githubusercontent.com/serbelga/serbelga.github.io/data/img/Weather_Station.jpg"
+          {
+              "url": "https://raw.githubusercontent.com/serbelga/serbelga.github.io/data/img/Weather_Station.jpg",
+              "height": 240,
+              "width": 240
+          }
         ]
       },
       {
         "title": "PymApp",
         "images": [
-          "https://raw.githubusercontent.com/serbelga/serbelga.github.io/data/img/PymApp.jpg"
+          {
+              "url": "https://raw.githubusercontent.com/serbelga/serbelga.github.io/data/img/PymApp.jpg",
+              "height": 240,
+              "width": 240
+          }
         ]
       }
     ]
