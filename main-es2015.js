@@ -611,7 +611,7 @@ class DesignComponent {
     constructor(sanitizer, http) {
         this.sanitizer = sanitizer;
         this.http = http;
-        this.designsUrl = 'https://raw.githubusercontent.com/serbelga/serbelga.github.io/data/data/design.json';
+        this.designsUrl = 'https://gist.githubusercontent.com/serbelga/1aa2b918ef592fef50147a5b071d34e9/raw/f63d43f6b59dad3f9e0c436cd5346d2cce375983/design_icons.json';
     }
     ngOnInit() {
         this.http.get(this.designsUrl).subscribe(data => {
@@ -621,7 +621,7 @@ class DesignComponent {
     }
 }
 DesignComponent.ɵfac = function DesignComponent_Factory(t) { return new (t || DesignComponent)(_angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["DomSanitizer"]), _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdirectiveInject"](_angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"])); };
-DesignComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: DesignComponent, selectors: [["app-design"]], decls: 2, vars: 1, consts: [[2, "min-height", "100vh"], ["style", "display: flex; flex-direction: column; margin-top: 24px;", 4, "ngFor", "ngForOf"], [2, "display", "flex", "flex-direction", "column", "margin-top", "24px"], [2, "margin-left", "24px"], [1, "horizontal-list"], ["class", "card design-card", 4, "ngFor", "ngForOf"], [1, "card", "design-card"], [1, "design-info"], [2, "display", "flex", "flex-direction", "row"], ["class", "design-img", "alt", "Photo", 3, "src", "height", "width", 4, "ngFor", "ngForOf"], [1, "design-details"], ["alt", "Photo", 1, "design-img", 3, "src", "height", "width"]], template: function DesignComponent_Template(rf, ctx) { if (rf & 1) {
+DesignComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: DesignComponent, selectors: [["app-design"]], decls: 2, vars: 1, consts: [[2, "min-height", "100vh"], ["style", "display: flex; flex-direction: column; margin-top: 24px;", 4, "ngFor", "ngForOf"], [2, "display", "flex", "flex-direction", "column", "margin-top", "24px"], [2, "margin-left", "48px"], [1, "horizontal-list"], ["class", "card design-card", 4, "ngFor", "ngForOf"], [1, "card", "design-card"], [1, "design-info"], [2, "display", "flex", "flex-direction", "row"], ["class", "design-img", "alt", "Photo", 3, "src", "height", "width", 4, "ngFor", "ngForOf"], [1, "design-details"], ["alt", "Photo", 1, "design-img", 3, "src", "height", "width"]], template: function DesignComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](0, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtemplate"](1, DesignComponent_div_1_Template, 5, 2, "div", 1);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
