@@ -611,7 +611,7 @@ class DesignComponent {
     constructor(sanitizer, http) {
         this.sanitizer = sanitizer;
         this.http = http;
-        this.designsUrl = 'https://gist.githubusercontent.com/serbelga/1aa2b918ef592fef50147a5b071d34e9/raw/f63d43f6b59dad3f9e0c436cd5346d2cce375983/design_icons.json';
+        this.designsUrl = 'https://raw.githubusercontent.com/serbelga/serbelga.github.io/data/data/design.json';
     }
     ngOnInit() {
         this.http.get(this.designsUrl).subscribe(data => {
