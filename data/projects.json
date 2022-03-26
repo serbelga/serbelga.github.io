@@ -1,5 +1,15 @@
 [
    {
+      "title":"ToDometer Multiplatform",
+      "url":"https://github.com/serbelga/ToDometerMultiplatform",
+      "thumbnail":"https://raw.githubusercontent.com/serbelga/ToDometer/master/art/isotype.jpg",
+      "youtube_video_url":"",
+      "medium_url":"",
+      "github_url":"https://github.com/serbelga/ToDometerMultiplatform",
+      "play_store_url":"https://play.google.com/store/apps/details?id=dev.sergiobelda.todometer",
+      "description":"A meter to-do list built with Android Jetpack, Compose UI Multiplatform, Wear Compose, SQLDelight, Koin Multiplatform, SwiftUI..."
+   },
+   {
       "title":"ToDometer",
       "url":"https://github.com/serbelga/ToDometer",
       "thumbnail":"https://raw.githubusercontent.com/serbelga/ToDometer/master/art/isotype.jpg",
