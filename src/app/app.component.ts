@@ -4,9 +4,9 @@ import {NavigationStart, Router} from '@angular/router';
 import {Observable} from 'rxjs';
 import {filter} from 'rxjs/operators';
 import {ThemeService} from './theme.service';
-import {DomSanitizer, SafeResourceUrl} from '@angular/platform-browser';
+import {DomSanitizer} from '@angular/platform-browser';
 import {HttpClient} from '@angular/common/http';
-import { List } from '@material/mwc-list';
+import {List} from '@material/mwc-list';
 
 @Component({
   selector: 'app-root',
@@ -20,8 +20,8 @@ export class AppComponent implements OnInit {
   tabs = [
     {label: 'Posts', router: 'posts'},
     {label: 'Projects', router: 'projects'},
-    {label: 'Design', router: 'design'},
-    {label: 'About', router: 'about'}
+    // {label: 'Design', router: 'design'},
+    // {label: 'About', router: 'about'}
   ];
   navStart: Observable<NavigationStart>;
   themeService: ThemeService;

@@ -13,6 +13,7 @@ export class AboutComponent implements OnInit {
 
   constructor(private sanitizer: DomSanitizer, private http: HttpClient) {
   }
+
   ngOnInit(): void {
     this.http.get(this.bioUrl).subscribe(
       data => {
