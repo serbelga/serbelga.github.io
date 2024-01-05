@@ -2,22 +2,12 @@
    {
       "title":"ToDometer Multiplatform",
       "url":"https://github.com/serbelga/ToDometerMultiplatform",
-      "thumbnail":"https://raw.githubusercontent.com/serbelga/serbelga.github.io/data/img/ToDometer_Multiplatform.jpg",
+      "thumbnail":"https://play-lh.googleusercontent.com/2pTDSZQ1sNIV_yRXrQtSY-WpMhuHzptV1ucXeAWMTQbB7AYuKLrlQRQ8QzbczmCL2ipP=w480-h960-rw",
       "youtube_video_url":"",
       "medium_url":"",
       "github_url":"https://github.com/serbelga/ToDometerMultiplatform",
       "play_store_url":"https://play.google.com/store/apps/details?id=dev.sergiobelda.todometer",
       "description":"A meter to-do list built with Android Jetpack, Compose UI Multiplatform, Wear Compose, SQLDelight, Koin Multiplatform, SwiftUI..."
-   },
-   {
-      "title":"ToDometer",
-      "url":"https://github.com/serbelga/ToDometer",
-      "thumbnail":"https://raw.githubusercontent.com/serbelga/ToDometer/master/art/isotype.jpg",
-      "youtube_video_url":"",
-      "medium_url":"",
-      "github_url":"https://github.com/serbelga/ToDometer",
-      "play_store_url":"",
-      "description":"A meter to-do list built with Android Jetpack (Room, ViewModel, LiveData, Databinding, ViewBinding, Paging...)"
    },
    {
       "title":"Weather Station IoT",
