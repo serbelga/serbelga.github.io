@@ -5,7 +5,7 @@
       "thumbnail":"https://play-lh.googleusercontent.com/2pTDSZQ1sNIV_yRXrQtSY-WpMhuHzptV1ucXeAWMTQbB7AYuKLrlQRQ8QzbczmCL2ipP=w480-h960-rw",
       "youtube_video_url":"",
       "medium_url":"",
-      "github_url":"https://github.com/serbelga/ToDometerMultiplatform",
+      "github_url":"https://github.com/serbelga/Todometer-KMP",
       "play_store_url":"https://play.google.com/store/apps/details?id=dev.sergiobelda.todometer",
       "description":"A meter to-do list built with Android Jetpack, Compose UI Multiplatform, Wear Compose, SQLDelight, Koin Multiplatform, SwiftUI..."
    },
