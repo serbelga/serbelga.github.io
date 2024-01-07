@@ -42,32 +42,5 @@
       "tags":[
          "Android"
       ]
-   },
-   {
-      "title":"Material Components Flutter: BottomAppBar",
-      "url":"https://medium.com/@serbelga/material-components-bottomappbar-flutter-9008a6e54382",
-      "thumbnail":"https://raw.githubusercontent.com/serbelga/serbelga.github.io/data/img/Flutter_BottomAppBar.jpg",
-      "tags":[
-         "Flutter",
-         "Material"
-      ]
-   },
-   {
-      "title":"Material Components Android: BottomAppBar - Part I",
-      "url":"https://medium.com/@serbelga/material-components-bottomappbar-kotlin-part-i-6c248600f6d3",
-      "thumbnail":"https://raw.githubusercontent.com/serbelga/serbelga.github.io/data/img/Android_BottomAppBar.jpg",
-      "tags":[
-         "Android",
-         "Material"
-      ]
-   },
-   {
-      "title":"Material Components Android: BottomAppBar - Part II",
-      "url":"https://medium.com/@serbelga/material-components-android-bottomappbar-part-ii-1ae0079ec3a6",
-      "thumbnail":"https://raw.githubusercontent.com/serbelga/serbelga.github.io/data/img/Android_BottomAppBar.jpg",
-      "tags":[
-         "Android",
-         "Material"
-      ]
    }
 ]
