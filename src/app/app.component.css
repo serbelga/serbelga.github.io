@@ -1,0 +1,21 @@
+@media (max-width: 720px) {
+  .top-app-bar-tab-bar {
+    visibility: hidden;
+  }
+}
+
+@media (min-width: 720px) {
+  .top-app-bar-menu-icon-button-responsive {
+    display: none;
+  }
+}
+
+.top-app-bar-menu-icon-button {
+  color: var(--primary);
+}
+
+.top-app-bar-menu-icon-button-icon {
+  width: 24px;
+  height: 24px;
+  background-color: var(--primary);
+}

@@ -21,6 +21,7 @@ import {ProjectsComponent} from './projects/projects.component';
 import {RouterModule, Routes} from '@angular/router';
 import {DesignComponent} from './design/design.component';
 import {AboutComponent} from './about/about.component';
+import {SvgIconComponent} from "./svg-icon/svg-icon.component";
 
 export const appRoutes: Routes = [
   {path: '', component: PostsComponent},
@@ -45,7 +46,8 @@ export const appRoutes: Routes = [
     RouterModule.forRoot(
       appRoutes,
       {useHash: true}
-    )
+    ),
+    SvgIconComponent
   ],
   providers: [],
   bootstrap: [AppComponent],

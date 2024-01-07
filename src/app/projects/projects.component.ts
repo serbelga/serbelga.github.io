@@ -5,7 +5,7 @@ import {HttpClient} from '@angular/common/http';
 @Component({
   selector: 'app-projects',
   templateUrl: './projects.component.html',
-  styleUrls: ['./projects.component.css']
+  styleUrls: ['./projects.component.css', '../common/common.css']
 })
 export class ProjectsComponent implements OnInit {
   projects: any;

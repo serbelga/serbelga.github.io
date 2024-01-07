@@ -1,0 +1,32 @@
+.design-card {
+  margin: 24px;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.design-card:last-child {
+  position: relative;
+}
+
+.design-card:last-child::after {
+  position: absolute;
+  content: '';
+  right: -24px;
+  width: 24px;
+  height: 100%;
+}
+
+.design-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.design-details {
+  margin: 24px;
+}
+
+.design-img {
+  border: 1px solid var(--outline);
+  border-radius: var(--mdc-shape-small-component-radius);
+  object-fit: contain;
+  margin: 24px 24px 0 24px;
+}

@@ -1,0 +1,20 @@
+.about-content {
+  justify-content: start;
+  margin: 24px;
+}
+
+.about-img {
+  margin-bottom: 24px;
+  border-radius: var(--mdc-shape-small-component-radius);
+}
+
+.bio-section {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 719px) {
+  .bio-section {
+    width: 55%;
+  }
+}
