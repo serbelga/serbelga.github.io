@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <title>
+  Giving powers to the Navigation Compose library · Sergio Belda
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="Sergio Belda">
+<meta name="description" content="Navigation Compose Extended is a multiplatform complementary library for Navigation Compose to improve creation of navigation elements, such as destination routes, arguments, deep links, … in a more idiomatic way than using literals. It also provides Safe navigation routes and Safe navigation arguments.
+
+  Usage
+  
+    
+    Link to heading
+  
+
+This library can be used programmatically or using annotations to generate classes. In the following lines, annotations are used to create navigation elements.">
+<meta name="keywords" content="blog,android">
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Giving powers to the Navigation Compose library">
+  <meta name="twitter:description" content="Navigation Compose Extended is a multiplatform complementary library for Navigation Compose to improve creation of navigation elements, such as destination routes, arguments, deep links, … in a more idiomatic way than using literals. It also provides Safe navigation routes and Safe navigation arguments.
+Usage Link to heading This library can be used programmatically or using annotations to generate classes. In the following lines, annotations are used to create navigation elements.">
+
+<meta property="og:url" content="http://localhost:1313/posts/2024/giving-powers-to-the-navigation-compose-library/">
+  <meta property="og:site_name" content="Sergio Belda">
+  <meta property="og:title" content="Giving powers to the Navigation Compose library">
+  <meta property="og:description" content="Navigation Compose Extended is a multiplatform complementary library for Navigation Compose to improve creation of navigation elements, such as destination routes, arguments, deep links, … in a more idiomatic way than using literals. It also provides Safe navigation routes and Safe navigation arguments.
+Usage Link to heading This library can be used programmatically or using annotations to generate classes. In the following lines, annotations are used to create navigation elements.">
+  <meta property="og:locale" content="en">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-04-24T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-04-24T00:00:00+00:00">
+    <meta property="article:tag" content="Navigation">
+    <meta property="article:tag" content="Annotations">
+    <meta property="article:tag" content="Multiplatform">
+    <meta property="article:tag" content="Compose">
+
+
+
+
+<link rel="canonical" href="http://localhost:1313/posts/2024/giving-powers-to-the-navigation-compose-library/">
+
+
+<link rel="preload" href="/fonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/css/coder.css" media="screen">
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/css/coder-dark.css" media="screen">
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/svg+xml" href="/img/favicon.svg" sizes="any">
+<link rel="icon" type="image/png" href="/img/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/img/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa-solid fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    
+    <a class="navigation-title" href="http://localhost:1313/">
+      Sergio Belda
+    </a>
+    
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa-solid fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link " href="/posts/">Blog</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="http://localhost:1313/posts/2024/giving-powers-to-the-navigation-compose-library/">
+              Giving powers to the Navigation Compose library
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa-solid fa-calendar" aria-hidden="true"></i>
+              <time datetime="2024-04-24T00:00:00Z">
+                April 24, 2024
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa-solid fa-clock" aria-hidden="true"></i>
+              4-minute read
+            </span>
+          </div>
+          <div class="authors">
+  <i class="fa-solid fa-user" aria-hidden="true"></i>
+    <a href="/authors/sergio-belda/">Sergio Belda</a></div>
+
+          
+          <div class="tags">
+  <i class="fa-solid fa-tag" aria-hidden="true"></i>
+    <span class="tag">
+      <a href="/tags/navigation/">Navigation</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/annotations/">Annotations</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/multiplatform/">Multiplatform</a>
+    </span>
+      <span class="separator">•</span>
+    <span class="tag">
+      <a href="/tags/compose/">Compose</a>
+    </span></div>
+
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <p><strong>Navigation Compose Extended</strong> is a multiplatform complementary library for Navigation Compose to improve creation of navigation elements, such as destination <strong>routes</strong>, <strong>arguments</strong>, <strong>deep links</strong>, … in a more idiomatic way than using literals. It also provides <strong>Safe navigation routes</strong> and <strong>Safe navigation arguments</strong>.</p>
+<h3 id="usage">
+  Usage
+  <a class="heading-link" href="#usage">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>This library can be used programmatically or using annotations to generate classes. In the following lines, <strong>annotations</strong> are used to create navigation elements.</p>
+<p>First, add the following dependencies in the module <strong>build.gradle</strong> file.</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span>plugins {
+</span></span><span style="display:flex;"><span>    id(<span style="color:#a5d6ff">&#34;com.google.devtools.ksp&#34;</span>) <span style="color:#8b949e;font-style:italic">// Use ksp to use compiler library.
+</span></span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>kotlin {
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    sourceSets {
+</span></span><span style="display:flex;"><span>        <span style="color:#ff7b72">val</span> <span style="color:#79c0ff">commonMain</span> <span style="color:#ff7b72">by</span> getting {
+</span></span><span style="display:flex;"><span>            dependencies {
+</span></span><span style="display:flex;"><span>                <span style="color:#8b949e;font-style:italic">// Add Jetbrains Navigation Compose Multiplatform dependency.
+</span></span></span><span style="display:flex;"><span>                implementation(<span style="color:#a5d6ff">&#34;org.jetbrains.androidx.navigation:navigation-compose:</span><span style="color:#a5d6ff">$jetbrains</span><span style="color:#a5d6ff">_nav_version&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                implementation(<span style="color:#a5d6ff">&#34;dev.sergiobelda.navigation.compose.extended:navigation-compose-extended:</span><span style="color:#a5d6ff">$version</span><span style="color:#a5d6ff">&#34;</span>)
+</span></span><span style="display:flex;"><span>                <span style="color:#8b949e;font-style:italic">// Use Annotations to generate NavDestinations.
+</span></span></span><span style="display:flex;"><span>                implementation(<span style="color:#a5d6ff">&#34;dev.sergiobelda.navigation.compose.extended:navigation-compose-extended-annotation:</span><span style="color:#a5d6ff">$version</span><span style="color:#a5d6ff">&#34;</span>)
+</span></span><span style="display:flex;"><span>            }
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>dependencies {
+</span></span><span style="display:flex;"><span>    add(<span style="color:#a5d6ff">&#34;kspCommonMainMetadata&#34;</span>, <span style="color:#a5d6ff">&#34;dev.sergiobelda.navigation.compose.extended:navigation-compose-extended-compiler:</span><span style="color:#a5d6ff">$version</span><span style="color:#a5d6ff">&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// Workaround for KSP only in Common Main.
+</span></span></span><span style="display:flex;"><span>tasks.withType&lt;org.jetbrains.kotlin.gradle.dsl.KotlinCompile&lt;*&gt;&gt;().all {
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">if</span> (name <span style="color:#ff7b72;font-weight:bold">!=</span> <span style="color:#a5d6ff">&#34;kspCommonMainKotlinMetadata&#34;</span>) {
+</span></span><span style="display:flex;"><span>        dependsOn(<span style="color:#a5d6ff">&#34;kspCommonMainKotlinMetadata&#34;</span>)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>kotlin.sourceSets.commonMain {
+</span></span><span style="display:flex;"><span>    kotlin.srcDir(<span style="color:#a5d6ff">&#34;build/generated/ksp/metadata/commonMain/kotlin&#34;</span>)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="create-a-navdestination">
+  Create a NavDestination
+  <a class="heading-link" href="#create-a-navdestination">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>A <strong>NavDestination</strong> represents some Destination in the Navigation graph. It’s defined by a <strong>destinationId</strong>, a list of <strong>arguments</strong> and a list of <strong>deepLinks</strong>. You can check more information on API Reference <a href="https://sergiobelda.dev/navigation-compose-extended/api/navigation-compose-extended/dev.sergiobelda.navigation.compose.extended/-nav-destination/index.html"  class="external-link" target="_blank" rel="noopener">here</a>.</p>
+<p>Annotate your Composable with <code>@NavDestination</code> annotation.</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span><span style="color:#d2a8ff;font-weight:bold">@NavDestination</span>(
+</span></span><span style="display:flex;"><span>    destinationId = <span style="color:#a5d6ff">&#34;home&#34;</span>,
+</span></span><span style="display:flex;"><span>    name = <span style="color:#a5d6ff">&#34;Home&#34;</span>, <span style="color:#8b949e;font-style:italic">// Optional: NavDestination name.
+</span></span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span><span style="color:#d2a8ff;font-weight:bold">@Composable</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">fun</span> <span style="color:#d2a8ff;font-weight:bold">HomeScreen</span>() {}
+</span></span></code></pre></div><p>The compiler will generate a <code>NavDestination</code> object associated with this destination.</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">object</span> <span style="color:#f0883e;font-weight:bold">HomeNavDestination</span> : NavDestination&lt;HomeNavArgumentKeys&gt;() {
+</span></span><span style="display:flex;"><span>  <span style="color:#ff7b72">override</span> <span style="color:#ff7b72">val</span> <span style="color:#79c0ff">destinationId</span>: String = <span style="color:#a5d6ff">&#34;home&#34;</span>
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="using-the-navdestination-into-the-navhost">
+  Using the NavDestination into the NavHost
+  <a class="heading-link" href="#using-the-navdestination-into-the-navhost">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>This library also provides some wrappers for <a href="https://sergiobelda.dev/navigation-compose-extended/api/navigation-compose-extended/dev.sergiobelda.navigation.compose.extended/-nav-host.html"  class="external-link" target="_blank" rel="noopener">NavHost</a>, <a href="https://sergiobelda.dev/navigation-compose-extended/api/navigation-compose-extended/dev.sergiobelda.navigation.compose.extended/composable.html"  class="external-link" target="_blank" rel="noopener">composable</a>, <a href="https://sergiobelda.dev/navigation-compose-extended/api/navigation-compose-extended/dev.sergiobelda.navigation.compose.extended/navigation.html"  class="external-link" target="_blank" rel="noopener">navigation</a> functions as syntax sugar to declare the navigation host and use <code>NavDestinations</code>. In the following code the <code>NavDestination</code> object is set to <code>navDestination</code> parameter, and <code>composable</code> function will set <code>route</code>, <code>arguments</code> and <code>deepLinks</code> implicitly.</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span>NavHost(navController = navController, startNavDestination = HomeNavDestination) {
+</span></span><span style="display:flex;"><span>    composable(navDestination = HomeNavDestination) {
+</span></span><span style="display:flex;"><span>        HomeScreen()
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p>If you don’t want to use these wrappers, <code>NavDestination</code> base class also offers <code>route</code>, <code>arguments</code> and <code>deepLinks</code> getters that can be used as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span>NavHost(navController = navController, startDestination = <span style="color:#f0883e;font-weight:bold">HomeNavDestination</span>.route) {
+</span></span><span style="display:flex;"><span>    composable(
+</span></span><span style="display:flex;"><span>        route = <span style="color:#f0883e;font-weight:bold">HomeNavDestination</span>.route,
+</span></span><span style="display:flex;"><span>        arguments = <span style="color:#f0883e;font-weight:bold">HomeNavDestination</span>.arguments,
+</span></span><span style="display:flex;"><span>        deepLinks = <span style="color:#f0883e;font-weight:bold">HomeNavDestination</span>.deepLinks
+</span></span><span style="display:flex;"><span>    ) {
+</span></span><span style="display:flex;"><span>        HomeScreen()
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="navigate">
+  Navigate
+  <a class="heading-link" href="#navigate">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>We can navigate to some destination using the actions functions provided by the <a href="https://sergiobelda.dev/navigation-compose-extended/api/navigation-compose-extended/dev.sergiobelda.navigation.compose.extended/-nav-action/index.html"  class="external-link" target="_blank" rel="noopener">NavAction</a> class. The <code>NavAction.navigate()</code> function receive a <a href="https://sergiobelda.dev/navigation-compose-extended/api/navigation-compose-extended/dev.sergiobelda.navigation.compose.extended/-nav-route/index.html"  class="external-link" target="_blank" rel="noopener">NavRoute</a> instance to navigate to some destination. This <code>NavRoute</code> associated with a destination can be obtained using the <code>navRoute()</code> function in the <code>NavDestination</code> class or the <code>safeNavRoute()</code> function if we are using annotations.</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span><span style="color:#ff7b72">val</span> <span style="color:#79c0ff">navAction</span> = rememberNavAction(navController)
+</span></span><span style="display:flex;"><span>NavHost(navController = navController, startNavDestination = HomeNavDestination) {
+</span></span><span style="display:flex;"><span>    composable(navDestination = HomeNavDestination) {
+</span></span><span style="display:flex;"><span>        HomeScreen(
+</span></span><span style="display:flex;"><span>            navigateToSettings = {
+</span></span><span style="display:flex;"><span>                navAction.navigate(
+</span></span><span style="display:flex;"><span>                    <span style="color:#f0883e;font-weight:bold">SettingsNavDestination</span>.navRoute()
+</span></span><span style="display:flex;"><span>                )
+</span></span><span style="display:flex;"><span>            },
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>    }
+</span></span></code></pre></div><h3 id="navigate-with-arguments">
+  Navigate with arguments
+  <a class="heading-link" href="#navigate-with-arguments">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>You can add navigation arguments using the <code>arguments</code> parameter in <code>@NavDestination</code> annotation:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span><span style="color:#d2a8ff;font-weight:bold">@NavDestination</span>(
+</span></span><span style="display:flex;"><span>    name = <span style="color:#a5d6ff">&#34;Settings&#34;</span>,
+</span></span><span style="display:flex;"><span>    destinationId = <span style="color:#a5d6ff">&#34;settings&#34;</span>,
+</span></span><span style="display:flex;"><span>    arguments = [        NavArgument(name = <span style="color:#a5d6ff">&#34;userId&#34;</span>, type = <span style="color:#f0883e;font-weight:bold">NavArgumentType</span>.Int),
+</span></span><span style="display:flex;"><span>        NavArgument(name = <span style="color:#a5d6ff">&#34;text&#34;</span>, type = <span style="color:#f0883e;font-weight:bold">NavArgumentType</span>.String, defaultValue = <span style="color:#a5d6ff">&#34;Default&#34;</span>),
+</span></span><span style="display:flex;"><span>        NavArgument(name = <span style="color:#a5d6ff">&#34;result&#34;</span>, type = <span style="color:#f0883e;font-weight:bold">NavArgumentType</span>.Boolean, defaultValue = <span style="color:#a5d6ff">&#34;true&#34;</span>),
+</span></span><span style="display:flex;"><span>    ],
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span><span style="color:#d2a8ff;font-weight:bold">@Composable</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">fun</span> <span style="color:#d2a8ff;font-weight:bold">SettingsScreen</span>(
+</span></span><span style="display:flex;"><span>    viewModel: SettingsViewModel
+</span></span><span style="display:flex;"><span>) {}
+</span></span></code></pre></div><p>You can navigate to the destination using the generated <code>safeNavRoute()</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span>composable(navDestination = HomeNavDestination) {
+</span></span><span style="display:flex;"><span>    HomeScreen(
+</span></span><span style="display:flex;"><span>        navigateToSettings = {
+</span></span><span style="display:flex;"><span>            navAction.navigate(
+</span></span><span style="display:flex;"><span>                <span style="color:#f0883e;font-weight:bold">SettingsNavDestination</span>.safeNavRoute(
+</span></span><span style="display:flex;"><span>                    userId = <span style="color:#a5d6ff">1</span>,
+</span></span><span style="display:flex;"><span>                    text = <span style="color:#a5d6ff">&#34;Text&#34;</span>,
+</span></span><span style="display:flex;"><span>                    <span style="color:#8b949e;font-style:italic">// Here are not passing result parameter because has a defaultValue
+</span></span></span><span style="display:flex;"><span>                )
+</span></span><span style="display:flex;"><span>            )
+</span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="retrieving-the-navigation-arguments-values">
+  Retrieving the navigation arguments values
+  <a class="heading-link" href="#retrieving-the-navigation-arguments-values">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>The value of navigation arguments can be obtained using the <a href="https://sergiobelda.dev/navigation-compose-extended/api/navigation-compose-extended/dev.sergiobelda.navigation.compose.extended/-nav-args/index.html"  class="external-link" target="_blank" rel="noopener">NavArgs</a> class. The <code>NavDestination.navArgs()</code> provides an instance of this class.</p>
+<p>If we use annotations, a <code>**SafeNavArgs**</code> class is generated with getters for each navigation argument:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span><span style="color:#8b949e;font-style:italic">// Generated class SettingsSafeNavArgs
+</span></span></span><span style="display:flex;"><span><span style="color:#ff7b72">public</span> <span style="color:#ff7b72">class</span> <span style="color:#f0883e;font-weight:bold">SettingsSafeNavArgs</span>(
+</span></span><span style="display:flex;"><span>  navBackStackEntry: NavBackStackEntry,
+</span></span><span style="display:flex;"><span>) {
+</span></span><span style="display:flex;"><span>  <span style="color:#ff7b72">private</span> <span style="color:#ff7b72">val</span> <span style="color:#79c0ff">navArgs</span>: NavArgs&lt;SettingsNavArgumentKeys&gt; <span style="color:#ff7b72">by</span> lazy {
+</span></span><span style="display:flex;"><span>    <span style="color:#f0883e;font-weight:bold">SettingsNavDestination</span>.navArgs(navBackStackEntry)
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">val</span> <span style="color:#79c0ff">userId</span>: Int?
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">get</span>() = navArgs.getInt(<span style="color:#f0883e;font-weight:bold">SettingsNavArgumentKeys</span>.UserIdNavArgumentKey)
+</span></span><span style="display:flex;"><span>  <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">val</span> <span style="color:#79c0ff">text</span>: String?
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">get</span>() = navArgs.getString(<span style="color:#f0883e;font-weight:bold">SettingsNavArgumentKeys</span>.TextNavArgumentKey)
+</span></span><span style="display:flex;"><span>  <span style="color:#ff7b72">public</span> <span style="color:#ff7b72">val</span> <span style="color:#79c0ff">result</span>: Boolean?
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">get</span>() = navArgs.getBoolean(<span style="color:#f0883e;font-weight:bold">SettingsNavArgumentKeys</span>.ResultNavArgumentKey)
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span>composable(navDestination = SettingsNavDestination) { navBackStackEntry <span style="color:#ff7b72;font-weight:bold">-&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72">val</span> <span style="color:#79c0ff">navArgs</span> = SettingsSafeNavArgs(navBackStackEntry)
+</span></span><span style="display:flex;"><span>    SettingsScreen(
+</span></span><span style="display:flex;"><span>        userId =  navArgs.userId <span style="color:#ff7b72;font-weight:bold">?:</span> <span style="color:#a5d6ff">0</span>,
+</span></span></code></pre></div><h3 id="navigate-with-deep-links-android-only">
+  Navigate with Deep Links (Android only)
+  <a class="heading-link" href="#navigate-with-deep-links-android-only">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>In the <code>AndroidManifest.xml</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-xml" data-lang="xml"><span style="display:flex;"><span><span style="color:#7ee787">&lt;activity</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f85149">...</span><span style="color:#7ee787">&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#7ee787">&lt;intent-filter&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#7ee787">&lt;action</span> android:name=<span style="color:#a5d6ff">&#34;android.intent.action.VIEW&#34;</span> <span style="color:#7ee787">/&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#7ee787">&lt;category</span> android:name=<span style="color:#a5d6ff">&#34;android.intent.category.DEFAULT&#34;</span> <span style="color:#7ee787">/&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#7ee787">&lt;category</span> android:name=<span style="color:#a5d6ff">&#34;android.intent.category.BROWSABLE&#34;</span> <span style="color:#7ee787">/&gt;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#7ee787">&lt;data</span> android:scheme=<span style="color:#a5d6ff">&#34;sample&#34;</span> android:host=<span style="color:#a5d6ff">&#34;home&#34;</span> <span style="color:#7ee787">/&gt;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#7ee787">&lt;/intent-filter&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#7ee787">&lt;/activity&gt;</span>
+</span></span></code></pre></div><p>Use the <code>deepLinkUris</code> parameter in the <code>@NavDestination</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span><span style="color:#d2a8ff;font-weight:bold">@NavDestination</span>(
+</span></span><span style="display:flex;"><span>    destinationId = <span style="color:#a5d6ff">&#34;home&#34;</span>,
+</span></span><span style="display:flex;"><span>    deepLinkUris = [        <span style="color:#a5d6ff">&#34;sample://home&#34;</span>,
+</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span><span style="color:#d2a8ff;font-weight:bold">@Composable</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">fun</span> <span style="color:#d2a8ff;font-weight:bold">HomeScreen</span>(navigateToSettings: () <span style="color:#ff7b72;font-weight:bold">-&gt;</span> Unit) {}
+</span></span></code></pre></div><h3 id="create-top-level-destinations">
+  Create Top Level Destinations
+  <a class="heading-link" href="#create-top-level-destinations">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+<p>There’s a special kind of destination to represent the top level destinations in the navigation graph. This is useful for destinations associated to items in a BottomNavigationBar where we can navigate to different screens by clicking on each navigation bar item. To avoid building up a large stack of destinations on the back stack when we click on navigation items and to avoid multiple copies of the same destination when we reselect the same item, we can use this kind of destination.</p>
+<div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span><span style="color:#d2a8ff;font-weight:bold">@NavDestination</span>(
+</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72;font-weight:bold">..</span>.
+</span></span><span style="display:flex;"><span>    isTopLevelNavDestination = <span style="color:#ff7b72">true</span>, <span style="color:#8b949e;font-style:italic">// Mark NavDestination as a top-level destination.
+</span></span></span><span style="display:flex;"><span>)
+</span></span><span style="display:flex;"><span><span style="color:#d2a8ff;font-weight:bold">@Composable</span>
+</span></span><span style="display:flex;"><span><span style="color:#ff7b72">fun</span> <span style="color:#d2a8ff;font-weight:bold">HomeScreen</span>() {}
+</span></span></code></pre></div><h3 id="source-code">
+  Source code
+  <a class="heading-link" href="#source-code">
+    <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
+    <span class="sr-only">Link to heading</span>
+  </a>
+</h3>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        
+        
+        
+        
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2026
+     Sergio Belda 
+    ·
+    
+    Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/js/coder.js"></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>

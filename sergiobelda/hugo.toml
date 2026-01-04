@@ -1,0 +1,63 @@
+baseurl = "https://sergiobelda.dev"
+title = "Sergio Belda"
+theme = "hugo-coder"
+languagecode = "en"
+defaultcontentlanguage = "en"
+
+[pagination]
+pagerSize = 20
+
+[markup.highlight]
+style = "github-dark"
+
+[params]
+  author = "Sergio Belda"
+  info = "Android Software Engineer"
+  description = "Sergio Belda's personal website"
+  keywords = "blog,android"
+  avatarurl = "images/avatar_2.jpg"
+
+  faviconSVG = "/img/favicon.svg"
+  favicon_32 = "/img/favicon-32x32.png"
+  favicon_16 = "/img/favicon-16x16.png"
+
+  since = 2026
+
+  enableTwemoji = true
+
+  colorScheme = "auto"
+  hidecolorschemetoggle = false
+
+[taxonomies]
+  category = "categories"
+  series = "series"
+  tag = "tags"
+  author = "authors"
+
+# Social links
+[[params.social]]
+  name = "Github"
+  icon = "fa-brands fa-github fa-2x"
+  weight = 1
+  url = "https://github.com/serbelga/"
+[[params.social]]
+  name = "LinkedIn"
+  icon = "fa-brands fa-linkedin-in fa-2x"
+  weight = 2
+  url = "https://www.linkedin.com/in/sergiobelda/"
+[[params.social]]
+  name = "Medium"
+  icon = "fa-brands fa-medium fa-2x"
+  weight = 3
+  url = "https://medium.com/@sergiobelda"
+[[params.social]]
+  name = "Twitter"
+  icon = "fa-brands fa-x-twitter fa-2x"
+  weight = 4
+  url = "https://twitter.com/sergiobeldag/"
+
+# Menu links
+[[menu.main]]
+  name = "Blog"
+  weight = 1
+  url  = "posts/"
