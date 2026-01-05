@@ -22,5 +22,40 @@
       <guid>http://localhost:1313/posts/2024/transforming-android-xml-vector-drawables-into-compose-multiplatform-imagevectors/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://github.com/serbelga/compose-vectorize/&#34;  class=&#34;external-link&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;strong&gt;Compose Vectorize&lt;/strong&gt;&lt;/a&gt; is a Kotlin Multiplatform library to generate &lt;code&gt;compose.ui.graphics.vector.ImageVector&lt;/code&gt; from XML files. It is built on top of AndroidX &lt;code&gt;material-icons&lt;/code&gt; vector generator, but it allows transforming not only solid plain icons but also illustrations and creates categories for resources automatically based on folder structure.&lt;/p&gt;&#xA;&lt;h3 id=&#34;how-to-use&#34;&gt;&#xA;  How to use&#xA;  &lt;a class=&#34;heading-link&#34; href=&#34;#how-to-use&#34;&gt;&#xA;    &lt;i class=&#34;fa-solid fa-link&#34; aria-hidden=&#34;true&#34; title=&#34;Link to heading&#34;&gt;&lt;/i&gt;&#xA;    &lt;span class=&#34;sr-only&#34;&gt;Link to heading&lt;/span&gt;&#xA;  &lt;/a&gt;&#xA;&lt;/h3&gt;&#xA;&lt;p&gt;First, add the gradle plugin in your project. Inside &lt;code&gt;plugins{}&lt;/code&gt; block in build.gradle root file.&lt;/p&gt;</description>
     </item>
+    <item>
+      <title>Android Jetpack Compose: Navigation</title>
+      <link>http://localhost:1313/posts/2020/android-jetpack-compose-navigation/</link>
+      <pubDate>Sat, 14 Nov 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2020/android-jetpack-compose-navigation/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Material Components for Android: Motion</title>
+      <link>http://localhost:1313/posts/2020/material-components-for-android-motion/</link>
+      <pubDate>Fri, 15 May 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2020/material-components-for-android-motion/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Android CameraX</title>
+      <link>http://localhost:1313/posts/2020/android-camerax/</link>
+      <pubDate>Mon, 27 Jan 2020 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2020/android-camerax/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Build a weather station with Google Cloud IoT, Cloud Firestore, Mongoose OS &amp; Android Jetpack</title>
+      <link>http://localhost:1313/posts/2019/build-a-weather-station-with-google-cloud-iot-cloud-firestore-mongoose-os--android-jetpack/</link>
+      <pubDate>Sat, 06 Jul 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2019/build-a-weather-station-with-google-cloud-iot-cloud-firestore-mongoose-os--android-jetpack/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Transitions in Android Navigation Component</title>
+      <link>http://localhost:1313/posts/2019/transitions-in-android-navigation-component/</link>
+      <pubDate>Tue, 12 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/2019/transitions-in-android-navigation-component/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>
