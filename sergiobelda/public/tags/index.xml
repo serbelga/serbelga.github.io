@@ -36,5 +36,12 @@
       <guid>http://localhost:1313/tags/navigation/</guid>
       <description></description>
     </item>
+    <item>
+      <title>ImageVector</title>
+      <link>http://localhost:1313/tags/imagevector/</link>
+      <pubDate>Mon, 05 Feb 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/imagevector/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

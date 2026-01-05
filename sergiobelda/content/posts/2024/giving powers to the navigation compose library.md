@@ -9,7 +9,7 @@ series = []
 aliases = []
 +++
 
-**Navigation Compose Extended** is a multiplatform complementary library for Navigation Compose to improve creation of navigation elements, such as destination **routes**, **arguments**, **deep links**, … in a more idiomatic way than using literals. It also provides **Safe navigation routes** and **Safe navigation arguments**.
+[**Navigation Compose Extended**](https://github.com/serbelga/navigation-compose-extended) is a multiplatform complementary library for Navigation Compose to improve creation of navigation elements, such as destination **routes**, **arguments**, **deep links**, … in a more idiomatic way than using literals. It also provides **safe navigation routes** and **safe navigation arguments**.
 
 ### Usage
 
@@ -129,7 +129,8 @@ You can add navigation arguments using the `arguments` parameter in `@NavDestina
 @NavDestination(
     name = "Settings",
     destinationId = "settings",
-    arguments = [        NavArgument(name = "userId", type = NavArgumentType.Int),
+    arguments = [        
+        NavArgument(name = "userId", type = NavArgumentType.Int),
         NavArgument(name = "text", type = NavArgumentType.String, defaultValue = "Default"),
         NavArgument(name = "result", type = NavArgumentType.Boolean, defaultValue = "true"),
     ],
@@ -209,7 +210,8 @@ Use the `deepLinkUris` parameter in the `@NavDestination`:
 ```kotlin
 @NavDestination(
     destinationId = "home",
-    deepLinkUris = [        "sample://home",
+    deepLinkUris = [        
+        "sample://home",
     ]
 )
 @Composable
@@ -222,11 +224,15 @@ There’s a special kind of destination to represent the top level destinations 
 
 ```kotlin
 @NavDestination(
-    ...
+    // ...
     isTopLevelNavDestination = true, // Mark NavDestination as a top-level destination.
 )
 @Composable
 fun HomeScreen() {}
 ```
 
-### Source code
+### Reference
+
+- [Project website](https://sergiobelda.dev/navigation-compose-extended/)
+- [GitHub](https://github.com/serbelga/navigation-compose-extended/)
+- [Read on Medium](https://medium.com/@sergiobelda/extending-navigation-compose-de6f426f78ea)

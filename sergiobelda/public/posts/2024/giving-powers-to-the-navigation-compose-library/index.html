@@ -13,7 +13,7 @@
 
 
 <meta name="author" content="Sergio Belda">
-<meta name="description" content="Navigation Compose Extended is a multiplatform complementary library for Navigation Compose to improve creation of navigation elements, such as destination routes, arguments, deep links, … in a more idiomatic way than using literals. It also provides Safe navigation routes and Safe navigation arguments.
+<meta name="description" content="Navigation Compose Extended is a multiplatform complementary library for Navigation Compose to improve creation of navigation elements, such as destination routes, arguments, deep links, … in a more idiomatic way than using literals. It also provides safe navigation routes and safe navigation arguments.
 
   Usage
   
@@ -28,13 +28,13 @@ This library can be used programmatically or using annotations to generate class
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Giving powers to the Navigation Compose library">
-  <meta name="twitter:description" content="Navigation Compose Extended is a multiplatform complementary library for Navigation Compose to improve creation of navigation elements, such as destination routes, arguments, deep links, … in a more idiomatic way than using literals. It also provides Safe navigation routes and Safe navigation arguments.
+  <meta name="twitter:description" content="Navigation Compose Extended is a multiplatform complementary library for Navigation Compose to improve creation of navigation elements, such as destination routes, arguments, deep links, … in a more idiomatic way than using literals. It also provides safe navigation routes and safe navigation arguments.
 Usage Link to heading This library can be used programmatically or using annotations to generate classes. In the following lines, annotations are used to create navigation elements.">
 
 <meta property="og:url" content="http://localhost:1313/posts/2024/giving-powers-to-the-navigation-compose-library/">
   <meta property="og:site_name" content="Sergio Belda">
   <meta property="og:title" content="Giving powers to the Navigation Compose library">
-  <meta property="og:description" content="Navigation Compose Extended is a multiplatform complementary library for Navigation Compose to improve creation of navigation elements, such as destination routes, arguments, deep links, … in a more idiomatic way than using literals. It also provides Safe navigation routes and Safe navigation arguments.
+  <meta property="og:description" content="Navigation Compose Extended is a multiplatform complementary library for Navigation Compose to improve creation of navigation elements, such as destination routes, arguments, deep links, … in a more idiomatic way than using literals. It also provides safe navigation routes and safe navigation arguments.
 Usage Link to heading This library can be used programmatically or using annotations to generate classes. In the following lines, annotations are used to create navigation elements.">
   <meta property="og:locale" content="en">
   <meta property="og:type" content="article">
@@ -130,7 +130,7 @@ Usage Link to heading This library can be used programmatically or using annotat
         
           
             <li class="navigation-item">
-              <a class="navigation-link " href="/posts/">Blog</a>
+              <a class="navigation-link " href="/posts/">Posts</a>
             </li>
           
         
@@ -194,7 +194,7 @@ Usage Link to heading This library can be used programmatically or using annotat
 
       <div class="post-content">
         
-        <p><strong>Navigation Compose Extended</strong> is a multiplatform complementary library for Navigation Compose to improve creation of navigation elements, such as destination <strong>routes</strong>, <strong>arguments</strong>, <strong>deep links</strong>, … in a more idiomatic way than using literals. It also provides <strong>Safe navigation routes</strong> and <strong>Safe navigation arguments</strong>.</p>
+        <p><a href="https://github.com/serbelga/navigation-compose-extended"  class="external-link" target="_blank" rel="noopener"><strong>Navigation Compose Extended</strong></a> is a multiplatform complementary library for Navigation Compose to improve creation of navigation elements, such as destination <strong>routes</strong>, <strong>arguments</strong>, <strong>deep links</strong>, … in a more idiomatic way than using literals. It also provides <strong>safe navigation routes</strong> and <strong>safe navigation arguments</strong>.</p>
 <h3 id="usage">
   Usage
   <a class="heading-link" href="#usage">
@@ -310,7 +310,8 @@ Usage Link to heading This library can be used programmatically or using annotat
 <div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span><span style="color:#d2a8ff;font-weight:bold">@NavDestination</span>(
 </span></span><span style="display:flex;"><span>    name = <span style="color:#a5d6ff">&#34;Settings&#34;</span>,
 </span></span><span style="display:flex;"><span>    destinationId = <span style="color:#a5d6ff">&#34;settings&#34;</span>,
-</span></span><span style="display:flex;"><span>    arguments = [        NavArgument(name = <span style="color:#a5d6ff">&#34;userId&#34;</span>, type = <span style="color:#f0883e;font-weight:bold">NavArgumentType</span>.Int),
+</span></span><span style="display:flex;"><span>    arguments = [        
+</span></span><span style="display:flex;"><span>        NavArgument(name = <span style="color:#a5d6ff">&#34;userId&#34;</span>, type = <span style="color:#f0883e;font-weight:bold">NavArgumentType</span>.Int),
 </span></span><span style="display:flex;"><span>        NavArgument(name = <span style="color:#a5d6ff">&#34;text&#34;</span>, type = <span style="color:#f0883e;font-weight:bold">NavArgumentType</span>.String, defaultValue = <span style="color:#a5d6ff">&#34;Default&#34;</span>),
 </span></span><span style="display:flex;"><span>        NavArgument(name = <span style="color:#a5d6ff">&#34;result&#34;</span>, type = <span style="color:#f0883e;font-weight:bold">NavArgumentType</span>.Boolean, defaultValue = <span style="color:#a5d6ff">&#34;true&#34;</span>),
 </span></span><span style="display:flex;"><span>    ],
@@ -380,7 +381,8 @@ Usage Link to heading This library can be used programmatically or using annotat
 </span></span></code></pre></div><p>Use the <code>deepLinkUris</code> parameter in the <code>@NavDestination</code>:</p>
 <div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span><span style="color:#d2a8ff;font-weight:bold">@NavDestination</span>(
 </span></span><span style="display:flex;"><span>    destinationId = <span style="color:#a5d6ff">&#34;home&#34;</span>,
-</span></span><span style="display:flex;"><span>    deepLinkUris = [        <span style="color:#a5d6ff">&#34;sample://home&#34;</span>,
+</span></span><span style="display:flex;"><span>    deepLinkUris = [        
+</span></span><span style="display:flex;"><span>        <span style="color:#a5d6ff">&#34;sample://home&#34;</span>,
 </span></span><span style="display:flex;"><span>    ]
 </span></span><span style="display:flex;"><span>)
 </span></span><span style="display:flex;"><span><span style="color:#d2a8ff;font-weight:bold">@Composable</span>
@@ -394,18 +396,23 @@ Usage Link to heading This library can be used programmatically or using annotat
 </h3>
 <p>There’s a special kind of destination to represent the top level destinations in the navigation graph. This is useful for destinations associated to items in a BottomNavigationBar where we can navigate to different screens by clicking on each navigation bar item. To avoid building up a large stack of destinations on the back stack when we click on navigation items and to avoid multiple copies of the same destination when we reselect the same item, we can use this kind of destination.</p>
 <div class="highlight"><pre tabindex="0" style="color:#e6edf3;background-color:#0d1117;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-kotlin" data-lang="kotlin"><span style="display:flex;"><span><span style="color:#d2a8ff;font-weight:bold">@NavDestination</span>(
-</span></span><span style="display:flex;"><span>    <span style="color:#ff7b72;font-weight:bold">..</span>.
-</span></span><span style="display:flex;"><span>    isTopLevelNavDestination = <span style="color:#ff7b72">true</span>, <span style="color:#8b949e;font-style:italic">// Mark NavDestination as a top-level destination.
+</span></span><span style="display:flex;"><span>    <span style="color:#8b949e;font-style:italic">// ...
+</span></span></span><span style="display:flex;"><span>    isTopLevelNavDestination = <span style="color:#ff7b72">true</span>, <span style="color:#8b949e;font-style:italic">// Mark NavDestination as a top-level destination.
 </span></span></span><span style="display:flex;"><span>)
 </span></span><span style="display:flex;"><span><span style="color:#d2a8ff;font-weight:bold">@Composable</span>
 </span></span><span style="display:flex;"><span><span style="color:#ff7b72">fun</span> <span style="color:#d2a8ff;font-weight:bold">HomeScreen</span>() {}
-</span></span></code></pre></div><h3 id="source-code">
-  Source code
-  <a class="heading-link" href="#source-code">
+</span></span></code></pre></div><h3 id="reference">
+  Reference
+  <a class="heading-link" href="#reference">
     <i class="fa-solid fa-link" aria-hidden="true" title="Link to heading"></i>
     <span class="sr-only">Link to heading</span>
   </a>
 </h3>
+<ul>
+<li><a href="https://sergiobelda.dev/navigation-compose-extended/"  class="external-link" target="_blank" rel="noopener">Project website</a></li>
+<li><a href="https://github.com/serbelga/navigation-compose-extended/"  class="external-link" target="_blank" rel="noopener">GitHub</a></li>
+<li><a href="https://medium.com/@sergiobelda/extending-navigation-compose-de6f426f78ea"  class="external-link" target="_blank" rel="noopener">Read on Medium</a></li>
+</ul>
 
       </div>
 

@@ -32,6 +32,12 @@
     <loc>http://localhost:1313/tags/</loc>
     <lastmod>2024-04-24T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/tags/imagevector/</loc>
+    <lastmod>2024-02-05T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/2024/transforming-android-xml-vector-drawables-into-compose-multiplatform-imagevectors/</loc>
+    <lastmod>2024-02-05T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/categories/</loc>
   </url><url>
     <loc>http://localhost:1313/series/</loc>
