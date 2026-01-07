@@ -2,19 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/posts/2024/redirect/</loc>
-    <lastmod>2026-01-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2026-01-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2026-01-05T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/tags/annotations/</loc>
-    <lastmod>2024-04-24T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/authors/</loc>
     <lastmod>2024-04-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/compose/</loc>
@@ -29,7 +17,10 @@
     <loc>http://localhost:1313/tags/navigation/</loc>
     <lastmod>2024-04-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/authors/sergio-belda/</loc>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2024-04-24T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2024-04-24T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
@@ -41,8 +32,21 @@
     <loc>http://localhost:1313/posts/2024/transforming-android-xml-vector-drawables-into-compose-multiplatform-imagevectors/</loc>
     <lastmod>2024-02-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>http://localhost:1313/posts/2020/android-jetpack-compose-navigation/</loc>
+    <lastmod>2020-11-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/series/</loc>
+    <loc>http://localhost:1313/posts/2020/material-components-for-android-motion/</loc>
+    <lastmod>2020-05-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/2020/android-camerax/</loc>
+    <lastmod>2020-01-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/2019/build-a-weather-station-with-google-cloud-iot-cloud-firestore-mongoose-os--android-jetpack/</loc>
+    <lastmod>2019-07-06T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/2019/transitions-in-android-navigation-component/</loc>
+    <lastmod>2019-03-12T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/categories/</loc>
   </url>
 </urlset>

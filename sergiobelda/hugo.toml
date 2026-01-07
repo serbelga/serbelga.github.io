@@ -1,63 +1,89 @@
-baseurl = "https://sergiobelda.dev"
+baseURL = "https://sergiobelda.dev"
 title = "Sergio Belda"
-theme = "hugo-coder"
-languagecode = "en"
-defaultcontentlanguage = "en"
+theme = "PaperMod"
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
 
-[pagination]
-pagerSize = 20
-
-[markup.highlight]
-style = "github-dark"
+[minify]
+disableXML = true
+minifyOutput = true
 
 [params]
-  author = "Sergio Belda"
-  info = "Android Software Engineer"
-  description = "Sergio Belda's personal website"
-  keywords = "blog,android"
-  avatarurl = "images/avatar_2.jpg"
+env = "production"
+title = "Sergio Belda"
+description = "Sergio Belda's personal website"
+keywords = [ "Blog", "Android" ]
+author = "Sergio Belda"
+defaultTheme = "auto"
+ShowReadingTime = true
+ShowShareButtons = false
+ShowPostNavLinks = false
+ShowBreadCrumbs = true
+ShowCodeCopyButtons = true
+ShowWordCount = false
+ShowRssButtonInSectionTermList = false
+UseHugoToc = false
+disableSpecial1stPost = false
+disableScrollToTop = false
+comments = false
+hidemeta = false
+hideSummary = false
+showtoc = false
+tocopen = false
 
-  faviconSVG = "/img/favicon.svg"
-  favicon_32 = "/img/favicon-32x32.png"
-  favicon_16 = "/img/favicon-16x16.png"
+[params.assets]
+favicon = "<link / abs url>"
+favicon16x16 = "<link / abs url>"
+favicon32x32 = "<link / abs url>"
+apple_touch_icon = "<link / abs url>"
+safari_pinned_tab = "<link / abs url>"
 
-  since = 2026
+[params.label]
+text = ""
+icon = "/apple-touch-icon.png"
+iconHeight = 35
 
-  enableTwemoji = true
+[params.profileMode]
+enabled = true
+title = "Sergio Belda"
+subtitle = "Android Software Engineer"
+imageUrl = "images/avatar_2.jpg"
+imageWidth = 240
+imageHeight = 240
+imageTitle = "my image"
 
-  colorScheme = "auto"
-  hidecolorschemetoggle = false
+[params.homeInfoParams]
+Title = "Sergio Belda"
+Content = "Android Software Engineer"
 
-[taxonomies]
-  category = "categories"
-  series = "series"
-  tag = "tags"
-  author = "authors"
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/serbelga/"
 
-# Social links
-[[params.social]]
-  name = "Github"
-  icon = "fa-brands fa-github fa-2x"
-  weight = 1
-  url = "https://github.com/serbelga/"
-[[params.social]]
-  name = "LinkedIn"
-  icon = "fa-brands fa-linkedin-in fa-2x"
-  weight = 2
-  url = "https://www.linkedin.com/in/sergiobelda/"
-[[params.social]]
-  name = "Medium"
-  icon = "fa-brands fa-medium fa-2x"
-  weight = 3
-  url = "https://medium.com/@sergiobelda"
-[[params.social]]
-  name = "Twitter"
-  icon = "fa-brands fa-x-twitter fa-2x"
-  weight = 4
-  url = "https://twitter.com/sergiobeldag/"
+[[params.socialIcons]]
+name = "medium"
+url = "https://medium.com/@sergiobelda"
 
-# Menu links
+[[params.socialIcons]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/sergiobelda/"
+
+[[params.socialIcons]]
+name = "twitter"
+url = "https://twitter.com/sergiobeldag/"
+
+[params.cover]
+hidden = true
+hiddenInList = true
+hiddenInSingle = true
+
 [[menu.main]]
-  name = "Posts"
-  weight = 1
-  url  = "posts/"
+identifier = "posts"
+name = "Posts"
+url = "/posts/"
+weight = 10
+
+[markup.highlight]
+noClasses = false
