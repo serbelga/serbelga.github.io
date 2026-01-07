@@ -2,51 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/tags/annotations/</loc>
+    <loc>http://localhost:64674/tags/annotations/</loc>
     <lastmod>2024-04-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/compose/</loc>
+    <loc>http://localhost:64674/tags/compose/</loc>
     <lastmod>2024-04-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2024/giving-powers-to-the-navigation-compose-library/</loc>
+    <loc>http://localhost:64674/posts/2024/giving-powers-to-the-navigation-compose-library/</loc>
     <lastmod>2024-04-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/multiplatform/</loc>
+    <loc>http://localhost:64674/tags/multiplatform/</loc>
     <lastmod>2024-04-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/navigation/</loc>
+    <loc>http://localhost:64674/tags/navigation/</loc>
     <lastmod>2024-04-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
+    <loc>http://localhost:64674/posts/</loc>
     <lastmod>2024-04-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>http://localhost:64674/</loc>
     <lastmod>2024-04-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>http://localhost:64674/tags/</loc>
     <lastmod>2024-04-24T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/imagevector/</loc>
+    <loc>http://localhost:64674/tags/imagevector/</loc>
     <lastmod>2024-02-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2024/transforming-android-xml-vector-drawables-into-compose-multiplatform-imagevectors/</loc>
+    <loc>http://localhost:64674/posts/2024/transforming-android-xml-vector-drawables-into-compose-multiplatform-imagevectors/</loc>
     <lastmod>2024-02-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2020/android-jetpack-compose-navigation/</loc>
+    <loc>http://localhost:64674/posts/2020/android-jetpack-compose-navigation/</loc>
     <lastmod>2020-11-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2020/material-components-for-android-motion/</loc>
+    <loc>http://localhost:64674/posts/2020/material-components-for-android-motion/</loc>
     <lastmod>2020-05-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2020/android-camerax/</loc>
+    <loc>http://localhost:64674/posts/2020/android-camerax/</loc>
     <lastmod>2020-01-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2019/build-a-weather-station-with-google-cloud-iot-cloud-firestore-mongoose-os--android-jetpack/</loc>
+    <loc>http://localhost:64674/posts/2019/build-a-weather-station-with-google-cloud-iot-cloud-firestore-mongoose-os--android-jetpack/</loc>
     <lastmod>2019-07-06T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/2019/transitions-in-android-navigation-component/</loc>
+    <loc>http://localhost:64674/posts/2019/transitions-in-android-navigation-component/</loc>
     <lastmod>2019-03-12T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>http://localhost:64674/categories/</loc>
   </url>
 </urlset>
