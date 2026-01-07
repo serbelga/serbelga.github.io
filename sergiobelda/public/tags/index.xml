@@ -2,45 +2,45 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on Sergio Belda</title>
-    <link>http://localhost:64674/tags/</link>
+    <link>http://localhost:64705/tags/</link>
     <description>Recent content in Tags on Sergio Belda</description>
     <generator>Hugo -- 0.154.2</generator>
     <language>en</language>
     <lastBuildDate>Wed, 24 Apr 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:64674/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:64705/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Annotations</title>
-      <link>http://localhost:64674/tags/annotations/</link>
+      <link>http://localhost:64705/tags/annotations/</link>
       <pubDate>Wed, 24 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:64674/tags/annotations/</guid>
+      <guid>http://localhost:64705/tags/annotations/</guid>
       <description></description>
     </item>
     <item>
       <title>Compose</title>
-      <link>http://localhost:64674/tags/compose/</link>
+      <link>http://localhost:64705/tags/compose/</link>
       <pubDate>Wed, 24 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:64674/tags/compose/</guid>
+      <guid>http://localhost:64705/tags/compose/</guid>
       <description></description>
     </item>
     <item>
       <title>Multiplatform</title>
-      <link>http://localhost:64674/tags/multiplatform/</link>
+      <link>http://localhost:64705/tags/multiplatform/</link>
       <pubDate>Wed, 24 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:64674/tags/multiplatform/</guid>
+      <guid>http://localhost:64705/tags/multiplatform/</guid>
       <description></description>
     </item>
     <item>
       <title>Navigation</title>
-      <link>http://localhost:64674/tags/navigation/</link>
+      <link>http://localhost:64705/tags/navigation/</link>
       <pubDate>Wed, 24 Apr 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:64674/tags/navigation/</guid>
+      <guid>http://localhost:64705/tags/navigation/</guid>
       <description></description>
     </item>
     <item>
       <title>ImageVector</title>
-      <link>http://localhost:64674/tags/imagevector/</link>
+      <link>http://localhost:64705/tags/imagevector/</link>
       <pubDate>Mon, 05 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:64674/tags/imagevector/</guid>
+      <guid>http://localhost:64705/tags/imagevector/</guid>
       <description></description>
     </item>
   </channel>
