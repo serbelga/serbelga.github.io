@@ -1,4 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+@font-face {
+  font-display: swap;
+  font-family: 'Google Sans Code';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/google-sans-code-v14-latin-regular.woff2') format('woff2');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Google Sans Flex';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/google-sans-flex-v16-latin-regular.woff2') format('woff2');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Google Sans Flex';
+  font-style: normal;
+  font-weight: 500;
+  src: url('/fonts/google-sans-flex-v16-latin-500.woff2') format('woff2');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'Google Sans Flex';
+  font-style: normal;
+  font-weight: 600;
+  src: url('/fonts/google-sans-flex-v16-latin-600.woff2') format('woff2');
+}
 
 body {
   font-family: 'Google Sans Flex';
