@@ -58,7 +58,7 @@ kotlin {
 
 Create a folder called `xml-images` in the module folder.
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*xSJJkLJ52js7-LB6KgE0wg.png)
+![](/images/2024-02-05/common_xml_images.png)
 
 To generate the ImageVectors, call the gradle task `generateImages` or launch the application:
 
@@ -76,7 +76,7 @@ composeVectorize {
 }
 ```
 
-![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1*owoaSY2lZMTPHDHqpavJvQ.png)
+![](/images/2024-02-05/common_build.png)
 
 Inside `xml-images` you can create folders to categorize these resources. The library will automatically create a tree structure of objects to access to the variables.
 
@@ -108,7 +108,7 @@ Icon(
 )
 ```
 
-![Compose Vectorize on different platforms](https://miro.medium.com/v2/resize:fit:4800/format:webp/1*OZeTODowRq4pwaBRsdU3ag.png)
+![Compose Vectorize on different platforms](/images/2024-02-05/multiplatform.png)
 
 ### Reference
 
