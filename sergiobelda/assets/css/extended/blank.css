@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Code:ital,wght@0,300..800;1,300..800&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+body {
+  font-family: 'Google Sans Flex';
+}
+code {
+  font-family: 'Google Sans Code';
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 500
+}
+
+strong {
+    font-weight: 600;
+}
+
+.logo a {
+    font-weight: 500;
+    font-size: 20px;
+}
