@@ -47,7 +47,11 @@ strong {
     font-weight: 600;
 }
 
+#menu a {
+    font-size: 18px;
+}
+
 .logo a {
     font-weight: 500;
-    font-size: 20px;
+    font-size: 18px;
 }
