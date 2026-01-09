@@ -87,3 +87,7 @@ weight = 10
 
 [markup.highlight]
 noClasses = false
+
+[caches]
+[caches.images]
+dir = ':cacheDir/images'
