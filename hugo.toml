@@ -46,7 +46,7 @@ icon = "/apple-touch-icon.png"
 iconHeight = 35
 
 [params.profileMode]
-enabled = true
+enabled = false
 title = "Sergio Belda"
 subtitle = "Android Software Engineer"
 imageUrl = "images/avatar.jpg"
@@ -57,6 +57,9 @@ imageTitle = "my image"
 [params.homeInfoParams]
 Title = "Sergio Belda"
 Content = "Android Software Engineer"
+imageUrl = "images/avatar.jpg"
+imageWidth = 120
+imageHeight = 120
 
 [[params.socialIcons]]
 name = "github"

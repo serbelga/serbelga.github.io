@@ -55,3 +55,12 @@ strong {
     font-weight: 500;
     font-size: 18px;
 }
+
+
+.home-info img {
+    border-radius: 50%;
+}
+
+.first-entry .entry-header {
+    margin: 14px 0;
+}
